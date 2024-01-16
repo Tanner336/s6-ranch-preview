@@ -1277,12 +1277,13 @@ footer {
     }
 }
 
-//breed - hero text
+//Facility - hero text
 .two-col {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    // background: url("../assets/img/grassy-field.jpg") no-repeat 40% 50%;
 
     &-wrapper {
         display: flex;
@@ -1320,7 +1321,7 @@ footer {
     }
 }
 
-// breed - overlap/offset card
+// Facility - overlap/offset card
 .overlap {
     display: flex;
     justify-content: center;
@@ -1389,10 +1390,15 @@ footer {
 
     .read-more a {
         color: $gold;
+
+        &:after {
+            right: -4rem;
+            top: 50%;
+        }
     }
 }
 
-//breed - stats
+//Facility - stats
 .stats {
     &-wrapper {
         display: flex;
@@ -1470,8 +1476,14 @@ footer {
     }
 }
 
-//breed - squares
+//Facility - squares
 //background img - 575 x 575
+.squares {
+    .hide-on-mobile{
+        border: none;
+    }
+}
+
 .square {
     float: left;
     position: relative;
@@ -1493,6 +1505,10 @@ footer {
         .table {
             border: 1px solid grey;
         }
+    }
+
+    .hide-on-mobile{
+        border: none;
     }
 
     // history
@@ -1682,11 +1698,6 @@ footer {
             margin-bottom: 0.625rem;
             letter-spacing: 0.4px;
             position: relative;
-        }
-
-        p {
-            // 
-
         }
 
         .slide-content {
