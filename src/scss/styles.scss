@@ -9,12 +9,14 @@
 // =========================
 
 // Variables
-$gold: #d5a269;
+// $gold: #d5a269;
+$gold: rgb(48, 180, 169);
 $secondary: #d4c4bc;
 $dark: #1a1a1a;
 $dark-medium: #202020;
 $dark-light: rgb(36 36 36);
-$white: #F3F3F3;
+// $white: #F3F3F3;
+$white: #fff;
 $off-white: #e8e8e8;
 $break-small: 480px;
 $break-med: 600px;
@@ -188,9 +190,13 @@ li {
 .main-btn {
     display: inline-block;
     width: min-content;
-    border: 1px solid $gold;
-    padding: 10px 14px;
+    // option-2
+    // border: 2px solid rgb(94 82 73 / 65%);
+    border: 2px solid rgb(26, 26, 26, 0.7);
+    // option-2
     background: rgb(26, 26, 26, 0.7);
+    // background: rgb(94 82 73 / 50%);
+    padding: 10px 14px;
     font-size: 0.75rem;
     letter-spacing: $spacing-large-mobile;
 
@@ -201,7 +207,7 @@ li {
 
     .main-btn-text {
         text-transform: uppercase;
-        color: $gold;
+        color: $white;
         line-height: 1.5rem;
         margin-right: -10px;
         margin-left: 10px;
@@ -220,14 +226,16 @@ li {
     }
 }
 
-//TCNA logo
+//s6 logo
 .logo {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     align-items: center;
     position: relative;
 
     img {
-        height: 30px;
+        height: 40px;
     }
 
     p {
@@ -242,6 +250,7 @@ li {
 
         a {
             color: rgba(255, 255, 255, .75);
+            @include playfair();
         }
 
         a::before {
@@ -347,7 +356,7 @@ li {
 
 
 // =========================
-// Header & Footer
+// Header & Footer & Contact Form
 // =========================
 
 //main nav
@@ -390,7 +399,7 @@ li {
             background: url("../assets/svg/MaterialSymbolsClose.svg") no-repeat;
             width: 40px;
             height: 40px;
-            display: none;
+            // display: none;
         }
 
         @include desktop {
@@ -412,10 +421,10 @@ li {
         z-index: 99;
         color: white;
         list-style: none;
-        max-width: 1000px;
+        max-width: 800px;
 
         a {
-            color: #d5a269;
+            color: $gold;
             letter-spacing: 0.25rem;
 
             &:hover {
@@ -443,7 +452,6 @@ li {
             flex-direction: row;
             justify-content: space-around;
             transform: translateY(0%);
-            padding-left: 40px;
             width: 100%;
 
             .nav-item {
@@ -470,24 +478,28 @@ footer {
 
     .footer {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         padding: 40px 10px;
+        gap: 2rem;
 
         @include desktop() {
+            flex-direction: row;
             justify-content: space-between;
             margin: 0 auto;
             max-width: 1400px;
             padding: 40px 30px;
+            align-items: flex-start;
         }
 
         svg {
-            margin-right: 5px;
+            margin-right: 0.5rem;
         }
 
-        a {
-            color: $gold;
-        }
+        // a {
+        //     color: $gold;
+        // }
 
         .contact,
         .credentials {
@@ -496,8 +508,8 @@ footer {
 
             p {
                 letter-spacing: $spacing-medium-mobile;
-                line-height: 2.5rem;
-                color: $gold;
+                // line-height: 2.5rem;
+                // color: $gold;
 
                 @include desktop {
                     letter-spacing: $spacing-medium;
@@ -506,17 +518,180 @@ footer {
 
             .small-text {
                 font-size: 0.75rem;
+
+                &:nth-of-type(3) {
+                    padding-top: 1rem;
+
+                    @include desktop() {
+                        padding-top: 0rem;
+                    }
+                }
             }
         }
 
         .contact {
-            align-items: flex-start;
+            align-items: center;
+
+            @include desktop {
+                align-items: flex-start;
+            }
         }
 
         .credentials {
             align-items: flex-end;
         }
+
+        img {
+            height: 78px;
+        }
     }
+
+    .social-media-icons {
+        padding-bottom: 15px;
+    }
+
+}
+
+//contact-form
+#contact-us {
+    // option-2
+    background: #707070;
+    // background: #8d8a88;
+    background: linear-gradient(to top, rgba(112, 112, 112, .9) 15%, rgba(112, 112, 112, .9) 100%), url("../assets/img/contact-us1.jpg") no-repeat 40% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .contact-us-wrapper {
+        width: 95vw;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @include desktop() {
+            flex-direction: row;
+        }
+
+        .form-container,
+        .map-container {
+            flex-basis: 50%;
+        }
+
+        h2 {
+            color: $white;
+
+            @include desktop() {
+                text-align: left;
+            }
+        }
+
+        .invalid-feedback,
+        .empty-feedback {
+            display: none;
+        }
+
+        .was-validated :placeholder-shown:invalid~.empty-feedback {
+            display: block;
+        }
+
+        .was-validated :not(:placeholder-shown):invalid~.invalid-feedback {
+            display: block;
+        }
+
+        .is-invalid,
+        .was-validated :invalid {
+            border-color: #d85d2d;
+        }
+
+        .empty-feedback,
+        .invalid-feedback {
+            color: #862600;
+        }
+
+        .form-container {
+            padding: 1rem 1rem 0rem 1rem;
+
+            @include desktop() {
+                padding: 3rem;
+            }
+        }
+
+        label {
+            color: white;
+            @include montserrat();
+        }
+
+        .form {
+            &-fields {
+                display: flex;
+                flex-direction: column;
+                font-size: 1rem;
+                padding-top: 1%;
+            }
+
+            &-row {
+                margin-top: 1rem;
+            }
+
+            &-names,
+            &-email,
+            &-message {
+                text-align: left;
+
+                label {
+                    display: block;
+                    padding-bottom: 5px;
+                }
+
+                input,
+                textarea {
+                    background: #303030;
+                    border: none;
+                    padding: 1rem;
+                    width: 100%;
+                    box-shadow: $shadow;
+                }
+
+                ::placeholder {
+                    color: lightgray;
+                    @include montserrat();
+                    font-size: 0.85rem;
+                }
+            }
+
+        }
+
+        .main-btn {
+            width: 100%;
+            color: white;
+            text-transform: uppercase;
+            box-shadow: $shadow;
+
+            // option-2
+            // border: 2px solid rgb(26, 26, 26, 0.7);
+            // background: rgb(26, 26, 26, 0.7);
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+        .map-wrapper {
+            padding: 1rem;
+            height: 100%;
+
+            @include desktop() {
+                padding: 3rem;
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: 4px solid $gold !important;
+                box-shadow: $shadow;
+            }
+        }
+    }
+
 }
 
 // =========================
@@ -527,12 +702,16 @@ footer {
 //background img size: 477 x 600 (mobile)
 //background img size: 1400 x 788 (desktop)
 .hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .85) 15%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/hero-mobile.jpg") no-repeat 40% 50%;
+    // option-2
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.jpg") no-repeat 40% 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 15%, rgba(0, 0, 0, 0.53) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/breeding2.jpg") no-repeat 50% 50%;
     background-size: cover;
     height: 600px;
 
     @include desktop() {
-        background: linear-gradient(to right, rgba(0, 0, 0, .85) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/hero.jpg") no-repeat left;
+        // option-2
+        // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.jpg") no-repeat 50% 50%;
+        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/hero-desktop3.jpg") no-repeat 50% 50%;
         background-size: cover;
         height: 600px;
     }
@@ -548,11 +727,14 @@ footer {
         text-align: center;
 
         @include desktop() {
-            top: 35%;
-            left: 5%;
-            width: max-content;
+            top: 7rem;
+            // left: 5%;
+            left: 50%;
+            transform: translatex(-50%);
+            // width: max-content;
             max-width: none;
             margin: 0;
+            // text-align: initial;
             text-align: initial;
             letter-spacing: $spacing-large;
         }
@@ -560,6 +742,7 @@ footer {
         h1 {
             padding-bottom: 15px;
             line-height: $line-height-lg;
+            text-align: center;
 
             @include desktop() {
                 margin-left: 1.5%;
@@ -573,7 +756,7 @@ footer {
         }
 
         .lines {
-            color: $gold;
+            // color: $gold;
             width: fit-content;
             position: relative;
 
@@ -612,14 +795,77 @@ footer {
             }
         }
     }
+
+    a.main-btn {
+        position: relative;
+        top: 15rem;
+    }
 }
 
-#home .hero .title-small {
-    margin: 0 auto;
-    max-width: 300px;
+#home {
+    .hero {
+        #nav {
+            background: none;
+            border: none;
 
-    @include desktop {
-        max-width: none;
+            a {
+                color: $white;
+            }
+
+            .nav-wrapper {
+                background: none;
+            }
+        }
+
+        .title-small {
+            margin: 0 auto;
+            max-width: 300px;
+
+            @include desktop {
+                max-width: none;
+            }
+        }
+
+        .main-btn:hover {
+            border: 2px solid $gold;
+        }
+    }
+
+    .news {
+        &-tile {
+            padding-top: 0;
+
+            &-text {
+                width: 800px;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            &-wrapper {
+                @include desktop() {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            height: auto;
+            width: auto;
+        }
+
+        .read-more {
+            text-align: center;
+            line-height: normal;
+            padding-top: 10px;
+
+            a {
+                font-weight: 600;
+            }
+        }
     }
 }
 
@@ -633,7 +879,8 @@ footer {
 //homepage - quick words
 // <img> : 350 x 253
 .quick-words {
-    background: linear-gradient(to bottom, rgba(11, 11, 11, .9) 15%, rgba(11, 11, 11, 0.9) 100%), url("../assets/img/background-sheep.webp") no-repeat 40% 50%;
+    // background: linear-gradient(to bottom, rgba(11, 11, 11, .9) 15%, rgba(11, 11, 11, 0.9) 100%), url("../assets/img/background-sheep.webp") no-repeat 40% 50%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.65) 15%, rgba(11, 11, 11, 0.65) 100%), url("../assets/img/background-1.jpg") no-repeat 40% 50%;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -675,8 +922,8 @@ footer {
 
         @include desktop () {
             position: relative;
-            right: -42%;
-            top: 16%;
+            right: -26rem;
+            top: 4rem;
         }
     }
 
@@ -688,7 +935,7 @@ footer {
         margin-top: 0.5rem;
 
         @include desktop {
-            max-width: 350px;
+            max-width: 450px;
             position: relative;
             right: 9%;
             top: -13%;
@@ -696,7 +943,7 @@ footer {
     }
 
     &-bottom {
-        background-color: $dark;
+        background-color: $dark-medium;
         padding: 60px 4% 5px;
         margin: -30px auto 0;
         width: 95vw;
@@ -705,14 +952,14 @@ footer {
 
         @include desktop {
             position: relative;
-            max-width: 750px;
+            max-width: 720px;
             left: 3%;
             top: -31%;
             padding: 30px;
 
             .text-block,
             .read-more {
-                padding-left: 38%;
+                padding-left: 22rem;
             }
 
             .line::after {
@@ -767,11 +1014,13 @@ footer {
         }
 
         &.one {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/tornjak-pandora.jpg") no-repeat 0 15%;
+            // option-2
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url("../assets/img/meet-trainers.jpg") no-repeat 50% 15%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.85) 80%), url("../assets/img/meet-trainers.jpg") no-repeat 50% 15%;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/tornjak-pandora.jpg") no-repeat 0 15%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/meet-trainers.jpg") no-repeat 50% 15%;
                 background-size: cover;
             }
 
@@ -793,7 +1042,9 @@ footer {
         }
 
         &.two {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/tornjak-ola.jpg") no-repeat 0% 20%;
+            // option-2
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/lessions2.jpg") no-repeat 60% 60%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/lessions2.jpg") no-repeat 60% 60%;
             background-size: cover;
 
             @include desktop {
@@ -801,7 +1052,7 @@ footer {
             }
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/tornjak-ola.jpg") no-repeat 0 20%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.85) 100%), url("../assets/img/lessions2.jpg") no-repeat 60% 60%;
                 background-size: cover;
             }
 
@@ -823,11 +1074,13 @@ footer {
         }
 
         &.three {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/tornjak-dagon.jpg") no-repeat 20% 20%;
+            // option-2
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/tornjak-dagon.jpg") no-repeat 20% 20%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.75) 100%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
                 background-size: cover;
             }
 
@@ -852,14 +1105,19 @@ footer {
     .card-border {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         height: 400px;
+
+        @include desktop() {
+            height: 630px;
+        }
     }
 
     .card-text {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 3rem;
     }
 
     .main-btn {
@@ -970,7 +1228,7 @@ footer {
 // About Breed Page
 // =========================
 
-#facility {
+#page-breed {
     .hero {
         background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/tornjak-lipa-fend-mobile.jpg") no-repeat center center;
         background-size: cover;
@@ -1013,15 +1271,9 @@ footer {
             }
         }
     }
-
-    
-
-    .line::after {
-        right: -4rem;
-    }
 }
 
-//facility - hero text
+//breed - hero text
 .two-col {
     display: flex;
     justify-content: center;
@@ -1068,10 +1320,7 @@ footer {
 .overlap {
     display: flex;
     justify-content: center;
-    // background: #202020;
-    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.65) 15%, rgba(11, 11, 11, 0.65) 100%), url("../assets/img/s6ranch-meet-the-trainer.jpg") no-repeat 40% -250%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: #202020;
 
     &-quote {
         display: flex;
@@ -1190,7 +1439,9 @@ footer {
         line-height: 3rem;
 
         @include desktop {
-            font-size: 1.75rem;
+            // font-size: 1.75rem;
+            font-size: 2.5rem;
+            padding-bottom: 1.5rem;
         }
     }
 
@@ -1764,11 +2015,11 @@ footer {
 // =========================
 #membership {
     .hero {
-        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("/assets/img/tornjak-lipa.jpg") no-repeat center bottom;
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/tornjak-lipa.jpg") no-repeat center bottom;
         background-size: cover;
 
         @include desktop() {
-            background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("/assets/img/tornjak-lipa.jpg") no-repeat center 75%;
+            background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/tornjak-lipa.jpg") no-repeat center 75%;
             background-size: cover;
             height: 600px;
         }
@@ -1811,31 +2062,31 @@ footer {
 
     .square {
         &.one {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/show-zadok.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/show-zadok.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/show-zadok.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/show-zadok.jpg") no-repeat center;
                 background-size: cover;
             }
         }
 
         &.two {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/unethical-breeding-small.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/unethical-breeding-small.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/unethical-breeding-small.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/unethical-breeding-small.jpg") no-repeat center;
                 background-size: cover;
             }
         }
 
         &.three {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/tornjak-brita-pup.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/tornjak-brita-pup.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/tornjak-brita-pup.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/tornjak-brita-pup.jpg") no-repeat center;
                 background-size: cover;
             }
         }
@@ -1847,11 +2098,11 @@ footer {
 // =========================
 #breeder-registration {
     .hero {
-        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("/assets/img/puppies-mobile.jpg") no-repeat center bottom;
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/puppies-mobile.jpg") no-repeat center bottom;
         background-size: cover;
 
         @include desktop() {
-            background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("/assets/img/puppies-desktop.jpg") no-repeat center 75%;
+            background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/puppies-desktop.jpg") no-repeat center 75%;
             background-size: cover;
             height: 600px;
         }
@@ -1871,31 +2122,31 @@ footer {
 
     .square {
         &.one {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/show-zadok.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/show-zadok.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/show-zadok.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/show-zadok.jpg") no-repeat center;
                 background-size: cover;
             }
         }
 
         &.two {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/unethical-breeding-small.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/unethical-breeding-small.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/unethical-breeding-small.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/unethical-breeding-small.jpg") no-repeat center;
                 background-size: cover;
             }
         }
 
         &.three {
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("/assets/img/tornjak-puppies2.jpg") no-repeat center;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/tornjak-puppies2.jpg") no-repeat center;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("/assets/img/tornjak-puppies2.jpg") no-repeat center;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .5) 15%, rgba(11, 11, 11, 0.5) 100%), url("../assets/img/tornjak-puppies2.jpg") no-repeat center;
                 background-size: cover;
             }
         }
