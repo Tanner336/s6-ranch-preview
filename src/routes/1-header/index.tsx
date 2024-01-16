@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import tornjakZadok from "@/assets/img/tornjak-zadok.jpg";
-import { ContactForm } from "../../components/contact-form";
 
-export function Home() {
+export function Header() {
     return (<>
-        <div className="w-full h-full">
+        <div className="w-full h-full bg-red-500">
 
             <nav className="p-4 flex items-center justify-between">
                 <div>Logo</div>
@@ -18,9 +16,6 @@ export function Home() {
                 </div>
             </nav>
 
-            <ContactForm />
-
-            <img src={tornjakZadok} alt="" />
         </div>
     </>);
 }

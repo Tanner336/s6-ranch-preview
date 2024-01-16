@@ -1,21 +1,28 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, ErrorPage, Staff } from "./routes";
+import { Root, ErrorPage, Staff } from "./routes";
 import { AboutBreed } from "./routes/about-breed";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <Root />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/",
+                element: <div className="bg-green-400">34444</div>,
+            },
+            {
+                path: "/staff",
+                element: <Staff />,
+            },
+            {
+                path: "/AboutBreed",
+                element: <AboutBreed />,
+            },
+        ],
     },
-    {
-        path: "/staff",
-        element: <Staff />,
-    },
-    {
-        path: "/AboutBreed",
-        element: <AboutBreed />,
-    },
+   
 ]);
 
 export function App() {
