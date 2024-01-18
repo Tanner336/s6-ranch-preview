@@ -7,3 +7,4 @@ export * from './23-services';
 export * from './24-reining';
 export * from './25-breeding';
 export * from './26-contact';
+export * from './27-horses-for-sale';

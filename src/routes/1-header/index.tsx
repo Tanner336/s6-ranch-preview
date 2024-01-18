@@ -44,6 +44,9 @@ export function Header() {
                     <li className="nav-item">
                         <Link to="/contact">Contact</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/horses-for-sale">Horses</Link>
+                    </li>
                 </ul>
             </div>
 
