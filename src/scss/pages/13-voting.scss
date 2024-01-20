@@ -1,0 +1,21 @@
+// =========================
+// Voting Form
+// =========================
+#voting {
+    background: $dark-light;
+
+    .overlap .offset-card {
+        padding: 1rem 0 0 0;
+    }
+
+    .voting-form {
+
+        iframe {
+            height: 3520px;
+
+            @include desktop() {
+                height: 2590px;
+            }
+        }
+    }
+}

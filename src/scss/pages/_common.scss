@@ -1,0 +1,349 @@
+// =========================
+// Variables + Mixins
+// =========================
+
+// Variables
+// $gold: #d5a269;
+$gold: rgb(48, 180, 169);
+$secondary: #d4c4bc;
+$dark: #1a1a1a;
+$dark-medium: #202020;
+$dark-light: rgb(36 36 36);
+// $white: #F3F3F3;
+$white: #fff;
+$off-white: #e8e8e8;
+$break-small: 480px;
+$break-med: 600px;
+$break-lg: 768px;
+$break-xl: 1024px;
+$font-playfair: 'Playfair Display', serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$spacing-normal: normal;
+$spacing-medium: 0.25rem;
+$spacing-medium-mobile: 0.2rem;
+$spacing-large: .75rem;
+$spacing-large-mobile: .55rem;
+$line-height-lg: 1.75rem;
+$shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+// Mixins
+@mixin mobile-only {
+    @media (min-width: $break-small) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: $break-med) and (max-width: #{$break-lg - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: $break-med) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $break-lg) {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+    @media (min-width: $break-xl) {
+        @content;
+    }
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin playfair {
+    font-family: $font-playfair;
+    font-weight: 400;
+}
+
+@mixin montserrat-thin {
+    font-family: $font-montserrat;
+    font-weight: 200;
+}
+
+@mixin montserrat {
+    font-family: $font-montserrat;
+    font-weight: 400;
+}
+
+@mixin montserrat-bold {
+    font-family: $font-montserrat;
+    font-weight: 600;
+}
+
+
+// =========================
+// Default Layout
+// =========================
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    font-size: 1em;
+    @include center;
+    text-align: center;
+}
+
+section {
+    border-bottom: 1px solid $gold;
+}
+
+h1 {
+    font-size: 2.75em;
+    @include playfair();
+    margin: 0;
+
+    @include desktop() {
+        font-size: 5em;
+    }
+}
+
+h2 {
+    margin: 0;
+    margin-top: 0.15rem;
+    font-size: 1.25em;
+    @include playfair();
+    text-transform: uppercase;
+    color: $gold;
+    letter-spacing: $spacing-large-mobile;
+
+    @include desktop {
+        letter-spacing: $spacing-large;
+        font-size: 1.5em;
+        margin-top: 0.25rem;
+    }
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.75em;
+    @include playfair();
+    color: $gold;
+    text-transform: uppercase;
+    letter-spacing: $spacing-large-mobile;
+
+    @include desktop {
+        letter-spacing: $spacing-large;
+    }
+}
+
+p {
+    margin: 0;
+    font-size: 0.85rem;
+    @include montserrat-thin();
+    line-height: 1.4rem;
+    color: $white;
+
+    @include desktop {
+        line-height: 1.5rem;
+    }
+}
+
+a,
+a:visited {
+    @include montserrat();
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    font-size: 0.95em;
+    @include montserrat();
+}
+
+.hide {
+    display: none !important;
+}
+
+// =========================
+// Reusable Styles
+// =========================
+
+//main button
+.main-btn {
+    display: inline-block;
+    width: min-content;
+    // option-2
+    // border: 2px solid rgb(94 82 73 / 65%);
+    border: 2px solid rgb(26, 26, 26, 0.7);
+    // option-2
+    background: rgb(26, 26, 26, 0.7);
+    // background: rgb(94 82 73 / 50%);
+    padding: 10px 14px;
+    font-size: 0.75rem;
+    letter-spacing: $spacing-large-mobile;
+
+    @include tablet-up () {
+        display: initial;
+        letter-spacing: $spacing-large;
+    }
+
+    .main-btn-text {
+        text-transform: uppercase;
+        color: $white;
+        line-height: 1.5rem;
+        margin-right: -10px;
+        margin-left: 10px;
+        // line-height: $line-height-lg;
+
+        @include tablet-up () {
+            margin-right: -$spacing-large;
+            margin-left: 0;
+        }
+    }
+
+    &:hover {
+        border: 2px solid $gold;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+}
+
+//s6 logo
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+
+    img {
+        height: 40px;
+    }
+
+    p {
+        @include playfair();
+        letter-spacing: $spacing-medium-mobile;
+        font-size: 30px;
+        padding-left: 10px;
+
+        @include desktop {
+            letter-spacing: $spacing-medium;
+        }
+
+        a {
+            color: rgba(255, 255, 255, .75);
+            @include playfair();
+        }
+
+        a::before {
+            content: "";
+            display: block;
+            inset: 0;
+            position: absolute;
+        }
+    }
+}
+
+//font designs
+.title-small {
+    margin: 0;
+    font-size: 0.7rem;
+    @include montserrat();
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: $spacing-large-mobile;
+
+    @include desktop {
+        letter-spacing: $spacing-large;
+        font-size: 0.75rem;
+    }
+}
+
+.title-large {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.25em;
+    @include playfair();
+    text-transform: uppercase;
+    color: $gold;
+    letter-spacing: $spacing-large-mobile;
+
+    @include desktop {
+        letter-spacing: $spacing-large;
+        font-size: 1.5em;
+    }
+}
+
+.paragraph-large {
+    font-size: 1rem;
+    @include montserrat();
+    color: $gold;
+    margin-top: 0.5rem;
+}
+
+//CTA read more
+.read-more {
+    font-size: 0.7rem;
+    @include montserrat();
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: $gold;
+    letter-spacing: $spacing-large-mobile;
+
+    @include desktop {
+        letter-spacing: $spacing-large;
+    }
+}
+
+.line {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 1px;
+        background: $gold;
+        position: absolute;
+        right: -30%;
+        top: 50%;
+
+        @include desktop() {
+            right: -5%;
+            top: 50%;
+        }
+
+    }
+}
+
+.lowercase {
+    text-transform: none;
+}
+
+//clear float
+.clear-float {
+    clear: both;
+}
+
+.hide-on-mobile {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}

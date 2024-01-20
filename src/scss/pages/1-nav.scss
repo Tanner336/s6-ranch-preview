@@ -1,0 +1,112 @@
+//main nav
+// logo: 62 x 40
+#nav {
+    background: $dark;
+    padding: 20px;
+    border-bottom: 1px solid $gold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hamburger {
+        position: relative;
+        z-index: 100;
+        background: $dark;
+        border: 1px solid transparent;
+        color: $gold;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+
+        .menu-icon {
+            background: url("../assets/svg/CiHamburger.svg") no-repeat;
+            display: block;
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            border: 1px solid $gold;
+        }
+
+        // .material-icons {
+        //     font-size: 23px;
+        // }
+
+        .close-icon {
+            background: url("../assets/svg/MaterialSymbolsClose.svg") no-repeat;
+            width: 40px;
+            height: 40px;
+            // display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .nav-wrapper {
+        display: none;
+        flex-direction: column;
+        background: $dark;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 0;
+        transform: translateY(-100%);
+        transition: transform ease-in-out 0.3s;
+        z-index: 99;
+        color: white;
+        list-style: none;
+        max-width: 800px;
+
+        a {
+            color: $gold;
+            letter-spacing: 0.25rem;
+
+            &:hover {
+                border-bottom: 1px solid $gold;
+            }
+        }
+
+        .nav-item {
+            display: block;
+            text-align: center;
+            margin: 1rem 4rem;
+            font-size: 0.9rem;
+            color: white;
+            text-decoration: none;
+
+            // @include desktop {
+            //     transform: translateY(0%);
+            //     display: flex;
+            // }
+        }
+
+        @include desktop {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            transform: translateY(0%);
+            width: 100%;
+
+            .nav-item {
+                margin: 0;
+                border-bottom: 1px solid transparent;
+
+                a {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    .show-menu {
+        // transform: translateY(34%);
+        transform: translateY(28%);
+        display: flex;
+    }
+}

@@ -1,31 +1,30 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, EffectCoverflow } from 'swiper/modules';
+//import 'swiper/css';
+
 export function HoreseForSale() {
     return (
         <main id="events" className="page-events">
-            <section className="hero">
-                <div className="two-col">
-                    <div className="two-col-wrapper">
-                        <div className="two-col-text">
-                            <h3 className="title-small">About Tornjak Club</h3>
-                            <h2>of North America</h2>
-                        </div>
-                        <div className="two-col-text-block">
-                            <p>
-                                A small group of passionate Tornjak owners gathered to share their
-                                love of the breed in September 2023. This small meeting in Ontario,
-                                Canada became the very beginning of the Tornjak Club of North
-                                America.
-                            </p>
-                            <p>
-                                TCNA is a community of Tornjak enthusiasts who have come together to
-                                share stories and knowledge about a rare and wonderful breed.
-                                Whether you're a seasoned Tornjak owner or just curious about these
-                                special pups, we're here to welcome you.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
+            <Hero />
+
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                modules={[Navigation, EffectCoverflow]}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide><Slide1 /></SwiperSlide>
+                <SwiperSlide><Slide2 /></SwiperSlide>
+                <SwiperSlide><Slide3 /></SwiperSlide>
+
+                {/* <SwiperSlide>Slide 1</SwiperSlide>
+                <SwiperSlide>Slide 2</SwiperSlide>
+                <SwiperSlide>Slide 3</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide> */}
+            </Swiper>
+
+            {/* <section>
                 <div className="slideshow-container">
 
                     <Slide1 />
@@ -46,10 +45,37 @@ export function HoreseForSale() {
                         <span className="dot" onClick={() => "currentSlide(3)"} />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </main>
     );
+}
+
+function Hero() {
+    return <section className="hero">
+        <div className="two-col">
+            <div className="two-col-wrapper">
+                <div className="two-col-text">
+                    <h3 className="title-small">About Tornjak Club</h3>
+                    <h2>of North America</h2>
+                </div>
+                <div className="two-col-text-block">
+                    <p>
+                        A small group of passionate Tornjak owners gathered to share their
+                        love of the breed in September 2023. This small meeting in Ontario,
+                        Canada became the very beginning of the Tornjak Club of North
+                        America.
+                    </p>
+                    <p>
+                        TCNA is a community of Tornjak enthusiasts who have come together to
+                        share stories and knowledge about a rare and wonderful breed.
+                        Whether you're a seasoned Tornjak owner or just curious about these
+                        special pups, we're here to welcome you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>;
 }
 
 function Slide1() {

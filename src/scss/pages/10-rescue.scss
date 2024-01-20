@@ -1,0 +1,29 @@
+// =========================
+// Rescue page
+// =========================
+#rescue {
+    .quick-words {
+        @include desktop {
+            height: 600px;
+        }
+    }
+
+    .chet {
+        border-bottom: none;
+        margin-top: 2rem;
+
+        img {
+            max-width: 250px;
+
+            @include desktop {
+                max-width: 400px;
+            }
+        }
+    }
+
+    .event-card {
+        @include desktop {
+            margin: 50px;
+        }
+    }
+}

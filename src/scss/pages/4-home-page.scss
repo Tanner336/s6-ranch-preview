@@ -1,0 +1,270 @@
+// =========================
+// Homepage
+// =========================
+
+#nav .nav-wrapper .nav-item a {
+    color: $white ;
+}
+
+#home {
+    .hero {
+        #nav {
+            background: none;
+            border: none;
+
+            a {
+                color: $white;
+            }
+
+            .nav-wrapper {
+                background: none;
+            }
+        }
+
+        .title-small {
+            margin: 0 auto;
+            max-width: 300px;
+
+            @include desktop {
+                max-width: none;
+            }
+        }
+
+        .main-btn:hover {
+            border: 2px solid $gold;
+        }
+    }
+
+    .news {
+        &-tile {
+            padding-top: 0;
+
+            &-text {
+                width: 800px;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            &-wrapper {
+                @include desktop() {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            height: auto;
+            width: auto;
+        }
+
+        .read-more {
+            text-align: center;
+            line-height: normal;
+            padding-top: 10px;
+
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+//homepage - cta button
+.cta {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $dark;
+}
+
+//homepage - quick words
+// <img> : 350 x 253
+.quick-words {
+    // background: linear-gradient(to bottom, rgba(11, 11, 11, .9) 15%, rgba(11, 11, 11, 0.9) 100%), url("../assets/img/background-sheep.webp") no-repeat 40% 50%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.65) 15%, rgba(11, 11, 11, 0.65) 100%), url("../assets/img/background-1.jpg") no-repeat 40% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop() {
+        height: 500px;
+    }
+
+    &-wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include desktop() {
+            margin: 0 auto;
+            max-width: 900px;
+        }
+    }
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 400px;
+
+
+        @include desktop() {
+            height: 350px;
+            min-width: 768px;
+            max-width: 900px;
+        }
+    }
+
+    &-title {
+        text-align: left;
+        width: fit-content;
+
+        @include desktop () {
+            position: relative;
+            right: -26rem;
+            top: 4rem;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        box-shadow: $shadow;
+        margin-top: 0.5rem;
+
+        @include desktop {
+            max-width: 450px;
+            position: relative;
+            right: 9%;
+            top: -13%;
+        }
+    }
+
+    &-bottom {
+        background-color: $dark-medium;
+        padding: 60px 4% 5px;
+        margin: -30px auto 0;
+        width: 95vw;
+        max-width: 600px;
+        text-align: left;
+
+        @include desktop {
+            position: relative;
+            max-width: 720px;
+            left: 3%;
+            top: -31%;
+            padding: 30px;
+
+            .text-block,
+            .read-more {
+                padding-left: 22rem;
+            }
+
+            .line::after {
+                right: -4rem;
+            }
+        }
+
+        a {
+            color: $gold;
+        }
+    }
+}
+
+//homepage - news
+// <img> : 450 x 320
+.news {
+    background: $dark-medium;
+
+    &-wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &-text {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    &-tile {
+        padding-top: 50px;
+    }
+
+    &-tile-wrapper {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 60px;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 1;
+        width: 450px;
+        max-width: 95%;
+        box-shadow: $shadow;
+
+        @include desktop {
+            height: 320px;
+        }
+    }
+
+    &-tile-text {
+        position: relative;
+        text-align: left;
+        background: $off-white;
+        padding: 4%;
+        z-index: 2;
+        width: 400px;
+        max-width: 90%;
+        margin-top: -50px;
+
+        @include desktop {
+            margin-top: -110px;
+            padding: 15px;
+        }
+
+        .text-block {
+            color: black;
+            padding-top: 0.5rem;
+            @include montserrat();
+        }
+
+        .paragraph-large {
+            @include montserrat-bold();
+            text-transform: capitalize;
+            letter-spacing: normal;
+        }
+
+        .read-more {
+            a {
+                color: $gold;
+            }
+
+            .line::after {
+                @include desktop {
+                    right: -4rem;
+                }
+            }
+        }
+    }
+
+    .tile-stories,
+    .tile-events {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
