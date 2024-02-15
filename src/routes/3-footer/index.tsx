@@ -5,8 +5,10 @@ export function Footer() {
         <footer>
             <div className="footer">
                 <ContactUsForm />
-                <Credencials />
-                <Copyright />
+                <div className="footer-socials">
+                    <Credencials />
+                    <Copyright />
+                </div>
             </div>
 
             <div id="fb-root" />
@@ -32,47 +34,39 @@ function Copyright() {
     return (
         <div className="contact">
             <div className="social-media-icons">
+                {/* icon family: https://www.iconfinder.com/iconsets/free-social-media-5 */}
+                {/* facebook SVG */}
                 <a
-                    href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d"
                     target="_blank"
                     rel="noopener noreferrer"
-                >
-                    <IconFacebook />
-                </a>
-
-                <a
                     href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d"
+                >
+                    <svg viewBox="0 0 32 32" width={35} height={35} fill="#30B4A9">
+                        <path d="M13.9 24.12h3.35V16h2.24l.3-2.8h-2.54v-1.4c0-.73.07-1.12 1.12-1.12h1.4v-2.8h-2.24c-2.7 0-3.64 1.36-3.64 3.64v1.68h-1.68V16h1.68v8.12z" />
+                        <path d="M16 1c8.27 0 15 6.73 15 15s-6.73 15-15 15S1 24.27 1 16 7.73 1 16 1m0-1a16 16 0 1 0 0 32 16 16 0 0 0 0-32z" />
+                    </svg>
+                </a>
+                {/* istagram SVG */}
+                <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://www.instagram.com/s6horses/"
                 >
-                    <IconInstagram />
+                    <svg viewBox="0 0 32 32" width={35} height={35} fill="#30B4A9">
+                        <path d="M21.87 8.17H10.13c-1.11 0-1.96.85-1.96 1.96v11.74c0 1.11.85 1.96 1.96 1.96h11.74c1.11 0 1.96-.85 1.96-1.95V10.13c0-1.11-.85-1.96-1.96-1.96zm-5.86 4.75a3.1 3.1 0 0 1 3.15 3.05A3.1 3.1 0 0 1 16 19.02a3.1 3.1 0 0 1-3.14-3.05A3.1 3.1 0 0 1 16 12.92zm5.86 8.47c0 .34-.14.49-.49.49H10.61c-.34 0-.49-.15-.49-.5v-6.85l1.22.27c-.13.42-.2.87-.2 1.34a4.8 4.8 0 0 0 4.87 4.72 4.8 4.8 0 0 0 4.87-4.72c0-.47-.07-.92-.2-1.34l1.2-.27v6.86zm0-8.82c0 .27-.22.5-.49.5h-1.95a.49.49 0 0 1-.5-.5v-1.96c0-.27.22-.48.5-.48h1.95c.28 0 .5.21.5.48v1.96z" />
+                        <path d="M16 1c8.27 0 15 6.73 15 15s-6.73 15-15 15S1 24.27 1 16 7.73 1 16 1m0-1a16 16 0 1 0 0 32 16 16 0 0 0 0-32z" />
+                    </svg>
                 </a>
-
-                {/* Email */}
-                {/* <svg width="35" height="35" version="1.1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <a href="mailto: tcna@tornjakclub.com">
-                        <g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1">
-                            <g id="mail">
-                                <path
-                                    d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z"
-                                    fill="#333333" />
-                                <path
-                                    d="M30,33.4615385 L47.3076923,18.4615385 L12.6923077,18.4615385 L30,33.4615385 Z M25.3251765,31.8010536 L30,35.6382399 L34.6015813,31.8010536 L47.3076923,42.6923077 L12.6923077,42.6923077 L25.3251765,31.8010536 Z M11.5384615,41.5384615 L11.5384615,19.6153846 L24.2307692,30.5769231 L11.5384615,41.5384615 Z M48.4615385,41.5384615 L48.4615385,19.6153846 L35.7692308,30.5769231 L48.4615385,41.5384615 Z"
-                                    fill="#d5a269" />
-                            </g>
-                        </g>
-                    </a>
-                </svg> */}
             </div>
-            
-            <p className="small-text">2601 Eden Plains Road</p>
-            <p className="small-text">Knightsen, CA 94548</p>
-            <p className="small-text">
-                <a href="https://sitellama.io/" target="_blank">
-                    Site by Sitellama
-                </a>
-            </p>
+            <div className="">
+                <p className="small-text">2601 Eden Plains Road</p>
+                <p className="small-text">Knightsen, CA 94548</p>
+                <p className="small-text">
+                    <a href="https://sitellama.com/" target="_blank">
+                        Site by Sitellama
+                    </a>
+                </p>
+            </div>
         </div>
     );
 }
@@ -83,7 +77,7 @@ function ContactUsForm() {
             <div className="contact-us-wrapper">
                 <div className="form-container">
                     <div className="form-title">
-                        <h2>Contact Us</h2>
+                        <h2>Contact Us!</h2>
                     </div>
                     <div className="form-fields">
                         <form
@@ -96,16 +90,18 @@ function ContactUsForm() {
                             <input
                                 type="hidden"
                                 name="access_key"
-                                defaultValue="a04f96ee-90d4-419a-98a1-81e984f2f3de" />
+                                defaultValue="a04f96ee-90d4-419a-98a1-81e984f2f3de"
+                            />
                             <input
                                 type="hidden"
                                 name="subject"
-                                defaultValue="New Submission from Web3Forms" />
+                                defaultValue="New Submission from Web3Forms"
+                            />
                             <input
                                 type="checkbox"
                                 name="botcheck"
-                                id=""
-                                style={{ display: "none" }} />
+                                style={{ display: "none" }}
+                            />
                             <div className="form-names form-row">
                                 <div className="form-names-first">
                                     <label htmlFor="fname">Name</label>
@@ -113,19 +109,13 @@ function ContactUsForm() {
                                         type="text"
                                         name="name"
                                         id="first_name"
-                                        placeholder="John Doe"
-                                        required />
+                                        placeholder="First and Last Name"
+                                        required
+                                    />
                                     <div className="empty-feedback invalid-feedback">
                                         Please provide your name.
                                     </div>
                                 </div>
-                                {/* <div class="form-names-last">
-                            <label for="lname">Last Name</label>
-                            <input type="text" name="last_name" id="lname" placeholder="Doe" required />
-                            <div class="empty-feedback invalid-feedback">
-                            Please provide your last name.
-                            </div>
-                            </div> */}
                             </div>
                             <div className="form-email form-row">
                                 <div>
@@ -135,7 +125,8 @@ function ContactUsForm() {
                                         name="email"
                                         id="email"
                                         placeholder="you@email.com"
-                                        required />
+                                        required
+                                    />
                                     <div className="empty-feedback">
                                         Please provide your email address.
                                     </div>
@@ -152,14 +143,15 @@ function ContactUsForm() {
                                     id="message"
                                     placeholder="Your Message"
                                     required
-                                    defaultValue={""} />
+                                    defaultValue={""}
+                                />
                                 <div className="empty-feedback invalid-feedback">
                                     Please enter a message.
                                 </div>
                             </div>
                             <div className="form-submit form-row">
-                                <button type="submit" className="main-btn">
-                                    Send Message
+                                <button className="lines" type="submit">
+                                    Send
                                 </button>
                             </div>
                             <p id="result" />
@@ -175,7 +167,8 @@ function ContactUsForm() {
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade" />
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
                     </div>
                 </div>
             </div>

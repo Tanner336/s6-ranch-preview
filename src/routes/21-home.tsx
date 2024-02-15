@@ -1,8 +1,11 @@
 import { HeaderBody } from "./1-header";
+import { SEO } from "./SEO";
 
 export function Home() {
     return (
         <main id="home">
+            <SEO title="S6 Ranch" description="Beginner friendly page for learning React Helmet" href="/facility" />
+
             <section className="hero">
                 <HeaderBody />
                 <div className="hero-text">
@@ -15,7 +18,7 @@ export function Home() {
                     <span className="main-btn-text">Our Services</span>
                 </a>
             </section>
-            
+
             <section className="quick-words">
                 <div className="quick-words-wrapper">
                     <div className="quick-words-top">
@@ -152,107 +155,7 @@ export function Home() {
                     </div>
                 </div>
             </section>
-            <section id="contact-us">
-                <div className="contact-us-wrapper">
-                    <div className="form-container">
-                        <div className="form-title">
-                            <h2>Contact Us</h2>
-                        </div>
-                        <div className="form-fields">
-                            <form
-                                action="https://api.web3forms.com/submit"
-                                method="POST"
-                                id="form"
-                                className="needs-validation"
-                                noValidate
-                            >
-                                <input
-                                    type="hidden"
-                                    name="access_key"
-                                    defaultValue="a04f96ee-90d4-419a-98a1-81e984f2f3de"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="subject"
-                                    defaultValue="New Submission from Web3Forms"
-                                />
-                                <input
-                                    type="checkbox"
-                                    name="botcheck"
-                                    id=""
-                                    style={{ display: "none" }}
-                                />
-                                <div className="form-names form-row">
-                                    <div className="form-names-first">
-                                        <label htmlFor="fname">Name</label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            id="first_name"
-                                            placeholder="John Doe"
-                                            required
-                                        />
-                                        <div className="empty-feedback invalid-feedback">
-                                            Please provide your name.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="form-email form-row">
-                                    <div>
-                                        <label htmlFor="email">Email</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            id="email"
-                                            placeholder="you@email.com"
-                                            required
-                                        />
-                                        <div className="empty-feedback">
-                                            Please provide your email address.
-                                        </div>
-                                        <div className="invalid-feedback">
-                                            Please provide a valid email address.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="form-message form-row">
-                                    <label htmlFor="message">Message</label>
-                                    <textarea
-                                        rows={5}
-                                        name="message"
-                                        id="message"
-                                        placeholder="Your Message"
-                                        required
-                                        defaultValue={""}
-                                    />
-                                    <div className="empty-feedback invalid-feedback">
-                                        Please enter a message.
-                                    </div>
-                                </div>
-                                <div className="form-submit form-row">
-                                    <button type="submit" className="main-btn">
-                                        Send Message
-                                    </button>
-                                </div>
-                                <p id="result" />
-                            </form>
-                        </div>
-                    </div>
-                    <div className="map-container">
-                        <div className="map-wrapper">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.579481420945!2d-121.6641405241076!3d37.963603771938374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fff8d308e2a31%3A0xd62788201a0e2933!2sS6%20Ranch!5e0!3m2!1sen!2sus!4v1705364626387!5m2!1sen!2sus"
-                                width={450}
-                                height={450}
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
     );
 }
+

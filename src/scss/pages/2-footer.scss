@@ -11,12 +11,12 @@ footer {
         gap: 2rem;
 
         @include desktop() {
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             margin: 0 auto;
             max-width: 1400px;
             padding: 40px 30px;
-            align-items: flex-start;
+            // align-items: flex-start;
         }
 
         svg {
@@ -74,6 +74,12 @@ footer {
 
     .social-media-icons {
         padding-bottom: 15px;
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
 }
