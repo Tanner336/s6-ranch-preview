@@ -1,5 +1,6 @@
 import { HeaderBody } from "./1-header";
 import { SEO } from "./SEO";
+import imgHorse2 from "../assets/img/horse-2.jpg"
 
 export function Home() {
     return (
@@ -27,7 +28,7 @@ export function Home() {
                             <h2>With Integrity</h2>
                         </div>
                         <img
-                            src="assets/img/horse-2.jpg"
+                            src={imgHorse2}
                             alt="black and white colored tornjak"
                         />
                     </div>
