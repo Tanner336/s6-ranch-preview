@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { MainMenu } from "./MainMenu";
+import { IconCross, IconHamburger } from "../../ui/icons";
 
 export function HeaderBody() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,8 @@ export function HeaderBody() {
             </div>
  */}
             <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <div className={isMenuOpen ? "menu-icon" : "close-icon"} />
+                {/* <div className={isMenuOpen ? "close-icon" : "menu-icon"} /> */}
+                {isMenuOpen ? <IconCross /> : <IconHamburger />}
             </button>
 
             {/* <button className="hamburger">
@@ -28,7 +30,7 @@ export function HeaderBody() {
                 </button>
                 */}
 
-            <MainMenu />
+            <MainMenu isOpen={isMenuOpen}/>
         </div>
     );
 }

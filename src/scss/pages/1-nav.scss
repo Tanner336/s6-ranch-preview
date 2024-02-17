@@ -18,28 +18,25 @@
         height: 40px;
         padding: 0;
 
-        .menu-icon {
-            background: url("../assets/svg/CiHamburger.svg") no-repeat;
-            display: block;
-            background-size: cover;
-            width: 40px;
-            height: 40px;
-        }
+        // .menu-icon {
+        //     background: url("../assets/svg/CiHamburger.svg") no-repeat;
+        //     display: block;
+        //     background-size: cover;
+        //     width: 40px;
+        //     height: 40px;
+        // }
 
         &:hover {
             border: 1px solid $gold;
         }
 
-        // .material-icons {
-        //     font-size: 23px;
+        // .close-icon {
+        //     background: url("../assets/svg/MaterialSymbolsClose.svg") no-repeat;
+        //     display: block;
+        //     background-size: cover;
+        //     width: 40px;
+        //     height: 40px;
         // }
-
-        .close-icon {
-            background: url("../assets/svg/MaterialSymbolsClose.svg") no-repeat;
-            width: 40px;
-            height: 40px;
-            // display: none;
-        }
 
         @include desktop {
             display: none;
@@ -47,7 +44,7 @@
     }
 
     .nav-wrapper {
-        display: none;
+        // display: none;
         flex-direction: column;
         background: $dark;
         position: absolute;

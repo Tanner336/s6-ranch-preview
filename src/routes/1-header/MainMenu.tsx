@@ -1,7 +1,8 @@
 import { CSSProperties } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { classNames } from "../../utils";
 
-export function MainMenu() {
+export function MainMenu({isOpen}: {isOpen: boolean}) {
     const loc = useLocation();
 
     const activeStyles = (path: string): CSSProperties => path === loc.pathname
@@ -14,7 +15,7 @@ export function MainMenu() {
         : {};
 
     return (
-        <ul className="nav-wrapper">
+        <ul className={classNames("nav-wrapper", isOpen && "show-menu")}>
             <li className="nav-item">
                 <Link to="/" style={activeStyles('/')}>Home</Link>
             </li>

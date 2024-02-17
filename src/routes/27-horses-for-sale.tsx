@@ -78,6 +78,49 @@ function Hero() {
     </section>;
 }
 
+/*
+"str".split(/!\[\](\(*.jpg\))/i)
+----------------------------------------------
+
+![](image-url)
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+----------------------------------------------
+
+![](image-url)
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+#title
+description
+
+----------------------------------------------
+*/
+
 function Slide1() {
     return <div className="mySlides fade">
         <div className="event-card-top">
