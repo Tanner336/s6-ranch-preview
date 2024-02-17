@@ -4,12 +4,12 @@ export function Facility() {
     return (
         <main id="facility">
 
-                <Helmet>
-                    <link rel='canonical' href='https://www.tornjak.org/facility' />
-                    <title>Learning React Helmet!</title>
-                    <meta name='description' content='Beginner friendly page for learning React Helmet.' />
-                    <meta name="title" content="Default Title" data-react-helmet="true"></meta>
-                </Helmet>
+            {/* <Helmet>
+                <link rel='canonical' href='https://www.tornjak.org/facility' />
+                <title>Learning React Helmet!</title>
+                <meta name='description' content='Beginner friendly page for learning React Helmet.' />
+                <meta name="title" content="Default Title" data-react-helmet="true"></meta>
+            </Helmet> */}
 
             <section className="hero">
                 <div className="two-col">
