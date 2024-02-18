@@ -1,0 +1,61 @@
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#facility {
+    .hero {
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/entry-v2.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-wrapper {
+        height: 33.33%;
+    }
+
+    .cta {
+        background: $dark-medium;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .news {
+        &-wrapper {
+            padding-top: 0;
+
+            @include desktop {
+                padding-top: 50px;
+            }
+        }
+
+        &-tile-wrapper {
+            padding-top: 0;
+        }
+
+        &-tile-text {
+            margin-top: 0;
+
+            @include desktop {
+                margin-top: -50px;
+            }
+        }
+    }
+}
+
+.cta-text-block {
+    background: $off-white;
+    padding: 2rem;
+
+    h3,
+    p {
+        color: black;
+        font-weight: 400;
+    }
+
+    a {
+        color: $teal;
+    }
+}

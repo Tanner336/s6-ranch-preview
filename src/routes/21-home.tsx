@@ -1,6 +1,7 @@
 import { HeaderBody } from "./1-header";
 import { SEO } from "./SEO";
-import imgHorse2 from "../assets/img/horse-2.jpg"
+import imgHorse2 from "../assets/img/horse-2.jpg";
+import { Link } from "react-router-dom";
 
 export function Home() {
     return (
@@ -55,9 +56,14 @@ export function Home() {
                             <h2 className="lines">
                                 <span>Trainers</span>
                             </h2>
-                            <a className="main-btn" tabIndex={0} href="/pages/about-breed.html">
+
+                            <Link to="/breeding" className="main-btn">
+                                <span className="main-btn-text">more info2</span>
+                            </Link>
+
+                            {/* <a className="main-btn" tabIndex={0} href="/pages/about-breed.html">
                                 <span className="main-btn-text">more info</span>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
@@ -68,7 +74,7 @@ export function Home() {
                             <h2 className="lines">
                                 <span>Lessions</span>
                             </h2>
-                            <a className="main-btn" tabIndex={0} href="/pages/facilities.html">
+                            <a className="main-btn" href="/pages/facilities.html">
                                 <span className="main-btn-text">more info</span>
                             </a>
                         </div>
@@ -81,7 +87,7 @@ export function Home() {
                             <h2 className="lines">
                                 <span>Breedeing</span>
                             </h2>
-                            <a className="main-btn" tabIndex={0} href="/pages/breeders.html">
+                            <a className="main-btn" href="/pages/breeders.html">
                                 <span className="main-btn-text">more info</span>
                             </a>
                         </div>
