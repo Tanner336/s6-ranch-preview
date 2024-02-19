@@ -11,12 +11,12 @@ footer {
         gap: 2rem;
 
         @include desktop() {
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
             margin: 0 auto;
             max-width: 1400px;
             padding: 40px 30px;
-            // align-items: flex-start;
+            align-items: flex-start;
         }
 
         svg {
@@ -24,7 +24,7 @@ footer {
         }
 
         // a {
-        //     color: $gold;
+        //     color: $teal;
         // }
 
         .contact,
@@ -35,7 +35,7 @@ footer {
             p {
                 letter-spacing: $spacing-medium-mobile;
                 // line-height: 2.5rem;
-                // color: $gold;
+                // color: $teal;
 
                 @include desktop {
                     letter-spacing: $spacing-medium;
@@ -74,12 +74,6 @@ footer {
 
     .social-media-icons {
         padding-bottom: 15px;
-    }
-
-    .footer-socials {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
     }
 
 }

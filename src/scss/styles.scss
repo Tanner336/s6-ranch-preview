@@ -4,30 +4,15 @@
 @import "normalize";
 @import "fonts";
 
+
+// =========================
+// Header & Footer & Pages
+// =========================
+
 @import "pages/common.scss";
-
-// =========================
-// Header & Footer & Contact Form
-// =========================
-
-@import "pages/33-1-hero.scss";
-@import "pages/33-2-card.scss";
-@import "pages/33-3-two-col.scss";
-
 @import "pages/1-nav.scss";
 @import "pages/2-footer.scss";
 @import "pages/3-contact-form.scss";
 @import "pages/4-home-page.scss";
-@import "pages/5-about-bread.scss";
-@import "pages/6-club.scss";
-@import "pages/7-breeders.scss";
-@import "pages/8-events.scss";
-@import "pages/9-stories.scss";
-@import "pages/10-rescue.scss";
-@import "pages/11-membership.scss";
-@import "pages/12-breeder-registration.scss";
-@import "pages/13-voting.scss";
-@import "pages/14-article.scss";
 @import "pages/15-facility.scss";
-
 @import "pages/27-horses-for-sale.scss";
