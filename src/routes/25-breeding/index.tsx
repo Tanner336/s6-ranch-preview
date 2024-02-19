@@ -2,7 +2,7 @@ import { Hero } from "./1-hero";
 import { Card } from "./2-carousel";
 import { cardInfos } from "./slider-data";
 
-export function HoreseForSale() {
+export function Breeding() {
   return (
     <main id="for-sale" className="page-events">
       <Hero />
