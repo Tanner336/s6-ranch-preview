@@ -1,9 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+import { SEO } from './SEO';
 
 export function Facility() {
     return (
         <main id="facility">
-
+            <SEO title="S6 Ranch Facility" description="Horse stables and accomodations for indoor and outdoor horse training" href="/facility" />
             {/* <Helmet>
                 <link rel='canonical' href='https://www.tornjak.org/facility' />
                 <title>Learning React Helmet!</title>

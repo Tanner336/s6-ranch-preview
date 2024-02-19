@@ -7,9 +7,9 @@ export function MainMenu({isOpen}: {isOpen: boolean}) {
 
     const activeStyles = (path: string): CSSProperties => path === loc.pathname
         ? {
-            color: "white",
+            color: "rgb(48, 180, 169)",
             fontWeight: "bold",
-            transform: 'scaleY(3.5)',
+            transform: 'scaleY(1.5)',
             display: 'inline-block',
         }
         : {};
