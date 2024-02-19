@@ -1,40 +1,136 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
-import { SEO } from "./SEO";
-//import 'swiper/css';
+import { Fragment, useRef } from "react";
+import { Swiper, SwiperRef, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation, EffectCoverflow } from 'swiper/modules';
+import 'swiper/css';
+
+import img1 from "../assets/img/maggie-horse.jpg";
+import img2 from "../assets/img/maggie-horse.jpg";
+import img3 from "../assets/img/maggie-horse.jpg";
+
+type CardDataItem = {
+    title: string;
+    description: string;
+};
+
+type CardInfo = {
+    img: string;
+    cardDataItems: CardDataItem[];
+    last: string;
+    lastUrl: string;
+
+};
+
+const cardDataItems: CardDataItem[] = [
+    {
+        title: "Name",
+        description: "Seabiscuit",
+    },
+    {
+        title: "Breed",
+        description: "Male",
+    },
+    {
+        title: "Price",
+        description: "10K",
+    },
+];
+
+const cardInfos: CardInfo[] = [
+    {
+        img: img1,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: './voting.html'
+    },
+    {
+        img: img2,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: './voting.html'
+    },
+    {
+        img: img3,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: './voting.html'
+    },
+];
+
+function SS() {
+    const swiper22 = useSwiper();
+    console.log('swiper22', swiper22);
+    return (
+        <>
+            {[1, 2, 3].map((i, el) => {
+                return (
+                    <SwiperSlide key={el} style={{ color: 'red' }}>
+                        Slide {el}
+                    </SwiperSlide>
+                );
+            })}
+        </>
+    );
+}
+
+function SwiperBody() {
+    const swiper2 = useSwiper();
+    console.log('swiper2', swiper2);
+    return (
+    <div className="slideshow-container">
+        <SwiperSlide><SlideItem cardInfo={cardInfos[0]} /></SwiperSlide>
+        <SwiperSlide><SlideItem cardInfo={cardInfos[1]} /></SwiperSlide>
+        <SwiperSlide><SlideItem cardInfo={cardInfos[2]} /></SwiperSlide>
+
+        <button onClick={() => swiper2.slidePrev()}>Prev</button>
+        <button onClick={() => swiper2.slideNext()}>Next</button>
+    </div>
+    );
+}
+
 
 export function HoreseForSale() {
-  return (
-    <>
-      <SEO title="S6 Ranch Horses For Sale" description="Horses for sale offered at S6 Ranch" href="/horses-for-sale" />
+    // const swiper2 = useSwiper();
+    // const swiper3 = useRef<SwiperRef>(null);
 
-      <main id="events" className="page-events">
-        <Hero />
+    // console.log('swiper', swiper2, swiper3.current);
 
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          modules={[Navigation, EffectCoverflow]}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>
-            <Slide1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Slide2 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Slide3 />
-          </SwiperSlide>
+    return (
+        <main id="events" className="page-events">
+            <Hero />
 
-          {/* <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide> */}
-        </Swiper>
+            {/* <Swiper ref={swiper3} modules={[Navigation, EffectCoverflow]} effect="fade">
+                <SS />
+            </Swiper> */}
 
-        {/* <section>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                modules={[Navigation, EffectCoverflow]}
+                // onSlideChange={() => console.log('onSlideChange: slide change')}
+                // onSwiper={(swiper) => console.log('onSwiper', swiper)}
+            >
+                <SwiperBody />
+
+            </Swiper>
+
+
+            {/* <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                //modules={[Navigation, EffectCoverflow]}
+                onSlideChange={() => console.log('onSlideChange: slide change')}
+                onSwiper={(swiper) => console.log('onSwiper', swiper)}
+            >
+                <SwiperSlide><SlideItem cardInfo={cardInfos[0]} /></SwiperSlide>
+                <SwiperSlide><SlideItem cardInfo={cardInfos[1]} /></SwiperSlide>
+                <SwiperSlide><SlideItem cardInfo={cardInfos[2]} /></SwiperSlide>
+
+                <button onClick={() => swipers2.lidePrev()}>Prev</button>
+                <button onClick={() => swiper2.slideNext()}>Next</button>
+
+            </Swiper> */}
+
+            {/* <section>
                 <div className="slideshow-container">
 
                     <Slide1 />
@@ -133,34 +229,55 @@ description
 ----------------------------------------------
 */
 
+function SlideItem({ cardInfo }: { cardInfo: CardInfo; }) {
+    return (
+        <div className="mySlides fade">
+            <div className="event-card-top">
+                <img className="event-card-img" src={cardInfo.img} />
+            </div>
+            <div className="event-card-bottom">
+
+                {cardInfo.cardDataItems.map((item, index) => (
+                    <Fragment key={index}>
+                        <p className="title-small">{item.title}</p>
+                        <h2 className="lowercase">{item.description}</h2>
+                    </Fragment>
+                ))}
+
+                <p>{cardInfo.last}</p>
+                <p className="read-more">
+                    <a className="line" href={cardInfo.lastUrl}>
+                        Inquire about this horse
+                    </a>
+                </p>
+            </div>
+        </div>
+    );
+}
+
 function Slide1() {
-  return (
-    <div className="mySlides fade">
-      <div className="event-card-top">
-        <img
-          className="event-card-img"
-          src="./src/assets/img/meetup-vote.jpg"
-        />
-        {/*<div class="event-card-date">
+    return (<div className="mySlides fade">
+        <div className="event-card-top">
+            <img className="event-card-img" src="./src/assets/img/maggie-horse.jpg" />
+            {/*<div class="event-card-date">
             <p>ongoing</p>
         </div> */}
-      </div>
-      <div className="event-card-bottom">
-        <p className="title-small">Name</p>
-        <h2 className="lowercase">Seabiscuit</h2>
-        <p className="title-small">Breed</p>
-        <h2 className="lowercase">Male</h2>
-        <p className="title-small">Price</p>
-        <h2 className="lowercase">10K</h2>
-        <p>Buy Horse now yada yada yada</p>
-        <p className="read-more">
-          <a className="line" href="./voting.html">
-            Inquire about this horse
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+        </div>
+        <div className="event-card-bottom">
+            <p className="title-small">Name</p>
+            <h2 className="lowercase">Seabiscuit</h2>
+            <p className="title-small">Breed</p>
+            <h2 className="lowercase">Male</h2>
+            <p className="title-small">Price</p>
+            <h2 className="lowercase">10K</h2>
+            <p>Buy Horse now yada yada yada</p>
+            <p className="read-more">
+                <a className="line" href="./voting.html">
+                    Inquire about this horse
+                </a>
+            </p>
+        </div>
+    </div>);
 }
 
 function Slide2() {
@@ -189,33 +306,39 @@ function Slide2() {
 }
 
 function Slide3() {
-  return (
-    <div className="mySlides fade">
-      <div className="event-card-top">
-        <img
-          className="event-card-img"
-          src="./src/assets/img/meet-scylla-dagon.jpg"
-        />
-        {/*<div class="event-card-date">
-                <p>ongoing</p>
-            </div> */}
-      </div>
-      <div className="event-card-bottom">
-        <p className="title-small">Vote on the</p>
-        <h2 className="lowercase">Next Meetup</h2>
-        <p>
-          Interested in coming to our next Tornjak Club meetup? It's a very
-          special sight to see all of the lovely Tornjaks all in one location,
-          but it take a lot of planning to coordinate people and dogs from all
-          over North America. If we have enough interest, we will hold a 2024
-          meetup. We would love to hear your thoughts on the date and location.
-        </p>
-        <p className="read-more">
-          <a className="line" href="./voting.html">
-            Vote Now
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+    return (
+        <div className="mySlides fade">
+            <div className="event-card-top">
+                <img className="event-card-img" src="./src/assets/img/facility-1.jpg" />
+            </div>
+
+            <div className="event-card-bottom">
+                <p className="title-small">Name</p>
+                <h2 className="lowercase">Oceanwafer</h2>
+                <p className="title-small">Breed</p>
+                <h2 className="lowercase">Male</h2>
+                <p className="title-small">Price</p>
+                <h2 className="lowercase">20K</h2>
+                <p>Buy Horse now yada yada yada</p>
+            </div>
+
+            {/* <div className="event-card-bottom">
+            <p className="title-small">Vote on the</p>
+            <h2 className="lowercase">Next Meetup</h2>
+            <p>
+                Interested in coming to our next Tornjak Club meetup? It's a very
+                special sight to see all of the lovely Tornjaks all in one
+                location, but it take a lot of planning to coordinate people and
+                dogs from all over North America. If we have enough interest, we
+                will hold a 2024 meetup. We would love to hear your thoughts on
+                the date and location.
+            </p>
+            <p className="read-more">
+                <a className="line" href="./voting.html">
+                    Vote Now
+                </a>
+            </p>
+        </div> */}
+        </div>
+    );
 }
