@@ -1,7 +1,6 @@
-import img1 from "@/assets/img/sample-horse1.jpg";
-import img2 from "@/assets/img/sample-horse2.jpg";
-import img3 from "@/assets/img/sample-horse3.jpg";
-import img4 from "@/assets/img/sample-horse4.jpg";
+import img1 from "@/assets/img/sample-colt1.jpg";
+import img2 from "@/assets/img/sample-colt2.jpg";
+import img3 from "@/assets/img/sample-colt3.jpg";
 
 type CardDescItem = {
   title: string;
@@ -27,19 +26,19 @@ const defCardDescItems: CardDescItem[] = [
 
 export const cardInfos: CardInfo[] = [
   {
-    img: [img1, img2, img3, img4],
+    img: [img1, img2, img3],
     cardDescItems: defCardDescItems,
     last: "Inquire about this horse",
     lastUrl: "#contact-us",
   },
   {
-    img: [img1, img2, img3, img4],
+    img: [img1, img2, img3],
     cardDescItems: defCardDescItems,
     last: "Inquire about this horse",
     lastUrl: "#contact-us",
   },
   {
-    img: [img1, img2, img3, img4],
+    img: [img1, img2, img3],
     cardDescItems: defCardDescItems,
     last: "Inquire about this horse",
     lastUrl: "#contact-us",
