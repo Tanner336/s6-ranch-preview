@@ -4,7 +4,7 @@ import { cardInfos } from "./slider-data";
 
 export function Breeding() {
   return (
-    <main id="for-sale" className="page-events">
+    <main id="breeding" className="page-events">
       <Hero />
       <div className="horses-for-sale">
         <Card cardInfo={cardInfos[0]} />
