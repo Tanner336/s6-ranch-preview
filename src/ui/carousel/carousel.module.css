@@ -29,7 +29,8 @@
     flex: 0 0 var(--slide-size);
 }
 
-.card__number {
+/* not used */
+/* .card__number {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -39,7 +40,7 @@
     font-weight: 800;
     text-align: center;
     color: #f003;
-}
+} */
 
 .card__img {
     display: block;
@@ -49,26 +50,48 @@
 }
 
 .buttons-wrapper {
-    position: absolute;
-    left: 1.5rem;
+    /* position: absolute;
+    left: 50%;
     top: 50%;
+    transform: translate(-40%, -50%); */
+
+    /* background-color: blueviolet; */
+
     display: flex;
     align-items: center;
-    transform: translateY(-50%);
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0;
+    padding: 1rem;
+
+    button {
+        padding: 0;
+        border: none;
+        color: teal;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        gap: .5rem;
+    }
 }
 
 .button__icon {
+    /* display: inline-block; */
     width: 2rem;
     height: 2rem;
-    fill: currentColor;
+    /* fill: currentColor; */
+    /* background-color: red; */
+    fill: teal;
+    cursor: pointer;
 }
 
 .button-dots-wrapper {
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     right: 0;
     bottom: -1rem;
-    color: #EF4444;
+    /* color: #EF4444; */
 
     display: flex;
     align-items: center;
@@ -77,14 +100,19 @@
     z-index: 10;
 }
 
+button {
+    background: transparent;
+}
+
 .button-dots__button {
-    width: 1.5rem;
-    height: 0.25rem;
+    width: .5rem;
+    height: .5rem;
     border-radius: 0.25rem;
     display: inline-flex;
     align-items: center;
 
-    background-color: rgb(14 165 233 / 1);
+    background-color: rgb(49 81 95);
+    border: 1px solid #ffffff;
 }
 
 .button-dots__button.active {
