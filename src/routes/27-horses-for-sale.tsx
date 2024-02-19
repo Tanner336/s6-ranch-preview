@@ -1,7 +1,7 @@
 import { Fragment, useRef } from "react";
 import { Swiper, SwiperRef, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation, EffectCoverflow } from 'swiper/modules';
-import 'swiper/css';
+import { Navigation, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
 
 import img1 from "../assets/img/maggie-horse.jpg";
 import img2 from "../assets/img/maggie-horse.jpg";
@@ -9,31 +9,30 @@ import img3 from "../assets/img/maggie-horse.jpg";
 import { Link } from "react-router-dom";
 
 type CardDataItem = {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 };
 
 type CardInfo = {
-    img: string;
-    cardDataItems: CardDataItem[];
-    last: string;
-    lastUrl: string;
-
+  img: string;
+  cardDataItems: CardDataItem[];
+  last: string;
+  lastUrl: string;
 };
 
 const cardDataItems: CardDataItem[] = [
-    {
-        title: "Name",
-        description: "Seabiscuit",
-    },
-    {
-        title: "Breed",
-        description: "Male",
-    },
-    {
-        title: "Price",
-        description: "10K",
-    },
+  {
+    title: "Name",
+    description: "Seabiscuit",
+  },
+  {
+    title: "Breed",
+    description: "Male",
+  },
+  {
+    title: "Price",
+    description: "10K",
+  },
 ];
 
 const cardInfos: CardInfo[] = [
@@ -58,64 +57,68 @@ const cardInfos: CardInfo[] = [
 ];
 
 function SS() {
-    const swiper22 = useSwiper();
-    console.log('swiper22', swiper22);
-    return (
-        <>
-            {[1, 2, 3].map((i, el) => {
-                return (
-                    <SwiperSlide key={el} style={{ color: 'red' }}>
-                        Slide {el}
-                    </SwiperSlide>
-                );
-            })}
-        </>
-    );
+  const swiper22 = useSwiper();
+  console.log("swiper22", swiper22);
+  return (
+    <>
+      {[1, 2, 3].map((i, el) => {
+        return (
+          <SwiperSlide key={el} style={{ color: "red" }}>
+            Slide {el}
+          </SwiperSlide>
+        );
+      })}
+    </>
+  );
 }
 
 function SwiperBody() {
-    const swiper2 = useSwiper();
-    console.log('swiper2', swiper2);
-    return (
+  const swiper2 = useSwiper();
+  console.log("swiper2", swiper2);
+  return (
     <div className="slideshow-container">
-        <SwiperSlide><SlideItem cardInfo={cardInfos[0]} /></SwiperSlide>
-        <SwiperSlide><SlideItem cardInfo={cardInfos[1]} /></SwiperSlide>
-        <SwiperSlide><SlideItem cardInfo={cardInfos[2]} /></SwiperSlide>
+      <SwiperSlide>
+        <SlideItem cardInfo={cardInfos[0]} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SlideItem cardInfo={cardInfos[1]} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SlideItem cardInfo={cardInfos[2]} />
+      </SwiperSlide>
 
-        <button onClick={() => swiper2.slidePrev()}>Prev</button>
-        <button onClick={() => swiper2.slideNext()}>Next</button>
+      <button onClick={() => swiper2.slidePrev()}>Prev</button>
+      <button onClick={() => swiper2.slideNext()}>Next</button>
     </div>
-    );
+  );
 }
 
-
 export function HoreseForSale() {
-    // const swiper2 = useSwiper();
-    // const swiper3 = useRef<SwiperRef>(null);
+  // const swiper2 = useSwiper();
+  // const swiper3 = useRef<SwiperRef>(null);
 
-    // console.log('swiper', swiper2, swiper3.current);
+  // console.log('swiper', swiper2, swiper3.current);
 
-    return (
-        <main id="events" className="page-events">
-            <Hero />
+  return (
+    <>
+      <main id="events" className="page-events">
+        <Hero />
 
-            {/* <Swiper ref={swiper3} modules={[Navigation, EffectCoverflow]} effect="fade">
+        {/* <Swiper ref={swiper3} modules={[Navigation, EffectCoverflow]} effect="fade">
                 <SS />
             </Swiper> */}
 
-            <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
-                modules={[Navigation, EffectCoverflow]}
-                // onSlideChange={() => console.log('onSlideChange: slide change')}
-                // onSwiper={(swiper) => console.log('onSwiper', swiper)}
-            >
-                <SwiperBody />
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          modules={[Navigation, EffectCoverflow]}
+          // onSlideChange={() => console.log('onSlideChange: slide change')}
+          // onSwiper={(swiper) => console.log('onSwiper', swiper)}
+        >
+          <SwiperBody />
+        </Swiper>
 
-            </Swiper>
-
-
-            {/* <Swiper
+        {/* <Swiper
                 spaceBetween={50}
                 slidesPerView={3}
                 //modules={[Navigation, EffectCoverflow]}
@@ -131,7 +134,7 @@ export function HoreseForSale() {
 
             </Swiper> */}
 
-            {/* <section>
+        {/* <section>
                 <div className="slideshow-container">
 
                     <Slide1 />
@@ -153,36 +156,38 @@ export function HoreseForSale() {
                     </div>
                 </div>
             </section> */}
-
-        </main>
-    );
+      </main>
+    </>
+  );
 }
 
 function Hero() {
-    return <section className="hero">
-        <div className="two-col">
-            <div className="two-col-wrapper">
-                <div className="two-col-text">
-                    <h3 className="title-small">About Tornjak Club</h3>
-                    <h2>of North America</h2>
-                </div>
-                <div className="two-col-text-block">
-                    <p>
-                        A small group of passionate Tornjak owners gathered to share their
-                        love of the breed in September 2023. This small meeting in Ontario,
-                        Canada became the very beginning of the Tornjak Club of North
-                        America.
-                    </p>
-                    <p>
-                        TCNA is a community of Tornjak enthusiasts who have come together to
-                        share stories and knowledge about a rare and wonderful breed.
-                        Whether you're a seasoned Tornjak owner or just curious about these
-                        special pups, we're here to welcome you.
-                    </p>
-                </div>
-            </div>
+  return (
+    <section className="hero">
+      <div className="two-col">
+        <div className="two-col-wrapper">
+          <div className="two-col-text">
+            <h3 className="title-small">About Tornjak Club</h3>
+            <h2>of North America</h2>
+          </div>
+          <div className="two-col-text-block">
+            <p>
+              A small group of passionate Tornjak owners gathered to share their
+              love of the breed in September 2023. This small meeting in
+              Ontario, Canada became the very beginning of the Tornjak Club of
+              North America.
+            </p>
+            <p>
+              TCNA is a community of Tornjak enthusiasts who have come together
+              to share stories and knowledge about a rare and wonderful breed.
+              Whether you're a seasoned Tornjak owner or just curious about
+              these special pups, we're here to welcome you.
+            </p>
+          </div>
         </div>
-    </section>;
+      </div>
+    </section>
+  );
 }
 
 /*
@@ -228,20 +233,19 @@ description
 ----------------------------------------------
 */
 
-function SlideItem({ cardInfo }: { cardInfo: CardInfo; }) {
-    return (
-        <div className="mySlides fade">
-            <div className="event-card-top">
-                <img className="event-card-img" src={cardInfo.img} />
-            </div>
-            <div className="event-card-bottom">
-
-                {cardInfo.cardDataItems.map((item, index) => (
-                    <Fragment key={index}>
-                        <p className="title-small">{item.title}</p>
-                        <h2 className="lowercase">{item.description}</h2>
-                    </Fragment>
-                ))}
+function SlideItem({ cardInfo }: { cardInfo: CardInfo }) {
+  return (
+    <div className="mySlides fade">
+      <div className="event-card-top">
+        <img className="event-card-img" src={cardInfo.img} />
+      </div>
+      <div className="event-card-bottom">
+        {cardInfo.cardDataItems.map((item, index) => (
+          <Fragment key={index}>
+            <p className="title-small">{item.title}</p>
+            <h2 className="lowercase">{item.description}</h2>
+          </Fragment>
+        ))}
 
                 <p>{cardInfo.last}</p>
                 <p className="read-more">
@@ -255,10 +259,14 @@ function SlideItem({ cardInfo }: { cardInfo: CardInfo; }) {
 }
 
 function Slide1() {
-    return (<div className="mySlides fade">
-        <div className="event-card-top">
-            <img className="event-card-img" src="./src/assets/img/maggie-horse.jpg" />
-            {/*<div class="event-card-date">
+  return (
+    <div className="mySlides fade">
+      <div className="event-card-top">
+        <img
+          className="event-card-img"
+          src="./src/assets/img/maggie-horse.jpg"
+        />
+        {/*<div class="event-card-date">
             <p>ongoing</p>
         </div> */}
         </div>
@@ -280,45 +288,48 @@ function Slide1() {
 }
 
 function Slide2() {
-    return <div className="mySlides fade">
-        <div className="event-card-top">
-            <img
-                className="event-card-img"
-                src="./src/assets/img/group-photo1.jpg" />
-            {/*<div class="event-card-date">
+  return (
+    <div className="mySlides fade">
+      <div className="event-card-top">
+        <img
+          className="event-card-img"
+          src="./src/assets/img/group-photo1.jpg"
+        />
+        {/*<div class="event-card-date">
             <p>ongoing</p>
         </div> */}
-        </div>
-        <div className="event-card-bottom">
-            <p className="title-small">Name</p>
-            <h2 className="lowercase">Oceanwafer</h2>
-            <p className="title-small">Breed</p>
-            <h2 className="lowercase">Male</h2>
-            <p className="title-small">Price</p>
-            <h2 className="lowercase">20K</h2>
-            <p>Buy Horse now yada yada yada</p>
-        </div>
-    </div>;
+      </div>
+      <div className="event-card-bottom">
+        <p className="title-small">Name</p>
+        <h2 className="lowercase">Oceanwafer</h2>
+        <p className="title-small">Breed</p>
+        <h2 className="lowercase">Male</h2>
+        <p className="title-small">Price</p>
+        <h2 className="lowercase">20K</h2>
+        <p>Buy Horse now yada yada yada</p>
+      </div>
+    </div>
+  );
 }
 
 function Slide3() {
-    return (
-        <div className="mySlides fade">
-            <div className="event-card-top">
-                <img className="event-card-img" src="./src/assets/img/facility-1.jpg" />
-            </div>
+  return (
+    <div className="mySlides fade">
+      <div className="event-card-top">
+        <img className="event-card-img" src="./src/assets/img/facility-1.jpg" />
+      </div>
 
-            <div className="event-card-bottom">
-                <p className="title-small">Name</p>
-                <h2 className="lowercase">Oceanwafer</h2>
-                <p className="title-small">Breed</p>
-                <h2 className="lowercase">Male</h2>
-                <p className="title-small">Price</p>
-                <h2 className="lowercase">20K</h2>
-                <p>Buy Horse now yada yada yada</p>
-            </div>
+      <div className="event-card-bottom">
+        <p className="title-small">Name</p>
+        <h2 className="lowercase">Oceanwafer</h2>
+        <p className="title-small">Breed</p>
+        <h2 className="lowercase">Male</h2>
+        <p className="title-small">Price</p>
+        <h2 className="lowercase">20K</h2>
+        <p>Buy Horse now yada yada yada</p>
+      </div>
 
-            {/* <div className="event-card-bottom">
+      {/* <div className="event-card-bottom">
             <p className="title-small">Vote on the</p>
             <h2 className="lowercase">Next Meetup</h2>
             <p>
@@ -335,6 +346,6 @@ function Slide3() {
                 </a>
             </p>
         </div> */}
-        </div>
-    );
+    </div>
+  );
 }

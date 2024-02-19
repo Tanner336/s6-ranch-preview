@@ -171,4 +171,3 @@ export function Home() {
         </main>
     );
 }
-
