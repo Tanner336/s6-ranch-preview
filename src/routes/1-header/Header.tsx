@@ -12,23 +12,9 @@ export function HeaderBody() {
                 <img className="logo-img" alt="logo" src="./src/assets/img/logo-sm.png" />
             </Link>
 
-            {/* <div className="logo">
-                <img className="logo-img" alt="logo" src="./src/assets/img/logo-sm.png" />
-                <p className="logo-text">
-                    <Link to="/" />
-                </p>
-            </div>
- */}
             <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {/* <div className={isMenuOpen ? "close-icon" : "menu-icon"} /> */}
                 {isMenuOpen ? <IconCross /> : <IconHamburger />}
             </button>
-
-            {/* <button className="hamburger">
-                    <div className="menu-icon" />
-                    <div className="close-icon" />
-                </button>
-                */}
 
             <MainMenu isOpen={isMenuOpen}/>
         </div>
