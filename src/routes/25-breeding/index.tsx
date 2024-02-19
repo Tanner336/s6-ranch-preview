@@ -9,7 +9,7 @@ export function Breeding() {
       <div className="horses-for-sale">
         <Card cardInfo={cardInfos[0]} />
         <Card cardInfo={cardInfos[1]} />
-        <Card cardInfo={cardInfos[2]} />
+        {/* <Card cardInfo={cardInfos[2]} /> */}
       </div>
     </main>
   );
