@@ -1,0 +1,92 @@
+.carousel-wrapper {
+    position: relative;
+    height: var(--slide-height);
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+    --slide-height: 19rem;
+    color: purple;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.map-wrapper {
+    margin-left: calc(var(--slide-spacing) * -1);
+    display: flex;
+    backface-visibility: hidden;
+    touch-action: pan-y;
+}
+
+.card {
+    position: relative;
+    padding-left: var(--slide-spacing);
+    min-width: 0px;
+    flex: 0 0 var(--slide-size);
+}
+
+.card__number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 9999px;
+    width: 3rem;
+    height: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: #f003;
+}
+
+.card__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: var(--slide-height);
+}
+
+.buttons-wrapper {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.button__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+}
+
+.button-dots-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    color: #EF4444;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.25rem;
+    z-index: 10;
+}
+
+.button-dots__button {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+
+    background-color: rgb(14 165 233 / 1);
+}
+
+.button-dots__button.active {
+    background-color: teal;
+}
