@@ -1,8 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
+import { Testimonial } from './Testimonial';
+import { useState } from 'react';
 
 export function Facility() {
+    const [d1, setD1] = useState("1");
     return (
         <>
             <SEO title="S6 Ranch Facility" description="Horse stables and accomodations for indoor and outdoor horse training" href="/facility" />
@@ -74,25 +77,7 @@ export function Facility() {
                     </div>
                 </section>
 
-                <section id="testimonial" className="testimonial">
-                    <div className="section-title">
-                        <h3 className="title-small">Kind Words</h3>
-                        <h2 className="title-large">From Our Community</h2>
-                    </div>
-                    <div className="testimonial-card">
-                        <div className="testimonial-copy">
-                            <div className="arrow-prev" tabIndex={0} />
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-                                sapiente necessitatibus sequi ad minima! Similique rem libero commodi,
-                                earum impedit et eaque voluptatem nobis eveniet nihil veritatis modi a
-                                laborum!
-                            </p>
-                            <div className="arrow-next" tabIndex={0} />
-                            <p className="testimonial-name">- John Doe</p>
-                        </div>
-                    </div>
-                </section>
+                <Testimonial />
 
                 <section id="contact-us">
                     <div className="contact-us-wrapper">

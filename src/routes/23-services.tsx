@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SEO } from "./SEO";
+import { Testimonial } from "./Testimonial";
 
 export function Services() {
     return (
@@ -174,7 +175,10 @@ export function Services() {
                         </div>
                     </div>
                 </section>
-                <section id="testimonial" className="testimonial">
+
+                <Testimonial />
+
+                {/* <section id="testimonial" className="testimonial">
                     <div className="section-title">
                         <h3 className="title-small">Kind Words</h3>
                         <h2 className="title-large">From Our Community</h2>
@@ -192,7 +196,7 @@ export function Services() {
                             <p className="testimonial-name">- John Doe</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <section id="contact-us">
                     <div className="contact-us-wrapper">
                         <div className="form-container">
