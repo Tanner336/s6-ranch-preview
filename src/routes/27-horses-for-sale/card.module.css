@@ -1,0 +1,37 @@
+/* .horses-for-sale {
+    background-color: blue;
+} */
+
+.card {
+    margin: 0 auto;
+    max-width: 80%;
+    /* margin: 1rem 2rem; */
+    
+    background: #2B2B2B;
+    font-size: 1.25rem;
+   
+}
+
+.card__description {
+    /* margin-top: 2rem; */
+   background: #2B2B2B;
+   text-align: left;
+   padding: 0 2.5rem 2.5rem;
+}
+
+/* .card__description__item {
+    
+    h3 {
+        font-size: 1.5rem;
+        color: beigebrown;
+        text-transform: capitalize;
+        letter-spacing: normal;
+    }
+
+    p {
+        color: #36706D;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+} */
