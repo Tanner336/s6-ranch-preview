@@ -1,3 +1,7 @@
+// =========================
+// Facility & Service Pages
+// =========================
+//titles on hero img - Facility & Service
 .page-title {
     display: flex;
     flex-direction: column;
@@ -6,6 +10,208 @@
     height: 100%;
 }
 
+//testimonials - Facility & Service
+.testimonial {
+    clear: both;
+    background: $dark-light;
+    padding: 4rem 2rem;
+
+    &-card {
+        margin: 2rem;
+    }
+
+    &-copy {
+        width: 95%;
+        max-width: 1000px;
+        padding-top: 2rem;
+        margin: 0 auto;
+        position: relative;
+
+        @include desktop() {
+            padding-top: 2rem;
+            width: 75%;
+        }
+    }
+
+    .arrow-prev {
+        content: url("../assets/svg/arrow-prev.svg");
+        display: block;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        bottom: 50%;
+        left: -4rem;
+
+        @include desktop() {
+            left: -17%;
+        }
+    }
+
+    .arrow-next {
+        content: url("../assets/svg/arrow-next.svg");
+        display: block;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        bottom: 50%;
+        right: -4rem;
+
+        @include desktop() {
+            right: -17%;
+        }
+    }
+
+    &-name {
+        padding-top: 2rem;
+    }
+}
+
+//overlap/offset card - Facility & Service
+.overlap {
+    display: flex;
+    justify-content: center;
+    background: #202020;
+
+    &-quote {
+        display: flex;
+        flex-direction: column;
+        // width: 95%;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+
+
+        @include desktop {
+            // flex-direction: row;
+            // justify-content: center;
+            align-items: flex-end;
+            margin-top: 0;
+            margin-bottom: 5rem;
+        }
+
+        #service & {
+            @include desktop-huge() {
+                height: calc(20vw + 10px);
+            }
+        }
+
+
+        img {
+            max-width: 93%;
+        }
+
+        .reverse & {
+            @include desktop {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .offset-card {
+        display: flex;
+        flex-direction: column;
+        width: clamp(300px, 80%, 900px);
+        // margin: 2rem 4rem 2rem 4rem;
+        max-width: 98%;
+        background-color: $off-white;
+        padding: 1rem;
+        text-align: left;
+        box-shadow: $shadow;
+
+        @include tablet-only() {
+            width: 60%;
+        }
+
+        @include desktop {
+            margin: -4rem 4rem 4rem 4rem;
+            padding: 2rem;
+            // order: 1;
+            width: 40%;
+        }
+
+        .title-small {
+            color: #000;
+        }
+
+        .line {
+            margin: 0.5rem 0 1.5rem;
+            padding-bottom: 50px;
+
+            &::after {
+                left: 0;
+                top: 87%
+            }
+        }
+
+        p {
+            color: #000;
+            @include montserrat;
+        }
+    }
+
+    .quote {
+        margin: 1rem;
+
+        @include desktop {
+            margin: 0;
+        }
+
+        .title-large {
+            margin: 0;
+            line-height: 2;
+        }
+    }
+
+    .read-more a {
+        color: $teal;
+    }
+
+    #facility & {
+        display: block;
+
+        .overlap-quote {
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: center;
+
+            img {
+                max-width: none;
+            }
+        }
+
+        .offset-card {
+            max-width: 95%;
+            margin: -2rem 0 0;
+            width: clamp(300px, 55%, 1100px);
+            padding: 0.25rem;
+            background: $off-white;
+
+            @include desktop() {
+                padding: 1rem;
+                margin: -4rem 0 0;
+            }
+        }
+
+        .quote {
+            @include desktop() {
+                text-align: left;
+            }
+        }
+
+        .two-col-text-block {
+            width: clamp(300px, 55%, 1100px);
+            margin: 2rem auto;
+            text-align: left;
+
+            @include desktop() {
+                margin: 5rem auto;
+                columns: 2;
+            }
+        }
+    }
+}
+
+//facility only
 #facility {
     .hero {
         background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/entry-v2.jpg") no-repeat center center;
@@ -45,6 +251,7 @@
     }
 }
 
+//facebook cta - facility
 .cta-text-block {
     background: $off-white;
     padding: 2rem;
@@ -57,5 +264,305 @@
 
     a {
         color: $teal;
+    }
+}
+
+// grid of square imgs - facility
+// background img - 575 x 575
+.square {
+    float: left;
+    position: relative;
+    width: 100%;
+    // padding-bottom: 85%;
+    padding-bottom: 50%;
+    /* = width for a 1:1 aspect ratio */
+    background-color: #1E1E1E;
+
+    @include desktop {
+        width: 33.33%;
+        padding-bottom: 25%;
+
+    }
+
+    &.border {
+        background: $dark-medium;
+
+        .table {
+            border: 1px solid grey;
+        }
+    }
+
+    // Item 1.1
+    &.two {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-2.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-2.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 1.2
+    &.three {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-8.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-8.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 1.3
+    &.four {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-1.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-1.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 2.1
+    &.five {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-5.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-5.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 2.2
+    &.six {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-7.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-7.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 2.3
+    &.seven {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-4.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-4.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    // Item 3.1
+    &.eight {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-6.jpg") no-repeat center bottom;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-6.jpg") no-repeat center bottom;
+            background-size: cover;
+        }
+    }
+
+    // Item 3.2
+    &.nine {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .7) 15%, rgba(11, 11, 11, 0.7) 100%), url("../assets/img/facility-3.jpg") no-repeat center center;
+        background-size: cover;
+
+        &:hover {
+            background: url("../assets/img/facility-3.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    .content {
+        position: absolute;
+        height: 100%;
+        /* = 100% - 2*5% padding */
+        width: 100%;
+        /* = 100% - 2*5% padding */
+        padding: 5%;
+    }
+
+    .table {
+        display: table;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            border: 1px solid grey;
+        }
+    }
+
+    .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+
+//Service only
+#service {
+    .hero {
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/contact-us1.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    .service-wrapper {
+        padding-top: 4rem;
+    }
+
+    .service-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: rgb(32, 32, 32, 0.8);
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        padding: 0;
+
+        @include desktop() {
+            flex-direction: row;
+        }
+
+        li {
+            text-transform: uppercase;
+            padding: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
+}
+
+#service section {
+    &:nth-of-type(3) {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .4) 15%, rgba(11, 11, 11, 0.4) 100%), url("../assets/img/service-one-v2.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &:nth-of-type(4) {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-two-v2.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    &:nth-of-type(5) {
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-three-v2.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}
+
+//trainers - service page only
+#trainers {
+    background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url(../assets/img/service-background-blurr.jpg) no-repeat 50% 15%;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.trainers {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include desktop() {
+        padding: 4rem 9rem 10rem;
+    }
+
+    .section-title {
+        padding: 2rem;
+
+        @include desktop() {
+            padding: 0 0 2rem 0;
+        }
+
+        .title-small,
+        .title-large {
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        color: $dark;
+    }
+
+    .img-text-box {
+        display: grid;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        padding-bottom: 1rem;
+        min-height: 400px;
+        background: $dark;
+        box-shadow: $shadow;
+
+        @include desktop() {
+            min-height: 600px;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(0, 1fr);
+            padding-bottom: 0.5rem;
+        }
+
+        .reverse {
+            order: 1;
+
+            @include desktop() {
+                order: 0;
+            }
+        }
+
+        .col-text {
+            background-color: #fff;
+            padding: 10%;
+            text-align: left;
+
+            p {
+                color: black;
+                padding-top: 1.5rem;
+            }
+        }
+    }
+
+    .col-image {
+        min-height: 400px;
+    }
+
+    //Kristen
+    .trainer-one .col-image {
+        background: url("../assets/img/meet-trainers.jpg") no-repeat center 20%;
+        background-size: cover;
+    }
+
+    .trainer-two .col-image {
+        background: url("../assets/img/trainer-two-sample.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    .trainer-three .col-image {
+        background: url("../assets/img/trainer-three.jpg") no-repeat center center;
+        background-size: cover;
+    }
+
+    .secondary-details {
+        margin-top: 4rem;
+
+        hr {
+            border: 1px solid $teal;
+            width: 50%;
+            margin: 5rem auto 0;
+        }
     }
 }

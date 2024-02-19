@@ -17,7 +17,7 @@ export function Home() {
                     </h1>
                 </div>
                 <Link className="main-btn" tabIndex={0} to="/events">
-                    <span className="main-btn-text">Our Services</span>
+                    <span className="main-btn-text">View Services</span>
                 </Link>
             </section>
 
@@ -30,7 +30,7 @@ export function Home() {
                         </div>
                         <img
                             src={imgHorse2}
-                            alt="black and white colored tornjak"
+                            alt="profile view of a young horse"
                         />
                     </div>
                     <div className="quick-words-bottom">
@@ -43,7 +43,7 @@ export function Home() {
                         </p>
                         <p className="read-more">
                             <Link className="line" to="/about-breed">
-                                read more
+                                Facility Gallery
                             </Link>
                         </p>
                     </div>
@@ -60,12 +60,8 @@ export function Home() {
                             </h2>
 
                             <Link to="/breeding" className="main-btn">
-                                <span className="main-btn-text">more info2</span>
-                            </Link>
-
-                            {/* <a className="main-btn" tabIndex={0} href="/pages/about-breed.html">
                                 <span className="main-btn-text">more info</span>
-                            </a> */}
+                            </Link>
                         </div>
                     </div>
                 </div>
