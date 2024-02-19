@@ -6,6 +6,7 @@ import "swiper/css";
 import img1 from "../assets/img/maggie-horse.jpg";
 import img2 from "../assets/img/maggie-horse.jpg";
 import img3 from "../assets/img/maggie-horse.jpg";
+import { Link } from "react-router-dom";
 
 type CardDataItem = {
   title: string;
@@ -35,24 +36,24 @@ const cardDataItems: CardDataItem[] = [
 ];
 
 const cardInfos: CardInfo[] = [
-  {
-    img: img1,
-    cardDataItems: cardDataItems,
-    last: "Buy Horse now yada yada yada",
-    lastUrl: "./voting.html",
-  },
-  {
-    img: img2,
-    cardDataItems: cardDataItems,
-    last: "Buy Horse now yada yada yada",
-    lastUrl: "./voting.html",
-  },
-  {
-    img: img3,
-    cardDataItems: cardDataItems,
-    last: "Buy Horse now yada yada yada",
-    lastUrl: "./voting.html",
-  },
+    {
+        img: img1,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: '/'
+    },
+    {
+        img: img2,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: '/'
+    },
+    {
+        img: img3,
+        cardDataItems: cardDataItems,
+        last: 'Buy Horse now yada yada yada',
+        lastUrl: '/'
+    },
 ];
 
 function SS() {
@@ -246,15 +247,15 @@ function SlideItem({ cardInfo }: { cardInfo: CardInfo }) {
           </Fragment>
         ))}
 
-        <p>{cardInfo.last}</p>
-        <p className="read-more">
-          <a className="line" href={cardInfo.lastUrl}>
-            Inquire about this horse
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+                <p>{cardInfo.last}</p>
+                <p className="read-more">
+                    <Link className="line" to={cardInfo.lastUrl}>
+                        Inquire about this horse
+                    </Link>
+                </p>
+            </div>
+        </div>
+    );
 }
 
 function Slide1() {
@@ -268,23 +269,22 @@ function Slide1() {
         {/*<div class="event-card-date">
             <p>ongoing</p>
         </div> */}
-      </div>
-      <div className="event-card-bottom">
-        <p className="title-small">Name</p>
-        <h2 className="lowercase">Seabiscuit</h2>
-        <p className="title-small">Breed</p>
-        <h2 className="lowercase">Male</h2>
-        <p className="title-small">Price</p>
-        <h2 className="lowercase">10K</h2>
-        <p>Buy Horse now yada yada yada</p>
-        <p className="read-more">
-          <a className="line" href="./voting.html">
-            Inquire about this horse
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+        </div>
+        <div className="event-card-bottom">
+            <p className="title-small">Name</p>
+            <h2 className="lowercase">Seabiscuit</h2>
+            <p className="title-small">Breed</p>
+            <h2 className="lowercase">Male</h2>
+            <p className="title-small">Price</p>
+            <h2 className="lowercase">10K</h2>
+            <p>Buy Horse now yada yada yada</p>
+            <p className="read-more">
+                <Link className="line" to="/">
+                    Inquire about this horse
+                </Link>
+            </p>
+        </div>
+    </div>);
 }
 
 function Slide2() {

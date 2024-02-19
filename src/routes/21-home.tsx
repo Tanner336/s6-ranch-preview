@@ -4,22 +4,22 @@ import imgHorse2 from "../assets/img/horse-2.jpg";
 import { Link } from "react-router-dom";
 
 export function Home() {
-  return (
-    <main id="home">
-      <SEO title="S6 Ranch" description="S6 Horse Ranch" href="/facility" />
+    return (
+        <main id="home">
+            <SEO title="S6 Ranch" description="S6 Horse Ranch" href="/facility" />
 
-      <section className="hero">
-        <HeaderBody />
-        <div className="hero-text">
-          <h1>S6 Ranch</h1>
-          <h1 className="lines title-small">
-            <span>Reining &amp; Performance Horses</span>
-          </h1>
-        </div>
-        <a className="main-btn" tabIndex={0} href="/pages/events.html">
-          <span className="main-btn-text">Our Services</span>
-        </a>
-      </section>
+            <section className="hero">
+                <HeaderBody />
+                <div className="hero-text">
+                    <h1>S6 Ranch</h1>
+                    <h1 className="lines title-small">
+                        <span>Reining &amp; Performance Horses</span>
+                    </h1>
+                </div>
+                <Link className="main-btn" tabIndex={0} to="/events">
+                    <span className="main-btn-text">Our Services</span>
+                </Link>
+            </section>
 
             <section className="quick-words">
                 <div className="quick-words-wrapper">
@@ -35,19 +35,21 @@ export function Home() {
                     </div>
                     <div className="quick-words-bottom">
                         <p className="text-block">
-                            250 characters - See what our 10 acre ranch and NRHA Professional
-                            trainers can offer you an your horse. See what our 10acre ranch and
-                            NRHA Professional trainers can offer you and your horse. See what our
-                            10 acre ranch and NRHA Professional trainers.
+                            313 characters - See what our 10 acre ranch and NRHA Professional
+                            trainers can offer you and your horse. With beautiful
+                            accomodations, unmatched care, and top-knotch experts S6 Ranch is
+                            sure to have everything for the budding horse enthusiast to the
+                            seasoned equestrian.
                         </p>
                         <p className="read-more">
-                            <a className="line" href="/pages/about-breed.html">
+                            <Link className="line" to="/about-breed">
                                 read more
-                            </a>
+                            </Link>
                         </p>
                     </div>
                 </div>
             </section>
+
             <section className="card">
                 <div className="card-wrapper one">
                     <div className="card-border">
@@ -67,6 +69,7 @@ export function Home() {
                         </div>
                     </div>
                 </div>
+
                 <div className="card-wrapper two">
                     <div className="card-border">
                         <div className="card-text">
@@ -74,12 +77,13 @@ export function Home() {
                             <h2 className="lines">
                                 <span>Lessions</span>
                             </h2>
-                            <a className="main-btn" href="/pages/facilities.html">
+                            <Link className="main-btn" to="/facilities">
                                 <span className="main-btn-text">more info</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
+
                 <div className="card-wrapper three">
                     <div className="card-border">
                         <div className="card-text">
@@ -87,13 +91,14 @@ export function Home() {
                             <h2 className="lines">
                                 <span>Breedeing</span>
                             </h2>
-                            <a className="main-btn" href="/pages/breeders.html">
+                            <Link className="main-btn" to="/breeders">
                                 <span className="main-btn-text">more info</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section className="stats">
                 <div className="stats-wrapper">
                     <div className="stats-inner-wrapper">
@@ -130,6 +135,7 @@ export function Home() {
                     </div>
                 </div>
             </section>
+
             <section className="news">
                 <div className="news-wrapper">
                     <div className="news-text">
