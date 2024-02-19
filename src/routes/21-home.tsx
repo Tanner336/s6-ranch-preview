@@ -152,7 +152,7 @@ export function Home() {
                     all those who have the heart to try.
                   </p>
                   <p className="read-more">
-                    <a href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d">
+                    <a href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d" target="_blank">
                       Join Us on Facebook
                     </a>
                   </p>
