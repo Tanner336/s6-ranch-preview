@@ -1,8 +1,4 @@
-import { Fragment, useRef } from "react";
-import { Swiper, SwiperRef, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
-import "swiper/css";
-
+import { Fragment } from "react";
 import { Carousel, imageUrlByIndex } from "@/ui";
 
 import img1 from "../assets/img/facility-1.jpg";
@@ -60,51 +56,9 @@ const cardInfos: CardInfo[] = [
 	},
 ];
 
-function SS() {
-	const swiper22 = useSwiper();
-	console.log("swiper22", swiper22);
-	return (
-		<>
-			{[1, 2, 3].map((i, el) => {
-				return (
-					<SwiperSlide key={el} style={{ color: "red" }}>
-						Slide {el}
-					</SwiperSlide>
-				);
-			})}
-		</>
-	);
-}
-
-function SwiperBody() {
-	const swiper2 = useSwiper();
-	console.log("swiper2", swiper2);
-	return (
-		<div className="slideshow-container">
-			<SwiperSlide>
-				<SlideItem cardInfo={cardInfos[0]} />
-			</SwiperSlide>
-			<SwiperSlide>
-				<SlideItem cardInfo={cardInfos[1]} />
-			</SwiperSlide>
-			<SwiperSlide>
-				<SlideItem cardInfo={cardInfos[2]} />
-			</SwiperSlide>
-
-			<button onClick={() => swiper2.slidePrev()}>Prev</button>
-			<button onClick={() => swiper2.slideNext()}>Next</button>
-		</div>
-	);
-}
-
 const slides = [img1, img2, img3];
 
 export function HoreseForSale() {
-	// const swiper2 = useSwiper();
-	// const swiper3 = useRef<SwiperRef>(null);
-
-	// console.log('swiper', swiper2, swiper3.current);
-
 	return (
 		<>
 			<main id="events" className="page-events">
@@ -125,59 +79,6 @@ export function HoreseForSale() {
 					}
 					}
 				/>
-
-				{/* <Swiper ref={swiper3} modules={[Navigation, EffectCoverflow]} effect="fade">
-								<SS />
-						</Swiper> */}
-
-				{/* <Swiper
-					spaceBetween={50}
-					slidesPerView={3}
-					modules={[Navigation, EffectCoverflow]}
-					// onSlideChange={() => console.log('onSlideChange: slide change')}
-					// onSwiper={(swiper) => console.log('onSwiper', swiper)}
-				>
-					<SwiperBody />
-				</Swiper> */}
-
-				{/* <Swiper
-								spaceBetween={50}
-								slidesPerView={3}
-								//modules={[Navigation, EffectCoverflow]}
-								onSlideChange={() => console.log('onSlideChange: slide change')}
-								onSwiper={(swiper) => console.log('onSwiper', swiper)}
-						>
-								<SwiperSlide><SlideItem cardInfo={cardInfos[0]} /></SwiperSlide>
-								<SwiperSlide><SlideItem cardInfo={cardInfos[1]} /></SwiperSlide>
-								<SwiperSlide><SlideItem cardInfo={cardInfos[2]} /></SwiperSlide>
-
-								<button onClick={() => swipers2.lidePrev()}>Prev</button>
-								<button onClick={() => swiper2.slideNext()}>Next</button>
-
-						</Swiper> */}
-
-				{/* <section>
-								<div className="slideshow-container">
-
-										<Slide1 />
-										<Slide2 />
-										<Slide3 />
-
-										<a className="prev" onClick={() => "plusSlides(-1)"}  >
-												❮
-										</a>
-										<a className="next" onClick={() => "plusSlides(1)"}  >
-												❯
-										</a>
-
-										<br />
-										<div style={{ textAlign: "center" }}>
-												<span className="dot" onClick={() => "currentSlide(1)"} />
-												<span className="dot" onClick={() => "currentSlide(2)"} />
-												<span className="dot" onClick={() => "currentSlide(3)"} />
-										</div>
-								</div>
-						</section> */}
 			</main>
 		</>
 	);
