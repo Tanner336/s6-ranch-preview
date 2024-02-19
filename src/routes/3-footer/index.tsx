@@ -6,7 +6,7 @@ export function Footer() {
             <div className="footer">
                 <ContactUsForm />
                 <div className="footer-socials">
-                    <Credencials />
+                    <Credentials />
                     <Copyright />
                 </div>
             </div>
@@ -17,7 +17,7 @@ export function Footer() {
     </>);
 }
 
-function Credencials() {
+function Credentials() {
     return (
         <div className="credentials">
             <div className="logo">

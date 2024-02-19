@@ -6,6 +6,7 @@ import 'swiper/css';
 import img1 from "../assets/img/maggie-horse.jpg";
 import img2 from "../assets/img/maggie-horse.jpg";
 import img3 from "../assets/img/maggie-horse.jpg";
+import { Link } from "react-router-dom";
 
 type CardDataItem = {
     title: string;
@@ -40,19 +41,19 @@ const cardInfos: CardInfo[] = [
         img: img1,
         cardDataItems: cardDataItems,
         last: 'Buy Horse now yada yada yada',
-        lastUrl: './voting.html'
+        lastUrl: '/'
     },
     {
         img: img2,
         cardDataItems: cardDataItems,
         last: 'Buy Horse now yada yada yada',
-        lastUrl: './voting.html'
+        lastUrl: '/'
     },
     {
         img: img3,
         cardDataItems: cardDataItems,
         last: 'Buy Horse now yada yada yada',
-        lastUrl: './voting.html'
+        lastUrl: '/'
     },
 ];
 
@@ -244,9 +245,9 @@ function SlideItem({ cardInfo }: { cardInfo: CardInfo; }) {
 
                 <p>{cardInfo.last}</p>
                 <p className="read-more">
-                    <a className="line" href={cardInfo.lastUrl}>
+                    <Link className="line" to={cardInfo.lastUrl}>
                         Inquire about this horse
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>
@@ -270,9 +271,9 @@ function Slide1() {
             <h2 className="lowercase">10K</h2>
             <p>Buy Horse now yada yada yada</p>
             <p className="read-more">
-                <a className="line" href="./voting.html">
+                <Link className="line" to="/">
                     Inquire about this horse
-                </a>
+                </Link>
             </p>
         </div>
     </div>);

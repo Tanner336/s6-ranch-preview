@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export function Facility() {
     return (
@@ -60,140 +61,18 @@ export function Facility() {
                         </p>
                     </div>
                 </section>
-                {/* <section class="overlap">
-      <div class="overlap-quote">
-          <div class="offset-card">
-              <h3 class="title-small">Tornjak</h3>
-              <h2 class="line">Temperment</h2>
-              <p>
-                  Tornjaks are livestock guardian dogs, or LGDs, and possess temperaments uniquely suited to their
-                  vital role as protectors of herds and flocks. These dogs display unwavering loyalty,
-                  intelligence, and calm disposition. In the presence of livestock, they display a natural
-                  instinct to protect, forming strong bonds with the animals they guard. Tornjaks are known for
-                  their independence, self-confidence, and exceptional problem-solving abilities, making them
-                  adept at assessing threats and taking appropriate action. Despite their imposing presence, they
-                  are typically gentle and patient, particularly with those they deem under their care. However,
-                  they can be wary of strangers, making them effective guardians against potential threats. The
-                  Tornjak's temperament, with its combination of vigilance, courage, and an underlying gentleness,
-                  is a testament to their remarkable suitability for the essential role of safeguarding their
-                  domain.</p>
-              <p class="read-more"><a class="line" href="/pages/services.html">View Trainers</a></p>
-          </div>
 
-          <div class="quote">
-              <img src="../assets/img/horse-2.jpg"
-                  alt="black and white photo of a tornjak standing in tall grass">
-              <p class="title-small">
-                  unwavering loyalty
-              </p>
-          </div>
-      </div>
-  </section> */}
                 <section className="cta-text-block">
                     <div className="stats">
                         {/* <h2>Stay in the Loop with us on facebook</h2> */}
                         <h3 className="title-small">Stay in the Loop with us on facebook</h3>
                         <hr />
                         <p className="read-more">
-                            <a href="/pages/about-breed.html">Connect Now</a>
+                            <Link to="/pages/about-breed">Connect Now</Link>
                         </p>
                     </div>
                 </section>
-                <section className="squares">
-                    {/* no image */}
-                    <div className="square bg one border hide-on-mobile">
-                        <div className="content">
-                            <div className="table">
-                                <div className="table-cell">
-                                    <div className="card-text">
-                                        <p className="title-small">Tour our</p>
-                                        <h2 className="lines">
-                                            <span>Gallery</span>
-                                        </h2>
-                                        {/* <p>Our ranch offered all the amenities needed for a full training experience. Our large
-                              open area is always well maintained. We have a round pen and 25 stalls for training
-                              participants.</p> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* history */}
-                    <div className="square bg two">
-                        <div className="content">
-                            <div className="table">
-                                {/* <div class="table-cell">
-                      <a class="main-btn" tabindex="0" href="./articles/history.html">
-                          <span class="main-btn-text">History</span>
-                      </a>
-                  </div> */}
-                            </div>
-                        </div>
-                    </div>
-                    {/* health */}
-                    <div className="square bg three">
-                        <div className="content">
-                            <div className="table">
-                                {/* <div class="table-cell">
-                      <a class="main-btn" tabindex="0" href="./articles/health.html">
-                          <span class="main-btn-text">Health</span>
-                      </a>
-                  </div> */}
-                            </div>
-                        </div>
-                    </div>
-                    {/* appearance */}
-                    <div className="square bg four">
-                        <div className="content">
-                            <div className="table">
-                                {/* <div class="table-cell">
-                      <a class="main-btn" tabindex="0" href="./articles/appearance.html">
-                          <span class="main-btn-text">Appearance</span>
-                      </a>
-                  </div> */}
-                            </div>
-                        </div>
-                    </div>
-                    {/* grooming */}
-                    <div className="square bg five">
-                        <div className="content">
-                            <div className="table">
-                                {/* <div class="table-cell">
-                      <a class="main-btn" tabindex="0" href="./articles/grooming.html">
-                          <span class="main-btn-text">Grooming</span>
-                      </a>
-                  </div> */}
-                            </div>
-                        </div>
-                    </div>
-                    {/* exercise */}
-                    <div className="square bg six">
-                        <div className="content">
-                            <div className="table">
-                                {/* <div class="table-cell">
-                      <a class="main-btn" tabindex="0" href="./articles/exercise.html">
-                          <span class="main-btn-text">Exercise</span>
-                      </a>
-                  </div> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="square bg seven">
-                        <div className="content">
-                            <div className="table"></div>
-                        </div>
-                    </div>
-                    <div className="square bg eight">
-                        <div className="content">
-                            <div className="table"></div>
-                        </div>
-                    </div>
-                    <div className="square bg nine">
-                        <div className="content">
-                            <div className="table"></div>
-                        </div>
-                    </div>
-                </section>
+
                 <section id="testimonial" className="testimonial">
                     <div className="section-title">
                         <h3 className="title-small">Kind Words</h3>
@@ -213,6 +92,7 @@ export function Facility() {
                         </div>
                     </div>
                 </section>
+
                 <section id="contact-us">
                     <div className="contact-us-wrapper">
                         <div className="form-container">
@@ -316,9 +196,7 @@ export function Facility() {
                 </section>
             </main>
 
-
             <Squares />
-
         </>
     );
 }
@@ -332,9 +210,9 @@ function Squares() {
                     <div className="table">
                         <div className="table-cell">
                             <div className="card-text">
-                                <p className="title-small">About</p>
+                                <p className="title-small">Tour our</p>
                                 <h2 className="lines">
-                                    <span>Tornjaks</span>
+                                    <span>Gallery</span>
                                 </h2>
                             </div>
                         </div>
@@ -345,11 +223,11 @@ function Squares() {
             <div className="square bg two">
                 <div className="content">
                     <div className="table">
-                        <div className="table-cell">
-                            <a className="main-btn" tabIndex={0} href="./articles/history">
-                                <span className="main-btn-text">History</span>
-                            </a>
-                        </div>
+                        {/* <div class="table-cell">
+                      <a class="main-btn" tabindex="0" href="./articles/history.html">
+                          <span class="main-btn-text">History</span>
+                      </a>
+                  </div> */}
                     </div>
                 </div>
             </div>
@@ -357,11 +235,11 @@ function Squares() {
             <div className="square bg three">
                 <div className="content">
                     <div className="table">
-                        <div className="table-cell">
-                            <a className="main-btn" tabIndex={0} href="./articles/health">
-                                <span className="main-btn-text">Health</span>
-                            </a>
-                        </div>
+                        {/* <div class="table-cell">
+                      <a class="main-btn" tabindex="0" href="./articles/health.html">
+                          <span class="main-btn-text">Health</span>
+                      </a>
+                  </div> */}
                     </div>
                 </div>
             </div>
@@ -369,11 +247,11 @@ function Squares() {
             <div className="square bg four">
                 <div className="content">
                     <div className="table">
-                        <div className="table-cell">
-                            <a className="main-btn" tabIndex={0} href="./articles/appearance">
-                                <span className="main-btn-text">Appearance</span>
-                            </a>
-                        </div>
+                        {/* <div class="table-cell">
+                      <a class="main-btn" tabindex="0" href="./articles/appearance.html">
+                          <span class="main-btn-text">Appearance</span>
+                      </a>
+                  </div> */}
                     </div>
                 </div>
             </div>
@@ -381,11 +259,11 @@ function Squares() {
             <div className="square bg five">
                 <div className="content">
                     <div className="table">
-                        <div className="table-cell">
-                            <a className="main-btn" tabIndex={0} href="./articles/grooming">
-                                <span className="main-btn-text">Grooming</span>
-                            </a>
-                        </div>
+                        {/* <div class="table-cell">
+                      <a class="main-btn" tabindex="0" href="./articles/grooming.html">
+                          <span class="main-btn-text">Grooming</span>
+                      </a>
+                  </div> */}
                     </div>
                 </div>
             </div>
@@ -393,12 +271,27 @@ function Squares() {
             <div className="square bg six">
                 <div className="content">
                     <div className="table">
-                        <div className="table-cell">
-                            <a className="main-btn" tabIndex={0} href="./articles/exercise">
-                                <span className="main-btn-text">Exercise</span>
-                            </a>
-                        </div>
+                        {/* <div class="table-cell">
+                      <a class="main-btn" tabindex="0" href="./articles/exercise.html">
+                          <span class="main-btn-text">Exercise</span>
+                      </a>
+                  </div> */}
                     </div>
+                </div>
+            </div>
+            <div className="square bg seven">
+                <div className="content">
+                    <div className="table"></div>
+                </div>
+            </div>
+            <div className="square bg eight">
+                <div className="content">
+                    <div className="table"></div>
+                </div>
+            </div>
+            <div className="square bg nine">
+                <div className="content">
+                    <div className="table"></div>
                 </div>
             </div>
         </section>
