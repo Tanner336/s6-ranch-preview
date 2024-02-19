@@ -1,74 +1,53 @@
-// .swiper-wrapper div {
-//     width: 350px;
-// }
+#for-sale {
+    background: $dark-medium;
 
-// .swiper-container {
-//     position: relative;
-//     margin-top: 30px;
-//     max-width: 1200px;
-//     height: 500px;
-    
-//     --swiper-theme-color: #fff;
+    .hero {
+        // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/maggie-horse-v2.jpg") no-repeat center 40%;
+        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/for-sale-hero.jpg") no-repeat center 60%;
+        background-size: cover;
+    }
 
-//     --swiper-navigation-top-offset: 50%;
-//     --swiper-navigation-sides-offset: -30px;
-//     --swiper-navigation-color: var(--swiper-theme-color);
-// }
+    hr {
+        display: block;
+        width: 3rem;
+        margin-left: 0;
+        border: 1px solid rgb(48, 180, 169);
+    }
 
-// .swiper-wrapper {
-//     @include desktop {
-//         transform: none !important;
-//     }
-// }
 
-// .swiper-slide {
-//     border: 1px solid $gold;
-//     box-shadow: -1px 5px 15px black;
+    .read-more {
+        line-height: 1.4rem;
+    }
 
-//     h2 {
-//         padding: 0;
-//         font-size: 1.6rem;
-//         margin-right: -0.75rem;
-//     }
+    .line::after {
+        display: none;
+    }
 
-//     h3 {
-//         position: relative;
-//         margin-bottom: 0.625rem;
-//         padding: 0 1rem;
-//         font-size: 1.2rem;
-//         line-height: 1.4;
-//         letter-spacing: 0.4px;
-//         color: $dark;
-//     }
+    @include desktop() {
+        hr {
+            display: none;
+        }
 
-//     .slide-content {
-//         position: absolute;
-//         left: 50%;
-//         top: 45%;
-//         width: 90%;
-//         transform: translate(-50%, -45%);
-//     }
-// }
-
-// .swiper-slide-active .author {
-//     display: grid;
-//     opacity: 1;
-// }
-
-// .swiper-slide--one {
-//     background: $off-white;
-// }
-
-// .swiper-slide--two {
-//     background: $off-white;
-// }
-
-// .swiper-slide--three {
-//     background: $off-white;
-// }
-
-// // Buttons
+        .line::after {
+            display: block;
+            right: -4rem;
+        }
+    }
+}
 
 .horses-for-sale {
-    padding: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @include desktop() {
+        width: 85%;
+        max-width: 1200px;
+        padding: 5rem 0;
+    }
+}
+
+
+.title-large {
+    text-transform: capitalize;
 }

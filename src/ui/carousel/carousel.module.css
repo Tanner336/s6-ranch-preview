@@ -3,8 +3,8 @@
     height: var(--slide-height);
     --slide-spacing: 1rem;
     --slide-size: 100%;
-    --slide-height: 19rem;
-    color: purple;
+    /* --slide-height: 400px; */
+    --slide-width: 700px;
 }
 
 .overflow-hidden {
@@ -29,18 +29,6 @@
     flex: 0 0 var(--slide-size);
 }
 
-/* not used */
-/* .card__number {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border-radius: 9999px;
-    width: 3rem;
-    height: 3rem;
-    font-weight: 800;
-    text-align: center;
-    color: #f003;
-} */
 
 .card__img {
     display: block;
@@ -67,7 +55,7 @@
     button {
         padding: 0;
         border: none;
-        color: teal;
+        color: #30b4a9;
         font-size: 1rem;
         display: flex;
         align-items: center;
@@ -82,7 +70,7 @@
     height: 2rem;
     /* fill: currentColor; */
     /* background-color: red; */
-    fill: teal;
+    fill: #30b4a9;
     cursor: pointer;
 }
 

@@ -35,10 +35,10 @@ export function Facility() {
 
           <div className="two-col-text-block">
             <p>
-              We have indoor and outdoor arena to accomodate training in all
-              types of weather. A large pen for reining, cutting and roping.
-              Lots of space for multiple riders. We also have barrels and cones
-              for practicing patterns. 231 characters
+              479 characters - We have indoor and outdoor arena to accomodate
+              training in all types of weather. A large pen for reining, cutting
+              and roping. Lots of space for multiple riders. We also have
+              barrels and cones for practicing patterns.
             </p>
             <p>
               We have have 12 stalls for our training clients, we do not offer
@@ -47,10 +47,10 @@ export function Facility() {
               basics of riding and horsemanship.
             </p>
             <p>
-              We have indoor and outdoor arena to accomodate training in all
-              types of weather. A large pen for reining, cutting and roping.
-              Lots of space for multiple riders. We also have barrels and cones
-              for practicing patterns. 231 characters
+              479 characters - We have indoor and outdoor arena to accomodate
+              training in all types of weather. A large pen for reining, cutting
+              and roping. Lots of space for multiple riders. We also have
+              barrels and cones for practicing patterns.
             </p>
             <p>
               We have have 12 stalls for our training clients, we do not offer

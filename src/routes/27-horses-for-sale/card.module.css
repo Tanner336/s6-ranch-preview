@@ -1,10 +1,8 @@
-/* .horses-for-sale {
-    background-color: blue;
-} */
+/* FIX THIS!!!! Put into scss 'horses-for-sale.scss'. Do not leave as css. */
 
 .card {
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 95%;
     /* margin: 1rem 2rem; */
     
     background: #2B2B2B;
@@ -13,25 +11,27 @@
 }
 
 .card__description {
-    /* margin-top: 2rem; */
    background: #2B2B2B;
    text-align: left;
-   padding: 0 2.5rem 2.5rem;
+   padding: 1rem;
+
+   p {
+    padding: 1rem 0;
+   }
+
+   p.read-more {
+    padding: 0;
+   }
+
+  
 }
 
-/* .card__description__item {
-    
-    h3 {
-        font-size: 1.5rem;
-        color: beigebrown;
-        text-transform: capitalize;
-        letter-spacing: normal;
-    }
+.title-large {
+    text-transform: capitalize;
+}
 
-    p {
-        color: #36706D;
-        font-size: 1.25rem;
-        font-weight: 400;
-        line-height: 2.5rem;
+@media (min-width: 768px) {
+    .card__description {
+        padding: 2.5rem;
     }
-} */
+}
