@@ -1,4 +1,5 @@
 import { IconFacebook, IconInstagram } from "../../ui/icons";
+import logoImg from "@/assets/img/logo-med.png";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ function Credentials() {
   return (
     <div className="credentials">
       <div className="logo">
-        <img className="logo-img" alt="" src="./src/assets/img/logo-med.png" />
+        <img className="logo-img" alt="" src={logoImg} />
         <p className="logo-text">
           <a href="/">S6 Ranch</a>
         </p>

@@ -33,33 +33,33 @@
         }
     }
 
-    .arrow-prev {
-        content: url("../assets/svg/arrow-prev.svg");
-        display: block;
-        height: 45px;
-        width: 45px;
-        position: absolute;
-        bottom: 50%;
-        left: -4rem;
+    // .arrow-prev {
+    //     content: url("../assets/svg/arrow-prev.svg");
+    //     display: block;
+    //     height: 45px;
+    //     width: 45px;
+    //     position: absolute;
+    //     bottom: 50%;
+    //     left: -4rem;
 
-        @include desktop() {
-            left: -17%;
-        }
-    }
+    //     @include desktop() {
+    //         left: -17%;
+    //     }
+    // }
 
-    .arrow-next {
-        content: url("../assets/svg/arrow-next.svg");
-        display: block;
-        height: 45px;
-        width: 45px;
-        position: absolute;
-        bottom: 50%;
-        right: -4rem;
+    // .arrow-next {
+    //     content: url("../assets/svg/arrow-next.svg");
+    //     display: block;
+    //     height: 45px;
+    //     width: 45px;
+    //     position: absolute;
+    //     bottom: 50%;
+    //     right: -4rem;
 
-        @include desktop() {
-            right: -17%;
-        }
-    }
+    //     @include desktop() {
+    //         right: -17%;
+    //     }
+    // }
 
     &-name {
         padding-top: 2rem;
