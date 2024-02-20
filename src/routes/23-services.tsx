@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SEO } from "./SEO";
-import { Testimonial } from "./Testimonial";
+import { Testimonial } from "./22-facility/3-testimonial";
 
 export function Services() {
   return (
@@ -23,7 +23,7 @@ export function Services() {
           <div className="service-wrapper">
             <ul className="service-bar">
               <li>
-                <a href="#reining-lessions">Reining Lessions</a>
+                <a href="#reining-lessons">Reining Lessons</a>
               </li>
               <li>
                 <a href="#youth-reining">Youth Reining</a>
@@ -130,9 +130,9 @@ export function Services() {
         </section>
         <section className="overlap">
           <div className="overlap-quote">
-            <div className="offset-card" id="reining-lessions">
+            <div className="offset-card" id="reining-lessons">
               <h3 className="title-small">Service 1</h3>
-              <h2 className="line">Reining Lessions</h2>
+              <h2 className="line">Reining Lessons</h2>
               <p>
                 612 characters - Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Atque illo optio suscipit dicta deleniti eaque

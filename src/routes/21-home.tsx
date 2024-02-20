@@ -69,7 +69,7 @@ export function Home() {
             <div className="card-text">
               <p className="title-small">Find</p>
               <h2 className="lines">
-                <span>Lessions</span>
+                <span>Lessons</span>
               </h2>
               <Link className="main-btn" to="/services">
                 <span className="main-btn-text">more info</span>
@@ -148,7 +148,7 @@ export function Home() {
                   <p className="text-block">
                     Watching our students learn and grow is the heart of what we
                     do. S6 Ranch invites people of every learning stage to
-                    participate in our coaching. We believe horshmenship is for
+                    participate in our coaching. We believe horsemenship is for
                     all those who have the heart to try.
                   </p>
                   <p className="read-more">
