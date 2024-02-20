@@ -105,7 +105,8 @@
 
     .show-menu {
         // transform: translateY(34%);
-        transform: translateY(28%);
+        transform: translateY(25%);
         display: flex;
+        background-color: $dark !important;
     }
 }
