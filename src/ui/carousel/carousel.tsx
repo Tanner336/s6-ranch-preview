@@ -36,34 +36,35 @@ export function Carousel<T = string>({ slides, options, className, card, ...rest
             <div className={css["overflow-hidden"]} ref={emblaRef}>
                 <div className={css["map-wrapper"]}>
                     {slides.map(
-                        (imgSrc, index) => (<>
-                            {/* {card
-                                ? (
-                                    <Fragment key={index}>
-                                        {card(index)}
-                                    </Fragment>
-                                )
-                                : (
-                                    <div className={css["card"]} key={index}>
+                        (imgSrc, index) => (
+                            <Fragment key={index}>
 
-                                        <div className={css["card__number"]}>
-                                            <span>{index + 1}</span>
+                                {/* {card
+                                    ? (
+                                        <Fragment key={index}>
+                                            {card(index)}
+                                        </Fragment>
+                                    )
+                                    : (
+                                        <div className={css["card"]} key={index}>
+
+                                            <div className={css["card__number"]}>
+                                                <span>{index + 1}</span>
+                                            </div>
+
+                                            <img
+                                                className={css["card__img"]}
+                                                src={imageUrlByIndex<T>(slides, index)}
+                                                alt="Your alt text"
+                                            />
                                         </div>
 
-                                        <img
-                                            className={css["card__img"]}
-                                            src={imageUrlByIndex<T>(slides, index)}
-                                            alt="Your alt text"
-                                        />
-                                    </div>
+                                    )
+                                } */}
 
-                                )
-                            } */}
-                            
-                            <Fragment key={index}>
                                 {card(index)}
                             </Fragment>
-                        </>))
+                        ))
                     }
                 </div>
             </div>
