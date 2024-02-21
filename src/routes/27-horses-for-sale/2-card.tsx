@@ -38,7 +38,7 @@ export function Card({ cardInfo }: { cardInfo: H4SaleCardInfo; }) {
 					</div>
 				))}
 
-				<p>{cardInfo.notes}</p>
+				<p dangerouslySetInnerHTML={{__html: cardInfo.notes}} />
 
 				{/* <hr /> */}
 
