@@ -8,7 +8,7 @@ import { IconPrev, IconNext } from '@/ui/icons';
 import { classNames } from '@/utils/classnames';
 import css from "./carousel.module.css";
 
-console.log('css', css);
+// console.log('css', css);
 
 type CarouselProps<T> = {
     slides: T[];

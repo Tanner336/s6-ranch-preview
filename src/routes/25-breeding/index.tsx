@@ -1,5 +1,5 @@
 import { Hero } from "./1-hero";
-import { Card } from "./2-carousel";
+import { Card } from "./2-card";
 import { cardInfos } from "./slider-data";
 
 export function Breeding() {

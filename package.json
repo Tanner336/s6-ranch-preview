@@ -9,6 +9,7 @@
         "embla-carousel": "8.0.0-rc22",
         "embla-carousel-autoplay": "8.0.0-rc22",
         "embla-carousel-react": "8.0.0-rc22",
+        "json5": "^2.2.3",
         "marked": "^11.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

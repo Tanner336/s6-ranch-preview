@@ -1,0 +1,40 @@
+[
+    {
+      "img": [
+        "./data/horse-1.jpg",
+        "./data/horse-2.jpg",
+        "./data/horse-3.jpg",
+      ],
+      "cardDescItems": [
+        {
+          "title": "Cutting Horse",
+          "description": "Seabiscuit"
+        }
+      ],
+      "last": "Inquire about this horse",
+      "lastUrl": "#contact-us",
+      "notes": 
+      "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
+      Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
+      provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti \
+      officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, \
+      magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
+      Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus harum \t laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!"
+    },
+    {
+      "img": [
+        "./data/horse-1.jpg",
+        "./data/horse-2.jpg",
+        "./data/horse-3.jpg",
+      ],
+      "cardDescItems": [
+        {
+          "title": "Cutting Horse",
+          "description": "Seabiscuit",
+        }
+      ],
+      "last": "Inquire about this horse",
+      "lastUrl": "#contact-us",
+      "notes": "612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. Atque illo optio suscipit dicta deleniti eaque a, consequatur incidunt porro laboriosam provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus harum\tlaudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
+    },
+  ]

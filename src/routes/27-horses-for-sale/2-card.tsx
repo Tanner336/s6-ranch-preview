@@ -1,8 +1,10 @@
 import { Carousel, imageUrlByIndex } from "@/ui";
-import { CardInfo } from "./slider-data";
+import { H4SaleCardInfo } from "./types";
 import css from "@/ui/carousel/carousel.module.css";
 import css2 from "./card.module.css";
-import { Link } from "react-router-dom";
+
+// console.log(css, css);
+// console.log(css2, css2);
 
 function CarouselImgs({ imgUrls }: { imgUrls: string[]; }) {
 	return (
@@ -23,7 +25,7 @@ function CarouselImgs({ imgUrls }: { imgUrls: string[]; }) {
 	);
 }
 
-export function Card({ cardInfo }: { cardInfo: CardInfo; }) {
+export function Card({ cardInfo }: { cardInfo: H4SaleCardInfo; }) {
 	return (
 		<div className={css2.card}>
 			<CarouselImgs imgUrls={cardInfo.img} />
@@ -33,11 +35,12 @@ export function Card({ cardInfo }: { cardInfo: CardInfo; }) {
 					<div className={css2.card__description__item} key={index}>
 						<h3 className="title-small">{item.title}</h3>
 						<h2 className="title-large">{item.description}</h2>
-						<p>{item.notes}</p>
 					</div>
 				))}
 
-				<hr></hr>
+				<p>{cardInfo.notes}</p>
+
+				{/* <hr /> */}
 
 				<p className="read-more">
 					<a className="line" href={cardInfo.lastUrl}>

@@ -2,7 +2,6 @@ import { Carousel, imageUrlByIndex } from "@/ui";
 import { CardInfo } from "./slider-data";
 import css from "@/ui/carousel/carousel.module.css";
 import css2 from "./card.module.css";
-import { Link } from "react-router-dom";
 
 function CarouselImgs({ imgUrls }: { imgUrls: string[]; }) {
 	return (

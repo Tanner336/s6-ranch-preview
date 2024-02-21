@@ -17,7 +17,9 @@
 
 
     .read-more {
+        padding-top: 2rem;
         line-height: 1.4rem;
+        border-top: 1px solid rgb(48, 180, 169);
     }
 
     .line::after {
@@ -55,7 +57,7 @@
 
 #breeding {
     background: $dark-medium;
-
+ 
     .hero {
         // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/maggie-horse-v2.jpg") no-repeat center 40%;
         background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/for-sale-hero.jpg") no-repeat center 60%;

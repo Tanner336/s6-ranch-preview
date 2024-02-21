@@ -1,16 +1,16 @@
+import { gH4Sale } from "@/store";
 import { Hero } from "./1-hero";
-import { Card } from "./2-carousel";
-import { cardInfos } from "./slider-data";
+import { Card } from "./2-card";
 
 export function HoreseForSale() {
-  return (
-    <main id="for-sale" className="page-events">
-      <Hero />
-      <div className="horses-for-sale">
-        <Card cardInfo={cardInfos[0]} />
-        <Card cardInfo={cardInfos[1]} />
-        <Card cardInfo={cardInfos[2]} />
-      </div>
-    </main>
-  );
+    return (
+        <main id="for-sale" className="page-events">
+            <Hero />
+            <div className="horses-for-sale">
+                {gH4Sale.map((cardInfo, index) => (
+                    <Card cardInfo={cardInfo} key={index} />
+                ))}
+            </div>
+        </main>
+    );
 }
