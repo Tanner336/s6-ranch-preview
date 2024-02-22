@@ -1,4 +1,4 @@
-import { gH4Sale } from "@/store";
+import { dynamicData } from "@/store";
 import { Hero } from "./1-hero";
 import { Card } from "./2-card";
 
@@ -7,7 +7,7 @@ export function HoreseForSale() {
         <main id="for-sale" className="page-events">
             <Hero />
             <div className="horses-for-sale">
-                {gH4Sale.map((cardInfo, index) => (
+                {dynamicData.horses.map((cardInfo, index) => (
                     <Card cardInfo={cardInfo} key={index} />
                 ))}
             </div>

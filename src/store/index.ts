@@ -1,21 +1,31 @@
-import { H4SaleCardInfo } from "@/routes/27-horses-for-sale/types";
+import { CardInfo } from "@/routes/27-horses-for-sale/types";
 import JSON5 from "json5";
 
-export let gH4Sale: H4SaleCardInfo[] = []; // global H4Sale
+export type DynamicData = {         // glbal data from jsonl files
+    horses: CardInfo[];       // horses for sale
+    breading: CardInfo[];     // breading
+}
+
+export const dynamicData: DynamicData = {
+    horses: [],
+    breading: [],
+}
 
 export async function initMdSDataWithFetch(url: string) {
-    try {
         const res = await fetch(url);
         const text = await res.text();
         const json = JSON5.parse(text);
+        return json;
+        
 
-        gH4Sale = json;
-        console.log('H4S', gH4Sale);
-    } catch (err) {
-        console.error(err);
-    }
+        //console.log('H4S', gH4Sale);
 }
 
 export async function initDataWithFetch() {
-    await initMdSDataWithFetch("./data/horses-for-sale.jsonl");
+    try {
+        dynamicData.horses = await initMdSDataWithFetch("./data/horses/horses-for-sale.jsonl");
+        dynamicData.breading = await initMdSDataWithFetch("./data/breeding/breeding.jsonl");
+    } catch (err) {
+        console.error(err);
+    }
 }

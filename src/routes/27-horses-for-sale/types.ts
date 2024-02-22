@@ -3,12 +3,12 @@ export type CardDescItem = {
     description: string;
 };
 
-export type H4SaleCardInfo = { // H4Sale - horses for sale
-    img: string[];
-    cardDescItems: CardDescItem[];
-    notes: string;
-    last: string;
-    lastUrl: string;
+export type CardInfo = {            // H4Sale - horses for sale and breding
+    images: string[];               // image urls relative to the root folder
+    descriptions: CardDescItem[];   // title, description items
+    notes: string;                  // text with or without html tags
+    linkText: string;               // text for the external link
+    linkUrl: string;                // url for the external link
 };
 
 /*

@@ -1,19 +1,17 @@
 [
     {
-      "img": [
-        "./data/horse-1.jpg",
-        "./data/horse-2.jpg",
-        "./data/horse-3.jpg",
+      "images": [
+        "./data/horses/horse-1.jpg",
+        "./data/horses/horse-2.jpg",
+        "./data/horses/horse-3.jpg",
         // this is comment
       ],
-      "cardDescItems": [
+      "descriptions": [
         {
           "title": "Cutting Horse",
           "description": "Seabiscuit"
         }
       ],
-      "last": "Inquire about this horse",
-      "lastUrl": "#contact-us",
       "notes": 
       "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
       Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
@@ -22,22 +20,22 @@
       magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
       <div style='color:red; display:inline-block'>Animi</div> \
       Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
-      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!"
+      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
+      "linkText": "Inquire about this horse",
+      "linkUrl": "#contact-us",
     },
     {
-      "img": [
-        "./data/horse-2.jpg",
-        "./data/horse-3.jpg",
-        "./data/horse-1.jpg",
+      "images": [
+        "./data/horses/horse-2.jpg",
+        "./data/horses/horse-3.jpg",
+        "./data/horses/horse-1.jpg",
       ],
-      "cardDescItems": [
+      "descriptions": [
         {
           "title": "Cutting Horse",
           "description": "Seabiscuit",
         }
       ],
-      "last": "Inquire about this horse",
-      "lastUrl": "#contact-us",
       "notes": 
       "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
       Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
@@ -46,6 +44,8 @@
       magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
       <div style='color:red; display:inline-block'>Animi</div> \
       Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
-      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!"
+      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
+      "linkText": "Inquire about this horse",
+      "linkUrl": "#contact-us",
     },
-  ]
+]

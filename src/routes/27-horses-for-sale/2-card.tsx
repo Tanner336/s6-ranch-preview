@@ -1,5 +1,5 @@
 import { Carousel, imageUrlByIndex } from "@/ui";
-import { H4SaleCardInfo } from "./types";
+import { CardInfo } from "./types";
 import css from "@/ui/carousel/carousel.module.css";
 import css2 from "./card.module.css";
 
@@ -25,13 +25,13 @@ function CarouselImgs({ imgUrls }: { imgUrls: string[]; }) {
 	);
 }
 
-export function Card({ cardInfo }: { cardInfo: H4SaleCardInfo; }) {
+export function Card({ cardInfo }: { cardInfo: CardInfo; }) {
 	return (
 		<div className={css2.card}>
-			<CarouselImgs imgUrls={cardInfo.img} />
+			<CarouselImgs imgUrls={cardInfo.images} />
 
 			<div className={css2.card__description}>
-				{cardInfo.cardDescItems.map((item, index) => (
+				{cardInfo.descriptions.map((item, index) => (
 					<div className={css2.card__description__item} key={index}>
 						<h3 className="title-small">{item.title}</h3>
 						<h2 className="title-large">{item.description}</h2>
@@ -43,8 +43,8 @@ export function Card({ cardInfo }: { cardInfo: H4SaleCardInfo; }) {
 				{/* <hr /> */}
 
 				<p className="read-more">
-					<a className="line" href={cardInfo.lastUrl}>
-						{cardInfo.last}
+					<a className="line" href={cardInfo.linkUrl}>
+						{cardInfo.linkText}
 					</a>
 				</p>
 			</div>
