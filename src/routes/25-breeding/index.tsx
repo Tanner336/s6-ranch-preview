@@ -1,6 +1,6 @@
 import { dynamicData } from "@/store";
 import { Hero } from "./1-hero";
-import { Card } from "./2-card";
+import { Card } from "../27-horses-for-sale/2-card";
 
 export function Breeding() {
     return (

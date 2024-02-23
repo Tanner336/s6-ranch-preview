@@ -1,5 +1,6 @@
 import { Carousel, imageUrlByIndex } from "@/ui";
-import { CardInfo } from "./types";
+import { CardInfo } from "@/store";
+
 import css from "@/ui/carousel/carousel.module.css";
 import css2 from "./card.module.css";
 
@@ -28,25 +29,27 @@ function CarouselImgs({ imgUrls }: { imgUrls: string[]; }) {
 export function Card({ cardInfo }: { cardInfo: CardInfo; }) {
 	return (
 		<div className={css2.card}>
-			<CarouselImgs imgUrls={cardInfo.images} />
+			<CarouselImgs imgUrls={cardInfo.images || []} />
 
 			<div className={css2.card__description}>
-				{cardInfo.descriptions.map((item, index) => (
+				{cardInfo.descriptions?.map((item, index) => (
 					<div className={css2.card__description__item} key={index}>
 						<h3 className="title-small">{item.title}</h3>
 						<h2 className="title-large">{item.description}</h2>
 					</div>
 				))}
 
-				<p dangerouslySetInnerHTML={{__html: cardInfo.notes}} />
+				{cardInfo.notes && <p dangerouslySetInnerHTML={{ __html: cardInfo.notes }} />}
 
 				{/* <hr /> */}
 
-				<p className="read-more">
-					<a className="line" href={cardInfo.linkUrl}>
-						{cardInfo.linkText}
-					</a>
-				</p>
+				{cardInfo.linkUrl && cardInfo.linkText && (
+					<p className="read-more">
+						<a className="line" href={cardInfo.linkUrl}>
+							{cardInfo.linkText}
+						</a>
+					</p>
+				)}
 			</div>
 		</div>
 	);
