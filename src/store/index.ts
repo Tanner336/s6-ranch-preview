@@ -1,19 +1,22 @@
-import { toast } from "sonner";
-import { CardInfo } from "./types";
 import JSON5 from "json5";
+import { CardInfo } from "./types";
+import { TestimonialData } from "./types-testimonial";
 
 export * from "./types";
+export * from "./types-testimonial";
 
-export type DynamicData = {         // global data from jsonl files
-    horses: CardInfo[];             // horses for sale
-    breading: CardInfo[];           // breading
-    error: string | undefined;      // errors from parsing jsonl files
-    filename: string;               // filename of the jsonl file
+export type DynamicData = {             // global data from jsonl files
+    horses: CardInfo[];                 // horses for sale
+    breading: CardInfo[];               // breading
+    testimonials: TestimonialData[];    // testimonials
+    error: string | undefined;          // errors from parsing jsonl files
+    filename: string;                   // filename of the jsonl file
 };
 
 export const dynamicData: DynamicData = {
     horses: [],
     breading: [],
+    testimonials: [],
     error: undefined,
     filename: '',
 };
@@ -27,23 +30,16 @@ export async function initMdSDataWithFetch(url: string) {
 
 export async function initDataWithFetch() {
     try {
-        try {
-            dynamicData.horses = await initMdSDataWithFetch("./data/horses/horses-for-sale.jsonl");
-        } catch (err) {
-            dynamicData.error = err instanceof Error ? err.message : '' + err;
-            dynamicData.filename = "horses-for-sale.jsonl";
-            throw err;
-        }
-    
-        try {
-            dynamicData.breading = await initMdSDataWithFetch("./data/breeding/breeding.jsonl");
-        } catch (err) {
-            dynamicData.error = err instanceof Error ? err.message : '' + err;
-            dynamicData.filename = "breeding.jsonl";          
-            throw err;
-        }
-            
+        dynamicData.filename = "horses-for-sale.jsonl";
+        dynamicData.horses = await initMdSDataWithFetch(`./data/horses/${dynamicData.filename}`);
+
+        dynamicData.filename = "breeding.jsonl";
+        dynamicData.breading = await initMdSDataWithFetch(`./data/breeding/${dynamicData.filename}`);
+
+        dynamicData.filename = "testimonials.jsonl";
+        dynamicData.testimonials = await initMdSDataWithFetch(`./data/testimonials/${dynamicData.filename}`);
     } catch (err) {
-        console.error(err);
+        dynamicData.error = err instanceof Error ? err.message : '' + err;
+        console.error('11', err);
     }
 }

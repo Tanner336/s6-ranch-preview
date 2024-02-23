@@ -16,7 +16,7 @@ export function Facility() {
                 href="/facility"
             />
 
-            <section className="hero">
+            {/* <section className="hero">
                 <div className="page-title">
                     <h3 className="title-small">Explore</h3>
                     <h2>Our Facility</h2>
@@ -78,7 +78,7 @@ export function Facility() {
                 </div>
             </section>
 
-            <Squares />
+            <Squares /> */}
 
             <Testimonial />
         </main>

@@ -65,13 +65,27 @@
 }
 
 .button__icon {
-    /* display: inline-block; */
     width: 2rem;
     height: 2rem;
-    /* fill: currentColor; */
-    /* background-color: red; */
+}
+
+.button__arrow {
     fill: #30b4a9;
+    border-radius: 20px;
+    transition: background-color .2s ease-in-out;
     cursor: pointer;
+
+    &:hover {
+        background-color: #222222;
+    }
+}
+
+.button__arrow-left {
+    padding: 8px 14px 8px 6px !important;
+}
+
+.button__arrow-right {
+    padding: 8px 6px 8px 14px !important;
 }
 
 .button-dots-wrapper {
@@ -92,17 +106,24 @@ button {
     background: transparent;
 }
 
+.carousel-dots {
+    padding: .5rem .25rem !important;
+    cursor: pointer;
+}
+
+
 .button-dots__button {
-    width: .5rem;
-    height: .5rem;
-    border-radius: 0.25rem;
+    width: .75rem;
+    height: .75rem;
+    
+    background-color: rgb(31, 105, 99);
+    border: 1px solid rgb(26, 92, 86);
+    border-radius: 0.5rem;
+
     display: inline-flex;
     align-items: center;
-
-    background-color: rgb(49 81 95);
-    border: 1px solid #ffffff;
 }
 
 .button-dots__button.active {
-    background-color: teal;
+    background-color: rgb(8, 252, 231);
 }

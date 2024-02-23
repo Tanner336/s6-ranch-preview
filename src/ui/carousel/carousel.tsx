@@ -85,24 +85,19 @@ export function Carousel<T = string>({ slides, options, className, card, ...rest
         </div>
 
         <div className={css["buttons-wrapper"]}>
-            <button className="icon-text" onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
+            <button className={classNames(css["button__arrow"], css["button__arrow-left"])} onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
                 <IconPrev className={css["button__icon"]} />Prev
             </button>
 
             <div className={css["button-dots-wrapper"]}>
                 {scrollSnaps.map((_, index) => (
-                    <button
-                        className={classNames(
-                            css["button-dots__button"],
-                            index === selectedIndex && css["active"]
-                        )}
-                        onClick={() => onDotButtonClick(index)}
-                        key={index}
-                    />
+                    <button className={css["carousel-dots"]} onClick={() => onDotButtonClick(index)} key={index}>
+                        <div className={classNames(css["button-dots__button"], index === selectedIndex && css["active"])} />
+                    </button>
                 ))}
             </div>
 
-            <button className="icon-text" onClick={onNextButtonClick} disabled={nextBtnDisabled}>
+            <button className={classNames(css["button__arrow"], css["button__arrow-right"])} onClick={onNextButtonClick} disabled={nextBtnDisabled}>
                 Next<IconNext className={css["button__icon"]} />
             </button>
         </div>
