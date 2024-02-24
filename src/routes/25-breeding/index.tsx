@@ -8,11 +8,11 @@ export function Breeding() {
             <Hero />
 
             <div className="horses-for-sale">
-                {dynamicData.breading.map((cardInfo, index) => (
+                {dynamicData.breeding.map((cardInfo, index) => (
                     <Card cardInfo={cardInfo} key={index} />
                 ))}
             </div>
-            
+
         </main>
     );
 }

@@ -1,9 +1,9 @@
 [
     {
       "images": [
-        "./data/horses/horse-1.jpg",
-        "./data/horses/horse-2.jpg",
-        "./data/horses/horse-3.jpg",
+        "horse-1.jpg",
+        "horse-2.jpg",
+        "horse-3.jpg",
         // this is comment
       ],
       "descriptions": [

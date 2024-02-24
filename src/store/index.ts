@@ -7,7 +7,7 @@ export * from "./types-testimonial";
 
 export type DynamicData = {             // global data from jsonl files
     horses: CardInfo[];                 // horses for sale
-    breading: CardInfo[];               // breading
+    breeding: CardInfo[];               // breeding
     testimonials: TestimonialData[];    // testimonials
     error: string | undefined;          // errors from parsing jsonl files
     filename: string;                   // filename of the jsonl file
@@ -15,31 +15,54 @@ export type DynamicData = {             // global data from jsonl files
 
 export const dynamicData: DynamicData = {
     horses: [],
-    breading: [],
+    breeding: [],
     testimonials: [],
     error: undefined,
     filename: '',
 };
 
-export async function initMdSDataWithFetch(url: string) {
+async function initMdSDataWithFetch(url: string): Promise<any> {
     const res = await fetch(url);
     const text = await res.text();
-    const json = JSON5.parse(text);
-    return json;
+    const obj = JSON5.parse(text);
+    return obj;
+}
+
+function fixRelativePaths(items: string[], folder: string): string[] {
+    return items.map(
+        (item) => {
+            const isAbsolute = item.match(/^(\/|\.)/);
+            if (!isAbsolute) {
+                return `${folder}${item}`;
+            }
+            return item;
+        }
+    );
 }
 
 export async function initDataWithFetch() {
+    let folder = '';
     try {
+        folder = "./data/horses/";
         dynamicData.filename = "horses-for-sale.jsonl";
-        dynamicData.horses = await initMdSDataWithFetch(`./data/horses/${dynamicData.filename}`);
+        dynamicData.horses = await initMdSDataWithFetch(`${folder}${dynamicData.filename}`);
+        dynamicData.horses.forEach((item) => {
+            item.images = fixRelativePaths(item.images, folder);
+        });
 
+        folder = "./data/breeding/";
         dynamicData.filename = "breeding.jsonl";
-        dynamicData.breading = await initMdSDataWithFetch(`./data/breeding/${dynamicData.filename}`);
+        dynamicData.breeding = await initMdSDataWithFetch(`${folder}${dynamicData.filename}`);
+        dynamicData.breeding.forEach((item) => {
+            item.images = fixRelativePaths(item.images, folder);
+        });
 
+        folder = "./data/testimonials/";
         dynamicData.filename = "testimonials.jsonl";
-        dynamicData.testimonials = await initMdSDataWithFetch(`./data/testimonials/${dynamicData.filename}`);
+        dynamicData.testimonials = await initMdSDataWithFetch(`${folder}${dynamicData.filename}`);
     } catch (err) {
         dynamicData.error = err instanceof Error ? err.message : '' + err;
         console.error('11', err);
     }
 }
+
