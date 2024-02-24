@@ -23,7 +23,18 @@ export function App() {
         <HelmetProvider context={{}}>
             <div className="min-h-screen grid place-items-center">
                 <RouterProvider router={router} />
-                <Toaster />
+                <Toaster
+                    toastOptions={{
+                        style: {
+                            right: '0px',
+                            width: '500px',
+                            color: 'white',
+                            background: 'red',
+                            fontSize: '1.2em',
+                            fontWeight: 'bold',
+                        }
+                    }}
+                />
             </div>
         </HelmetProvider>
     </>);
