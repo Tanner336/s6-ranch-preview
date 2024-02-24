@@ -28,42 +28,44 @@ export function MainMenu() {
             }
             : {};
 
-    return (<>
-        <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <IconCross /> : <IconHamburger />}
-        </button>
+    return (
+        <div ref={ref}>
+            <button className="hamburger" onClick={() => setIsMenuOpen((v) => !v)}>
+                {isMenuOpen ? <IconCross /> : <IconHamburger />}
+            </button>
 
-        <ul ref={ref} className={classNames("nav-wrapper", isMenuOpen && "show-menu")}>
-            <li className="nav-item" onClick={CloseMenu}>
-                <Link to="/" style={activeStyles("/")}>
-                    Home
-                </Link>
-            </li>
-            <li className="nav-item" onClick={CloseMenu}>
-                <Link to="/facility" style={activeStyles("/facility")}>
-                    Facility
-                </Link>
-            </li>
-            <li className="nav-item" onClick={CloseMenu}>
-                <Link to="/services" style={activeStyles("/services")}>
-                    Services
-                </Link>
-            </li>
-            <li className="nav-item" onClick={CloseMenu}>
-                <Link to="/horses-for-sale" style={activeStyles("/horses-for-sale")}>
-                    For Sale
-                </Link>
-            </li>
-            <li className="nav-item" onClick={CloseMenu}>
-                <Link to="/breeding" style={activeStyles("/breeding")}>
-                    Breeding
-                </Link>
-            </li>
-            <li className="nav-item" onClick={CloseMenu}>
-                <a href="#contact-us" style={activeStyles("#contact")}>
-                    Contact
-                </a>
-            </li>
-        </ul >
-    </>);
+            <ul className={classNames("nav-wrapper", isMenuOpen && "show-menu")}>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <Link to="/" style={activeStyles("/")}>
+                        Home
+                    </Link>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <Link to="/facility" style={activeStyles("/facility")}>
+                        Facility
+                    </Link>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <Link to="/services" style={activeStyles("/services")}>
+                        Services
+                    </Link>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <Link to="/horses-for-sale" style={activeStyles("/horses-for-sale")}>
+                        For Sale
+                    </Link>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <Link to="/breeding" style={activeStyles("/breeding")}>
+                        Breeding
+                    </Link>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
+                    <a href="#contact-us" style={activeStyles("#contact")}>
+                        Contact
+                    </a>
+                </li>
+            </ul >
+        </div>
+    );
 }
