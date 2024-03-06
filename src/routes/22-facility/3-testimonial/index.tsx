@@ -37,23 +37,7 @@ export function Testimonial() {
             </div>
 
             <div className="testimonial-card">
-
                 <CarouselSlides slides={dynamicData.testimonials} />
-
-                {/* <div className="arrow-prev" tabIndex={0} />
-
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-                    sapiente necessitatibus sequi ad minima! Similique rem libero
-                    commodi, earum impedit et eaque voluptatem nobis eveniet nihil
-                    veritatis modi a laborum!
-                </p>
-
-                <p className="testimonial-name">- John Doe</p>
-
-                <div className="arrow-next" tabIndex={0} /> */}
-
-
             </div>
 
         </section>

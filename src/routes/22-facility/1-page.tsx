@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SEO } from "../SEO";
 import { Testimonial } from "./3-testimonial";
 import { useState } from "react";
-import grounds from "../../assets/img/grounds-v2.jpg";
+import grounds from "../../assets/img/grounds-v2.webp";
 import { Squares } from "./2-squares";
 
 export function Facility() {
@@ -16,7 +16,7 @@ export function Facility() {
                 href="/facility"
             />
 
-            {/* <section className="hero">
+            <section className="hero">
                 <div className="page-title">
                     <h3 className="title-small">Explore</h3>
                     <h2>Our Facility</h2>
@@ -78,7 +78,7 @@ export function Facility() {
                 </div>
             </section>
 
-            <Squares /> */}
+            <Squares />
 
             <Testimonial />
         </main>

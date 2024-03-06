@@ -12,7 +12,7 @@ export type CardInfo = {            // H4Sale - horses for sale and breding
 };
 
 /*
-"str".split(/!\[\](\(*.jpg\))/i)
+"str".split(/!\[\](\(*.webp\))/i)
 ----------------------------------------------
 
 ![](image-url)

@@ -1,9 +1,9 @@
 [
     {
       "images": [
-        "./data/horses/horse-2.jpg",
-        "./data/horses/horse-1.jpg",
-        "./data/horses/horse-3.jpg",
+        "./data/horses/horse-2.webp",
+        "./data/horses/horse-1.webp",
+        "./data/horses/horse-3.webp",
         // this is comment
       ],
       "descriptions": [
@@ -26,9 +26,9 @@
     },
     {
       "images": [
-        "./data/breeding/sample-colt2.jpg",
-        "./data/breeding/sample-colt3.jpg",
-        "./data/breeding/sample-colt1.jpg",
+        "./data/breeding/sample-colt2.webp",
+        "./data/breeding/sample-colt3.webp",
+        "./data/breeding/sample-colt1.webp",
       ],
       "descriptions": [
         {

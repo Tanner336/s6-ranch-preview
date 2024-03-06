@@ -1,7 +1,7 @@
 import { HeaderBody } from "./1-header";
 import { SEO } from "./SEO";
 import horseProfile from "../assets/img/horse-2.jpg";
-import community from "../assets/img/group-photo3.jpg";
+import community from "../assets/img/group-photo3.webp";
 import { Link } from "react-router-dom";
 
 export function Home() {

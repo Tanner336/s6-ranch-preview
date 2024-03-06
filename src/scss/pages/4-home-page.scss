@@ -8,14 +8,14 @@
 .hero {
     // option-2
     background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 15%, rgba(0, 0, 0, 0.53) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/hero-mobile.jpg") no-repeat 50% 80%;
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.jpg") no-repeat 40% 50%;
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.webp") no-repeat 40% 50%;
     background-size: cover;
     height: 300px;
 
     @include desktop() {
         // option-2
-        // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.jpg") no-repeat 50% 50%;
-        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/hero-desktop3.jpg") no-repeat 50% 50%;
+        // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/horse-stop.webp") no-repeat 50% 50%;
+        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/hero-desktop3.webp") no-repeat 50% 50%;
         background-size: cover;
         // height: 400px;
         height: 280px;
@@ -199,7 +199,7 @@
 //homepage - quick words
 // <img> : 350 x 253
 .quick-words {
-    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.65) 15%, rgba(11, 11, 11, 0.65) 100%), url("../assets/img/background-1.jpg") no-repeat 40% 50%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.65) 15%, rgba(11, 11, 11, 0.65) 100%), url("../assets/img/background-1.webp") no-repeat 40% 50%;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -335,12 +335,12 @@
 
         &.one {
             // option-2
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url("../assets/img/meet-trainers-v2.jpg") no-repeat 50% 15%;
-            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.85) 80%), url("../assets/img/meet-trainers-v2.jpg") no-repeat 50% 15%;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url("../assets/img/meet-trainers-v2.webp") no-repeat 50% 15%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.85) 80%), url("../assets/img/meet-trainers-v2.webp") no-repeat 50% 15%;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.8) 100%), url("../assets/img/meet-trainers-v2.jpg") no-repeat 50% 15%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.8) 100%), url("../assets/img/meet-trainers-v2.webp") no-repeat 50% 15%;
                 background-size: cover;
             }
 
@@ -363,8 +363,8 @@
 
         &.two {
             // option-2
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/lessons2.jpg") no-repeat 60% 60%;
-            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/lessons2.jpg") no-repeat 60% 60%;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/lessons2.webp") no-repeat 60% 60%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/lessons2.webp") no-repeat 60% 60%;
             background-size: cover;
 
             @include desktop {
@@ -372,7 +372,7 @@
             }
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.85) 100%), url("../assets/img/lessons2.jpg") no-repeat 60% 60%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.85) 100%), url("../assets/img/lessons2.webp") no-repeat 60% 60%;
                 background-size: cover;
             }
 
@@ -395,12 +395,12 @@
 
         &.three {
             // option-2
-            background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
-            // background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
+            background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(11, 11, 11, 0.95) 80%), url("../assets/img/breeding2.webp") no-repeat 50% 60%;
+            // background: linear-gradient(to bottom, rgba(11, 11, 11, .35) 15%, rgba(24, 20, 16, 0.95) 80%), url("../assets/img/breeding2.webp") no-repeat 50% 60%;
             background-size: cover;
 
             &:hover {
-                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.75) 100%), url("../assets/img/breeding2.jpg") no-repeat 50% 60%;
+                background: linear-gradient(to bottom, rgba(11, 11, 11, .15) 15%, rgba(11, 11, 11, 0.75) 100%), url("../assets/img/breeding2.webp") no-repeat 50% 60%;
                 background-size: cover;
             }
 

@@ -8,10 +8,10 @@ const data1: Record<string, string>[] = [
     subtitle: "Reining & Performance Horses",
   },
   {
-    img: "./src/assets/img/horse-2.jpg",
+    img: "./src/assets/img/horse-2.webp",
   },
   {
-    img: "./src/assets/img/horse-2.jpg",
+    img: "./src/assets/img/horse-2.webp",
   },
   {
     link: "/pages/about-breed.html",
@@ -20,7 +20,7 @@ const data1: Record<string, string>[] = [
   {
     // title: "Reining",
     // subtitle: "Reining & Performance Horses",
-    // img: "./src/assets/img/horse-2.jpg",
+    // img: "./src/assets/img/horse-2.webp",
     text: `250 characters - See what our 10 acre ranch and NRHA Professional
         trainers can offer you an your horse. See what our 10acre ranch and
         NRHA Professional trainers can offer you and your horse. See what our
@@ -36,8 +36,8 @@ const data1: Record<string, string>[] = [
 
 Reining & Performance Horses
 
-![image](./src/assets/img/horse-2.jpg)
-![image](./src/assets/img/horse-2.jpg)
+![image](./src/assets/img/horse-2.webp)
+![image](./src/assets/img/horse-2.webp)
 
 [read more](/pages/about-breed.html)
 

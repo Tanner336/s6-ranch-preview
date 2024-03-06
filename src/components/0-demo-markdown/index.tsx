@@ -2,7 +2,7 @@ import { HTMLAttributes, useMemo } from "react";
 import { marked } from "marked";
 import { classNames } from "../../utils";
 import './markdown.css';
-//![image](./src/assets/img/horse-2.jpg)
+//![image](./src/assets/img/horse-2.webp)
 const CODE_ORG = 
 `#### version 3.0.364 <span class="date">11.28.2018</span>
 
@@ -14,16 +14,16 @@ const CODE_ORG =
     <tr>
         <td>
             <a href="https://www.google.com/chrome/" target="_blank">
-                <img src="./src/assets/img/horse-2.jpg" alt="black and white colored tornjak" class="w-24 h-24" />
+                <img src="./src/assets/img/horse-2.webp" alt="black and white colored tornjak" class="w-24 h-24" />
             </a>
         </td>
 
-        <td><img src="./src/assets/img/horse-2.jpg" alt="black and white colored tornjak" class="w-24 h-24" /></td>
+        <td><img src="./src/assets/img/horse-2.webp" alt="black and white colored tornjak" class="w-24 h-24" /></td>
     </tr>
 </table>
 
-* <img src="./src/assets/img/horse-2.jpg" alt="black and white colored tornjak" class="w-24 h-24" />
-* <img src="./src/assets/img/horse-2.jpg" alt="black and white colored tornjak" class="w-24 h-24" />
+* <img src="./src/assets/img/horse-2.webp" alt="black and white colored tornjak" class="w-24 h-24" />
+* <img src="./src/assets/img/horse-2.webp" alt="black and white colored tornjak" class="w-24 h-24" />
 
 
 
