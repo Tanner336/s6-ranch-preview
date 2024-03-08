@@ -29,7 +29,7 @@ export function MainMenu() {
             : {};
 
     return (
-        <div ref={ref}>
+        <div className="navigation" ref={ref}>
             <button className="hamburger" onClick={() => setIsMenuOpen((v) => !v)}>
                 {isMenuOpen ? <IconCross /> : <IconHamburger />}
             </button>

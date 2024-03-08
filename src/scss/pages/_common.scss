@@ -26,6 +26,7 @@ $spacing-large: .75rem;
 $spacing-large-mobile: .55rem;
 $line-height-lg: 1.75rem;
 $shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+$shadow-white: rgb(0, 0, 0) 0px 10px 15px -5px;
 
 // Mixins
 @mixin mobile-only {
@@ -323,14 +324,16 @@ li {
     &::after {
         content: "";
         display: block;
-        width: 3rem;
+        width: 2rem;
         height: 1px;
         background: $teal;
         position: absolute;
-        right: -30%;
+        // right: -30%;
+        right: -13%;
         top: 50%;
 
         @include desktop() {
+            width: 3rem;
             right: -5%;
             top: 50%;
         }
