@@ -12,6 +12,9 @@ export default defineConfig(({ command }) => {
                 "@": path.resolve(__dirname, "./src"),
             },
         },
+        build: {
+            target: 'esnext'
+        },
         plugins: [react()],
         server: {
             port: 3000,

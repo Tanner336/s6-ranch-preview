@@ -14,9 +14,10 @@ type CarouselProps<T> = {
     slides: T[];
     options?: EmblaOptionsType;
     card: (index: number) => ReactNode;
+    showButtonText?: boolean;
 };
 
-export function Carousel<T = string>({ slides, options, className, card, ...rest }: CarouselProps<T> & HTMLAttributes<HTMLDivElement>) {
+export function Carousel<T = string>({ slides, options, className, card, showButtonText = true, ...rest }: CarouselProps<T> & HTMLAttributes<HTMLDivElement>) {
     const [emblaRef, api] = useEmblaCarousel(options, [/*Autoplay({ stopOnInteraction: false, delay: 5000 })*/]);
 
     const onButtonClick = useCallback(
@@ -38,55 +39,20 @@ export function Carousel<T = string>({ slides, options, className, card, ...rest
                     {slides.map(
                         (imgSrc, index) => (
                             <Fragment key={index}>
-
-                                {/* {card
-                                    ? (
-                                        <Fragment key={index}>
-                                            {card(index)}
-                                        </Fragment>
-                                    )
-                                    : (
-                                        <div className={css["card"]} key={index}>
-
-                                            <div className={css["card__number"]}>
-                                                <span>{index + 1}</span>
-                                            </div>
-
-                                            <img
-                                                className={css["card__img"]}
-                                                src={imageUrlByIndex<T>(slides, index)}
-                                                alt="Your alt text"
-                                            />
-                                        </div>
-
-                                    )
-                                } */}
-
                                 {card(index)}
                             </Fragment>
                         ))
                     }
                 </div>
             </div>
-
-
-            {/* <div className={css["button-dots-wrapper"]}>
-                {scrollSnaps.map((_, index) => (
-                    <button
-                        className={classNames(
-                            css["button-dots__button"],
-                            index === selectedIndex && css["active"]
-                        )}
-                        onClick={() => onDotButtonClick(index)}
-                        key={index}
-                    />
-                ))}
-            </div> */}
         </div>
 
         <div className={css["buttons-wrapper"]}>
             <button className={classNames(css["button__arrow"], css["button__arrow-left"])} onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
-                <IconPrev className={css["button__icon"]} />Prev
+                <IconPrev className={css["button__icon"]} />
+                {showButtonText && (
+                    <span>Prev</span>
+                )}
             </button>
 
             <div className={css["button-dots-wrapper"]}>
@@ -98,23 +64,15 @@ export function Carousel<T = string>({ slides, options, className, card, ...rest
             </div>
 
             <button className={classNames(css["button__arrow"], css["button__arrow-right"])} onClick={onNextButtonClick} disabled={nextBtnDisabled}>
-                Next<IconNext className={css["button__icon"]} />
+                {showButtonText && (
+                    <span>Next</span>
+                )}
+                <IconNext className={css["button__icon"]} />
             </button>
         </div>
-
     </>);
 }
 
 export function imageUrlByIndex<T>(arr: T[], idx: number): T {
     return arr[idx % arr.length];
 }
-
-// import { ButtonHTMLAttributes, DetailedHTMLProps, PropsWithChildren, useCallback } from 'react';
-// type ButtonProps = PropsWithChildren<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>>;
-// export function NavButton({ children, ...rest }: ButtonProps) {
-//     return (
-//         <button type="button" {...rest}>
-//             {children}
-//         </button>
-//     );
-// }
