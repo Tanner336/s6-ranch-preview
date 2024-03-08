@@ -424,7 +424,7 @@
         justify-content: space-around;
         background: rgb(32, 32, 32, 0.8);
         width: 95%;
-        max-width: 1200px;
+        max-width: 1120px;
         margin: 0 auto;
         border-radius: 10px;
         flex-wrap: wrap;
@@ -432,6 +432,7 @@
 
         @include desktop() {
             flex-direction: row;
+            width: 70%;
         }
 
         li {
@@ -446,34 +447,24 @@
     }
 }
 
-#service section {
-    &:nth-of-type(3) {
+#service {
+    .riding-lessons {
         background: linear-gradient(to bottom, rgba(11, 11, 11, .4) 15%, rgba(11, 11, 11, 0.4) 100%), url("../assets/img/service-one-v2.webp") no-repeat center center;
         background-size: cover;
     }
 
-    &:nth-of-type(4) {
+    .training {
         background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-two-v2.webp") no-repeat center center;
         background-size: cover;
     }
 
-    &:nth-of-type(5) {
+    .boarding {
         background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-three-v2.webp") no-repeat center center;
         background-size: cover;
     }
 
-    &:nth-of-type(6) {
+    .consignment {
         background: linear-gradient(to bottom, rgba(11, 11, 11, .4) 15%, rgba(11, 11, 11, 0.4) 100%), url("../assets/img/service-4.jpg") no-repeat center center;
-        background-size: cover;
-    }
-
-    &:nth-of-type(7) {
-        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-5.jpg") no-repeat center center;
-        background-size: cover;
-    }
-
-    &:nth-of-type(8) {
-        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-6.jpg") no-repeat center 20%;
         background-size: cover;
     }
 }

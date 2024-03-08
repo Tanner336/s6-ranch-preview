@@ -24,7 +24,7 @@
     &-text {
         max-width: 360px;
         position: relative;
-        top: 3%;
+        top: 6%;
         margin: 0 auto;
         color: $white;
         letter-spacing: $spacing-large-mobile;
@@ -101,7 +101,7 @@
 
     a.main-btn {
         position: relative;
-        top: 2rem;
+        top: 4rem;
 
         @include desktop() {
             top: 9rem
@@ -137,8 +137,8 @@
         }
 
         .title-small {
-            margin: 1rem auto 0;
-            max-width: 300px;
+            margin: 0.5rem auto 0;
+            // max-width: 300px;
 
             @include desktop {
                 margin: 0 auto;
@@ -170,6 +170,8 @@
 
         h3 {
             text-align: center;
+            font-weight: 600;
+            color: $teal;
         }
 
         img {
@@ -177,14 +179,9 @@
             width: auto;
         }
 
-        .read-more {
-            text-align: center;
-            line-height: normal;
-            padding-top: 10px;
-
-            a {
-                font-weight: 600;
-            }
+        .paragraph-large a {
+            font-weight: 600;
+            color: $teal;
         }
     }
 }
@@ -223,12 +220,14 @@
     &-top {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 0 auto;
         width: 80%;
         max-width: 400px;
 
 
         @include desktop() {
+            align-items: flex-start;
             height: 350px;
             min-width: 768px;
             max-width: 900px;
@@ -242,7 +241,7 @@
         @include desktop () {
             text-align: left;
             position: relative;
-            right: -26rem;
+            right: -26em;
             top: 5.5rem;
         }
     }
@@ -279,7 +278,7 @@
 
             .text-block,
             .read-more {
-                padding-left: 22rem;
+                padding-left: 21rem;
             }
 
             .line::after {
@@ -290,6 +289,57 @@
         a {
             color: $teal;
         }
+    }
+}
+
+//homepage - about us
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 2%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5) 80%), url("/src/assets/img/entry-v2.webp") no-repeat 50% top;
+    background-size: cover;
+
+    @include desktop {
+        padding: 2rem;
+    }
+
+    img {
+        width: 600px;
+        max-width: 95%;
+        z-index: 1;
+        box-shadow: $shadow-white;
+    }
+
+    .text-body {
+        padding: 2rem 1.5rem 1.5rem;
+        background: white;
+        // box-shadow: $shadow;
+        max-width: 1000px;
+        margin-top: -2rem;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include desktop {
+            padding: 3rem;
+        }
+
+        p {
+            @include montserrat;
+            color: black;
+            padding-top: 2rem;
+        }
+    }
+}
+
+#home .cta-text-block {
+    background: $dark;
+
+    h3 {
+        color: white;
     }
 }
 
@@ -512,7 +562,7 @@
 
         .text-block {
             color: black;
-            padding-top: 0.5rem;
+            padding: 0.5rem 0;
             @include montserrat();
         }
 
@@ -618,5 +668,82 @@
         width: 40px;
         margin-top: 20px;
         color: $teal;
+    }
+}
+
+
+
+// homepage - quote
+#quote {
+    background: url("../assets/img/louis-horse.webp") no-repeat right 33%;
+    background-size: cover;
+    padding: 1rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+
+    @include desktop {
+        padding: 2rem;
+    }
+
+    blockquote {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 95%;
+        margin: 0;
+        padding-top: 3rem;
+        font-size: 1.5rem;
+        line-height: normal;
+        font-style: italic;
+        @include playfair();
+        color: $dark-light;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        z-index: 1;
+
+        @include desktop {
+            font-size: 2.25rem;
+            line-height: 3rem;
+            width: 50%;
+            padding-top: 4rem;
+        }
+
+        &:before {
+            content: url("../assets/img/quotation-mark-m.png");
+            position: absolute;
+            top: -1rem;
+            z-index: -1;
+            left: 0;
+
+            @include desktop {
+                content: url("../assets/img/quotation-mark-d.png");
+            }
+        }
+
+    }
+
+    cite {
+        color: $teal;
+        padding-top: 1.5rem;
+        position: relative;
+        @include montserrat-bold();
+        font-style: unset;
+
+        @include desktop {
+            &:after {
+                content: "";
+                display: block;
+                width: 3rem;
+                height: 1px;
+                background: rgb(48, 180, 169);
+                position: absolute;
+                left: 19rem;
+                top: 2.25rem;
+            }
+        }
     }
 }
