@@ -2,8 +2,9 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/all-routes";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster, toast } from "sonner";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { dynamicData } from "./store";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
 function useDinamicDataErrors() {
     useEffect(
@@ -18,6 +19,15 @@ function useDinamicDataErrors() {
 }
 
 export function App() {
+    const [hasConsentValue, setHasConsentValue] = useState(false);
+
+    useEffect(() => {
+        setHasConsentValue(!!getCookieConsentValue());
+        if (getCookieConsentValue() === 'true') {
+            console.log('===================User ha s consented to cookies');
+        }
+    }, []);
+
     useDinamicDataErrors();
     return (<>
         <HelmetProvider context={{}}>
@@ -36,6 +46,21 @@ export function App() {
                     }}
                 />
             </div>
+
+            {!hasConsentValue && (
+                <CookieConsent
+                    location="bottom"
+                    buttonText="Accept"
+                    cookieName="s6RanchCookieConsent"
+                    style={{ background: "#2B373B" }}
+                    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                    expires={150}
+                >
+                    This website uses cookies to enhance the user experience.{" "}
+                    {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
+                </CookieConsent>
+            )
+            }
         </HelmetProvider>
     </>);
 }

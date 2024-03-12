@@ -1,5 +1,5 @@
 import { TestimonialData, dynamicData } from "@/store";
-import { Carousel, IconNext, IconPrev, imageUrlByIndex } from "@/ui";
+import { Carousel, imageUrlByIndex } from "@/ui";
 
 import css from "@/ui/carousel/carousel.module.css";
 
@@ -21,6 +21,7 @@ function CarouselSlides({ slides }: { slides: TestimonialData[]; }) {
                         </div>
                     );
                 }}
+            showButtonText={false}
         />
     );
 }
@@ -30,7 +31,6 @@ export function Testimonial() {
 
     return (
         <section id="testimonial" className="testimonial">
-
             <div className="section-title">
                 <h3 className="title-small">Kind Words</h3>
                 <h2 className="title-large">From Our Community</h2>
@@ -39,7 +39,6 @@ export function Testimonial() {
             <div className="testimonial-card">
                 <CarouselSlides slides={dynamicData.testimonials} />
             </div>
-
         </section>
     );
 }
