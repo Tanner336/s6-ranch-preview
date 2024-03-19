@@ -35,7 +35,7 @@ export function Facility() {
                 </div>
 
                 <div className="two-col-text-block">
-                    <h3 class="title-small">Our facility boasts:</h3>
+                    <h3 className="title-small">Our facility boasts:</h3>
                     <hr></hr>
                     <p>150ft x 75ft covered arena with lighting and performance footing</p>
                     <p>250 ft x 125ft outdoor arena with sand footing</p>
