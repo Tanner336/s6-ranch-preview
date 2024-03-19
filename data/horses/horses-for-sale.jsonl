@@ -1,7 +1,7 @@
 [
     {
         "images": [
-          "coming-soon.webp",
+          "./data/breeding/coming-soon.webp",
           // this is comment
         ],
         "descriptions": [
