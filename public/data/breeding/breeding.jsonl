@@ -1,51 +1,62 @@
 [
     {
       "images": [
-        "./data/horses/horse-2.webp",
-        "./data/horses/horse-1.webp",
-        "./data/horses/horse-3.webp",
+        "./data/breeding/coming-soon.jpg",
         // this is comment
       ],
       "descriptions": [
-        {
-          "title": "Cutting Horse",
-          "description": "Seabiscuit"
-        }
+            {
+              "title": "Coming soon",
+            }
       ],
-      "notes": 
-      "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
-      Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
-      provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti \
-      officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, \
-      magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
-      <div style='color:red; display:inline-block'>Animi</div> \
-      Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
-      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
-      "linkText": "Inquire about this horse",
-      "linkUrl": "#contact-us",
     },
-    {
-      "images": [
-        "./data/breeding/sample-colt2.webp",
-        "./data/breeding/sample-colt3.webp",
-        "./data/breeding/sample-colt1.webp",
-      ],
-      "descriptions": [
-        {
-          "title": "Cutting Horse",
-          "description": "Seabiscuit",
-        }
-      ],
-      "notes": 
-      "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
-      Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
-      provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti \
-      officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, \
-      magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
-      <div style='color:red; display:inline-block'>Animi</div> \
-      Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
-      harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
-      "linkText": "Inquire about this horse",
-      "linkUrl": "#contact-us",
-    },
+    // {
+    //   "images": [
+    //     "./data/horses/horse-2.webp",
+    //     "./data/horses/horse-1.webp",
+    //     "./data/horses/horse-3.webp",
+    //     // this is comment
+    //   ],
+    //   "descriptions": [
+    //     {
+    //       "title": "Cutting Horse",
+    //       "description": "Seabiscuit"
+    //     }
+    //   ],
+    //   "notes": 
+    //   "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
+    //   Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
+    //   provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti \
+    //   officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, \
+    //   magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
+    //   <div style='color:red; display:inline-block'>Animi</div> \
+    //   Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
+    //   harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
+    //   "linkText": "Inquire about this horse",
+    //   "linkUrl": "#contact-us",
+    // },
+    // {
+    //   "images": [
+    //     "./data/breeding/sample-colt2.webp",
+    //     "./data/breeding/sample-colt3.webp",
+    //     "./data/breeding/sample-colt1.webp",
+    //   ],
+    //   "descriptions": [
+    //     {
+    //       "title": "Cutting Horse",
+    //       "description": "Seabiscuit",
+    //     }
+    //   ],
+    //   "notes": 
+    //   "1612 characters - Lorem ipsum dolor sit amet consectetur\tadipisicing elit. \
+    //   Atque illo optio suscipit dicta deleniti eaque a, <b>consequatur</b> incidunt porro laboriosam \
+    //   provident libero doloremque ratione vitae quo sunt nam, tempora adipisci. Veritatis, aut sed, impedit deleniti \
+    //   officia rem dicta quo ducimus ullam totam ut beatae quas? Natus nulla odio aperiam\trerum, \
+    //   magni deleniti blanditiis in eveniet facilis. Adipisci, illo fugit? Aspernatur. \
+    //   <div style='color:red; display:inline-block'>Animi</div> \
+    //   Animi quam corrupti sunt enim labore\tsuscipit voluptatibus soluta porro eveniet sed temporibus \
+    //   harum laudantium quisquam sapiente perspiciatis uae, aut libero tenetur!",
+    //   "linkText": "Inquire about this horse",
+    //   "linkUrl": "#contact-us",
+    // },
 ]
