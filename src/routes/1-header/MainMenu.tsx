@@ -61,6 +61,11 @@ export function MainMenu() {
                     </Link>
                 </li>
                 <li className="nav-item" onClick={CloseMenu}>
+                    <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5d2486ea-bbf6-4ecc-9b77-7ccd59a2304e&env=na4&acct=4ca4f66f-951d-4258-9482-4800ab8aff19&v=2" target="_blank">
+                        Sign Forms
+                    </a>
+                </li>
+                <li className="nav-item" onClick={CloseMenu}>
                     <a href="#contact-us" style={activeStyles("#contact")}>
                         Contact
                     </a>

@@ -16,13 +16,13 @@ export function Home() {
         <div className="hero-text">
           <img src={logoXL} alt="profile view of a young horse" />
           <h1>Ranch</h1>
-          <h1 className="lines title-small">
+          {/* <h1 className="lines title-small">
             <span>Performance Horses</span>
-          </h1>
+          </h1> */}
         </div>
-        <a className="main-btn" tabIndex={0} href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5d2486ea-bbf6-4ecc-9b77-7ccd59a2304e&env=na4&acct=4ca4f66f-951d-4258-9482-4800ab8aff19&v=2">
+        {/* <a className="main-btn" tabIndex={0} href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5d2486ea-bbf6-4ecc-9b77-7ccd59a2304e&env=na4&acct=4ca4f66f-951d-4258-9482-4800ab8aff19&v=2">
           <span className="main-btn-text">Release Form</span>
-        </a>
+        </a> */}
       </section>
 
       <section className="quick-words">
