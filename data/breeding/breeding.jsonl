@@ -1,4 +1,18 @@
 [
+    /**/
+    {
+      "images": [
+        "./s6-ranch-preview/data/breeding/coming-soon.webp",
+        // this is comment
+      ],
+      "descriptions": [
+            {
+              "title": "Coming soon",
+            }
+      ],
+    },
+    /**/
+    
     /** /
     {
       "images": [
@@ -13,7 +27,7 @@
     },
     /**/
     
-    /**/
+    /** /
     {
       "images": [
         "./data/horses/horse-2.webp",
