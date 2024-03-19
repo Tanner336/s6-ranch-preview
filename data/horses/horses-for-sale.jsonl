@@ -2,12 +2,12 @@
     /**/
     {
         "images": [
-          "./s6-ranch-preview/data/horses/coming-soon.webp",
+          "./s6-ranch-preview/data/horses/service-one.webp",
           // this is comment
         ],
         "descriptions": [
               {
-                "title": "Coming soon",
+                "title": "Please check back for updates.",
               }
         ],
       },

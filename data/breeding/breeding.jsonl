@@ -2,12 +2,12 @@
     /**/
     {
       "images": [
-        "./s6-ranch-preview/data/breeding/coming-soon.webp",
+        "./s6-ranch-preview/data/breeding/mare-with-foal.webp",
         // this is comment
       ],
       "descriptions": [
             {
-              "title": "Coming soon",
+              "title": "Please check back for updates.",
             }
       ],
     },
