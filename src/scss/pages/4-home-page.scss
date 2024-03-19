@@ -6,29 +6,13 @@
 //background img size: 477 x 600 (mobile)
 //background img size: 1400 x 788 (desktop)
 .hero {
-    // option-2
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 15%, rgba(0, 0, 0, 0.53) 45%, rgba(0, 0, 0, 0.55) 90%), url("../assets/img/hero-mobile.jpg") no-repeat 50% 80%;
-
-    background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-1a.jpg") no-repeat 50% 50%;
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-2.jpg") no-repeat 00% 50%;
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-3.jpg") no-repeat 50% 50%;
-    // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-4.jpg") no-repeat 50% 50%;
+    background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/s6-ranch-hero-m.webp") no-repeat 50% 50%;
 
     background-size: cover;
     height: 300px;
 
     @include desktop() {
-        // background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/hero-desktop3.webp") no-repeat 50% 50%;
-        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-1a.jpg") no-repeat center left;
-        // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-2.jpg") no-repeat 50% 50%;
-        // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-3.jpg") no-repeat 50% 50%;
-        // background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-4.jpg") no-repeat 50% 50%;
-        background-size: cover;
-        height: 280px;
-    }
-
-    @media (min-width: $break-lg) and (max-width: 1300px) {
-        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-1a.jpg") no-repeat 25% center;
+        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/s6-ranch-hero-d.webp") no-repeat 60%;
         background-size: cover;
         height: 280px;
     }
@@ -39,7 +23,7 @@
         align-items: center;
         max-width: 360px;
         position: relative;
-        top: 6%;
+        top: 9%;
         margin: 0 auto;
         color: $white;
         letter-spacing: $spacing-large-mobile;

@@ -21,7 +21,7 @@ function Credentials() {
       <div className="logo">
         <img className="logo-img" alt="" src={logoImg} />
         <p className="logo-text">
-          <a href="/">S6 Ranch</a>
+          <a href="/">Ranch</a>
         </p>
       </div>
     </div>

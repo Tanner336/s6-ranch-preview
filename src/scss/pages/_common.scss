@@ -248,9 +248,8 @@ ul {
     }
 
     p {
-        @include playfair();
         letter-spacing: $spacing-medium-mobile;
-        font-size: 30px;
+        font-size: 28px;
         padding-left: 10px;
 
         @include desktop {
@@ -259,15 +258,16 @@ ul {
 
         a {
             color: rgba(255, 255, 255, .75);
-            @include playfair();
+            @include special-elite();
+            text-transform: uppercase;
         }
 
-        a::before {
-            content: "";
-            display: block;
-            inset: 0;
-            position: absolute;
-        }
+        // a::before {
+        //     content: "";
+        //     display: block;
+        //     inset: 0;
+        //     position: absolute;
+        // }
     }
 }
 
