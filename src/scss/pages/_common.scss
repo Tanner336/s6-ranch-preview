@@ -16,7 +16,7 @@ $break-small: 480px;
 $break-med: 600px;
 $break-lg: 768px;
 $break-xl: 1024px;
-$break-XXl: 1800px;
+$break-xxl: 1800px;
 $font-playfair: 'Playfair Display', serif;
 $font-montserrat: 'Montserrat', sans-serif;
 $font-special-elite: 'Special Elite', serif;
@@ -32,6 +32,12 @@ $shadow-white: rgb(0, 0, 0) 0px 10px 15px -5px;
 // Mixins
 @mixin mobile-only {
     @media (min-width: $break-small) {
+        @content;
+    }
+}
+
+@mixin tablet-hero {
+    @media (min-width: $break-lg) and (max-width: #{$break-xxl - 1px}) {
         @content;
     }
 }
@@ -61,7 +67,7 @@ $shadow-white: rgb(0, 0, 0) 0px 10px 15px -5px;
 }
 
 @mixin desktop-huge {
-    @media (min-width: $break-XXl) {
+    @media (min-width: $break-xxl) {
         @content;
     }
 }

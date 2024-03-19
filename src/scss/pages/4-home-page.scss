@@ -27,6 +27,12 @@
         height: 280px;
     }
 
+    @media (min-width: $break-lg) and (max-width: 1300px) {
+        background: linear-gradient(to right, rgba(0, 0, 0, .55) 15%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.35) 90%), url("../assets/img/testing-1a.jpg") no-repeat 25% center;
+        background-size: cover;
+        height: 280px;
+    }
+
     &-text {
         display: flex;
         flex-direction: column;
