@@ -5,6 +5,7 @@ import { Testimonial } from "./3-testimonial";
 import { useState } from "react";
 import grounds from "../../assets/img/grounds-v2.webp";
 import { Squares } from "./2-squares";
+import { IconFacebook, IconInstagram } from "../../ui/icons";
 
 export function Facility() {
     const [d1, setD1] = useState("1");
@@ -34,34 +35,16 @@ export function Facility() {
                 </div>
 
                 <div className="two-col-text-block">
-                    <p>
-                        479 characters - We have indoor and outdoor arena to accomodate
-                        training in all types of weather. A large pen for reining, cutting
-                        and roping. Lots of space for multiple riders. We also have
-                        barrels and cones for practicing patterns.
-                    </p>
-                    <p>
-                        We have have 12 stalls for our training clients, we do not offer
-                        boarding. We have a large pasture for turn out and a round pen for
-                        starting colts. Younger riders are welcome to come and learn the
-                        basics of riding and horsemanship.
-                    </p>
-                    <p>
-                        479 characters - We have indoor and outdoor arena to accomodate
-                        training in all types of weather. A large pen for reining, cutting
-                        and roping. Lots of space for multiple riders. We also have
-                        barrels and cones for practicing patterns.
-                    </p>
-                    <p>
-                        We have have 12 stalls for our training clients, we do not offer
-                        boarding. We have a large pasture for turn out and a round pen for
-                        starting colts. Younger riders are welcome to come and learn the
-                        basics of riding and horsemanship.
-                    </p>
+                    <h3 class="title-small">Our facility boasts:</h3>
+                    <hr></hr>
+                    <p>150ft x 75ft covered arena with lighting and performance footing</p>
+                    <p>250 ft x 125ft outdoor arena with sand footing</p>
+                    <p>120ft round cutting arena with sand footing</p>
+                    <p>60 ft round pen with sand footing</p>
                 </div>
             </section>
 
-            <section className="cta-text-block">
+            {/* <section className="cta-text-block">
                 <div className="stats">
                     <h3 className="title-small">
                         Stay in the Loop with us on facebook
@@ -76,11 +59,38 @@ export function Facility() {
                         </a>
                     </p>
                 </div>
+            </section> */}
+
+            <section className="cta-text-block">
+                <div>
+                    <h3 className="title-small">
+                        Let's get social
+                    </h3>
+                    <div className="social-media-icons">
+                        {/* icon family: https://www.iconfinder.com/iconsets/free-social-media-5 */}
+
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IconFacebook />
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/s6horses/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IconInstagram />
+                        </a>
+                    </div>
+                </div>
             </section>
 
             <Squares />
 
             <Testimonial />
-        </main>
+        </main >
     </>);
 }

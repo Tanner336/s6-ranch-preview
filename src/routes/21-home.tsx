@@ -4,6 +4,7 @@ import horseProfile from "../assets/img/horse-2.jpg";
 import community from "../assets/img/community-photo.webp";
 import salvador from "../assets/img/salvador-family.webp";
 import { Link } from "react-router-dom";
+import logoXL from "../assets/img/logo-xl.png";
 
 export function Home() {
   return (
@@ -13,14 +14,15 @@ export function Home() {
       <section className="hero">
         <HeaderBody />
         <div className="hero-text">
-          <h1>S6 Ranch</h1>
+          <img src={logoXL} alt="profile view of a young horse" />
+          <h1>Ranch</h1>
           <h1 className="lines title-small">
             <span>Performance Horses</span>
           </h1>
         </div>
-        <Link className="main-btn" tabIndex={0} to="/services">
-          <span className="main-btn-text">View Services</span>
-        </Link>
+        <a className="main-btn" tabIndex={0} href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5d2486ea-bbf6-4ecc-9b77-7ccd59a2304e&env=na4&acct=4ca4f66f-951d-4258-9482-4800ab8aff19&v=2">
+          <span className="main-btn-text">Release Form</span>
+        </a>
       </section>
 
       <section className="quick-words">
@@ -34,7 +36,7 @@ export function Home() {
           </div>
           <div className="quick-words-bottom">
             <p className="text-block">
-              See what our 10 acre ranch and NRHA Professional trainers can offer you and your horse. With beautiful accomodations, unmatched care, and top-knotch experts, S6 Ranch is sure to have something for the budding horse enthusiast to the seasoned equestrian.
+              See what our 10 acre ranch and NRHA Professional trainers can offer you and your horse. With beautiful accomodations, unmatched care, and top knotch experts, S6 Ranch is sure to have something for the budding horse enthusiast to the seasoned equestrian.
             </p>
             <p className="read-more">
               <Link className="line" to="/facility">
@@ -173,10 +175,7 @@ export function Home() {
                 <div className="news-tile-text">
                   <h3 className="title-small">Community is Everything</h3>
                   <p className="text-block">
-                    Watching our students learn and grow is the heart of what we
-                    do. S6 Ranch invites people of every learning stage to
-                    participate in our coaching. We believe horsemenship is for
-                    all those who have the heart to try.
+                    Watching our students learn and grow is the heart of what we do. S6 Ranch invites people of every learning stage to participate in our coaching. We believe horsemanship is for anyone with the heart to try.
                   </p>
                   <p className="paragraph-large">
                     <a href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d" target="_blank">

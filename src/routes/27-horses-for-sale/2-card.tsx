@@ -41,8 +41,6 @@ export function Card({ cardInfo }: { cardInfo: CardInfo; }) {
 
 				{cardInfo.notes && <p dangerouslySetInnerHTML={{ __html: cardInfo.notes }} />}
 
-				{/* <hr /> */}
-
 				{cardInfo.linkUrl && cardInfo.linkText && (
 					<p className="read-more">
 						<a className="line" href={cardInfo.linkUrl}>

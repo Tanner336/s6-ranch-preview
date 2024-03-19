@@ -74,36 +74,10 @@ export function Services() {
                     </div> */}
 
                     <div className="secondary-details">
+                        <p>As trusted mentors to many within our community, S6 Ranch teaches values of respect, compassion, and stewardship that lie at the heart of our shared passion for horses. We ensure each horse receives personalized attention and tailored care plans to thrive physically and emotionally. By prioritizing our clients in this way, we can offer guidance and support for any level rider.</p>
+                        <br></br>
                         <p>
-                            1752 Characters - Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Atque illo optio suscipit dicta deleniti eaque
-                            a, consequatur incidunt porro laboriosam provident libero
-                            doloremque ratione vitae quo sunt nam, tempora adipisci.
-                            Veritatis, aut sed, impedit deleniti officia rem dicta quo
-                            ducimus ullam totam ut beatae quas? Natus nulla odio aperiam
-                            rerum, magni deleniti blanditiis in eveniet facilis. Adipisci,
-                            illo fugit? Aspernatur. Animi quam corrupti sunt enim labore
-                            suscipit voluptatibus soluta porro eveniet sed temporibus harum
-                            laudantium quisquam sapiente perspiciatis quae, aut libero
-                            tenetur!Nam liber tempor cum soluta nobis eleifend option congue
-                            nihil imperdiet doming id quod mazim placerat facer possim
-                            assum. Typi non habent claritatem insitam; est usus legentis in
-                            iis qui facit eorum claritatem. Investigationes demonstraverunt
-                            lectores legere me lius quod ii legunt saepius acilisis at vero
-                            eros et accumsan et iusto odio dignissim qui blandit praesent
-                            luptatum. Nam liber tempor cum soluta nobis eleifend option
-                            congue nihil imperdiet doming id quod mazim placerat facer
-                            possim assum. Typi non habent claritatem insitam; est usus
-                            legentis in iis qui facit eorum claritatem. Investigationes
-                            demonstraverunt lectores legere me lius quod ii legunt saepius
-                            acilisis at vero eros et accumsan et iusto odio dignissim qui
-                            blandit praesent luptatum. Nam liber tempor cum soluta nobis
-                            eleifend option congue nihil imperdiet doming id quod mazim
-                            placerat facer possim assum. Typi non habent claritatem insitam;
-                            est usus legentis in iis qui facit eorum claritatem.
-                            Investigationes demonstraverunt lectores legere me lius quod ii
-                            legunt saepius acilisis at vero eros et accumsan et iusto odio
-                            dignissim qui blandit praesent luptatum.
+                            With a genuine love for horses and years of hands-on experience, our trainers and staff have cultivated a deep understanding of equine behavior and welfare that sets them apart as local experts in the field. Whether offering direction on proper training techniques, providing compassionate care to injured or neglected horses, or simply sharing stories and wisdom gleaned from years spent in the equestrian landscape, our staff enrich the lives of everyone at S6 and we are proud to call them family.
                         </p>
                         <hr />
                     </div>
@@ -128,7 +102,7 @@ export function Services() {
                         <h3 className="title-small">About Our</h3>
                         <h2 className="line">Training</h2>
                         <p>
-                            The 10 acre ranch is fully fenced and surrounded by mature trees complete with a walking track bordering the property. There are three client tack rooms, as well as a separate grain room. We have 2 wash racks, multiple turn-out pastures for day use, as well as cross-tie spots in breezeways. An automatic fly-spray stystem runs in horse stalls and breezeways year-round. Stalls are cleaned 6 days a week and horses are fed 7 days a week. Graining is available at additional cost. A full-time caretaker lives on the property as well as our trainer for any urgent horse needs. We have  12ft x 12ft stalls with 24 ft paddocks.
+                            S6 Ranch offers full-care training for show and non-show horses. Everything from boarding and daily turnout to feeding and grooming is included in our training packages. Our trainers work with you and your horse to establish a customized training schedule. Each horse and training program is unique so please inquire below for further details and pricing.
                         </p>
                     </div>
                 </div>
@@ -140,7 +114,7 @@ export function Services() {
                         <h3 className="title-small">About Our</h3>
                         <h2 className="line">Boarding</h2>
                         <p>
-                            S6 Ranch offers full-care training for show and non-show horses. Inquire below for further details and pricing.
+                            The 10 acre ranch is fully fenced and surrounded by mature trees complete with a walking track bordering the property. There are three client tack rooms, as well as a separate grain room. We have 2 wash racks, multiple turn-out pastures for day use, as well as cross-tie spots in breezeways. An automatic fly-spray stystem runs in horse stalls and breezeways year-round. Stalls are cleaned 6 days a week and horses are fed 7 days a week. Graining is available at additional cost. A full-time caretaker lives on the property as well as our trainer for any urgent horse needs. We have  12ft x 12ft stalls with 24 ft paddocks.
                         </p>
                     </div>
                 </div>

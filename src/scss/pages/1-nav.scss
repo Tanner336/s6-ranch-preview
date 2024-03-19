@@ -2,14 +2,18 @@
     background: $dark;
     padding: 20px;
     border-bottom: 1px solid $teal;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
 
     .navigation {
-        width: 80%;
+        // width: 80%;
         display: flex;
         justify-content: flex-end;
+
+        @include desktop {
+            justify-content: center;
+        }
     }
 
     .hamburger {

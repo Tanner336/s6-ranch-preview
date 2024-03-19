@@ -20,11 +20,6 @@ export function Squares() {
             <div className="square bg two">
                 <div className="content">
                     <div className="table">
-                        {/* <div class="table-cell">
-          <a class="main-btn" tabindex="0" href="./articles/history.html">
-              <span class="main-btn-text">History</span>
-          </a>
-      </div> */}
                     </div>
                 </div>
             </div>
@@ -32,11 +27,6 @@ export function Squares() {
             <div className="square bg three">
                 <div className="content">
                     <div className="table">
-                        {/* <div class="table-cell">
-          <a class="main-btn" tabindex="0" href="./articles/health.html">
-              <span class="main-btn-text">Health</span>
-          </a>
-      </div> */}
                     </div>
                 </div>
             </div>
@@ -44,11 +34,6 @@ export function Squares() {
             <div className="square bg four">
                 <div className="content">
                     <div className="table">
-                        {/* <div class="table-cell">
-          <a class="main-btn" tabindex="0" href="./articles/appearance.html">
-              <span class="main-btn-text">Appearance</span>
-          </a>
-      </div> */}
                     </div>
                 </div>
             </div>
@@ -56,11 +41,6 @@ export function Squares() {
             <div className="square bg five">
                 <div className="content">
                     <div className="table">
-                        {/* <div class="table-cell">
-          <a class="main-btn" tabindex="0" href="./articles/grooming.html">
-              <span class="main-btn-text">Grooming</span>
-          </a>
-      </div> */}
                     </div>
                 </div>
             </div>
@@ -68,11 +48,6 @@ export function Squares() {
             <div className="square bg six">
                 <div className="content">
                     <div className="table">
-                        {/* <div class="table-cell">
-          <a class="main-btn" tabindex="0" href="./articles/exercise.html">
-              <span class="main-btn-text">Exercise</span>
-          </a>
-      </div> */}
                     </div>
                 </div>
             </div>

@@ -19,6 +19,7 @@ $break-xl: 1024px;
 $break-XXl: 1800px;
 $font-playfair: 'Playfair Display', serif;
 $font-montserrat: 'Montserrat', sans-serif;
+$font-special-elite: 'Special Elite', serif;
 $spacing-normal: normal;
 $spacing-medium: 0.25rem;
 $spacing-medium-mobile: 0.2rem;
@@ -90,6 +91,10 @@ $shadow-white: rgb(0, 0, 0) 0px 10px 15px -5px;
     font-weight: 600;
 }
 
+@mixin special-elite {
+    font-family: $font-special-elite;
+    font-weight: 400;
+}
 
 // =========================
 // Default Layout
@@ -174,11 +179,6 @@ a:visited {
 ul {
     list-style: none;
     margin: 0;
-}
-
-li {
-    font-size: 0.95em;
-    @include montserrat();
 }
 
 .hide {
