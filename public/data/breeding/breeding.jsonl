@@ -1,4 +1,10 @@
 [
+    // {
+    //   "images": [
+    //     "./data/breeding/coming-soon.jpg",
+    //     // this is comment
+    //   ],
+    // },
     {
       "images": [
         "./data/horses/horse-2.webp",
