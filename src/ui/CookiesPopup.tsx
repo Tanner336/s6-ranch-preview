@@ -13,13 +13,13 @@ export function CookiesPopup() {
 
     return (<>
         {!hasConsentValue && (
-            <div style={{ background: "#2B373B", position: "fixed", bottom: 0, left: 0, width: '100%', zIndex: 200, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
+            <div style={{ fontFamily: "Montserrat, sans-serif", background: "#2B373B", position: "fixed", bottom: 0, left: 0, width: '100%', zIndex: 200, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', }}>
                 <CookieConsent
                     location="bottom"
                     buttonText="Accept"
                     cookieName="s6RanchCookieConsent"
-                    style={{ background: "transparent", position: "relative", maxWidth: '500px' }}
-                    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                    style={{ background: "transparent", position: "relative", maxWidth: '600px' }}
+                    buttonStyle={{ border: "2px solid transparent", background: "#1a1a1a", color: "white", fontSize: "13px" }}
                     expires={150}
                 >
                     <div>This website uses cookies to enhance the user experience.{" "}</div>
