@@ -36,7 +36,7 @@ export function Home() {
           </div>
           <div className="quick-words-bottom">
             <p className="text-block">
-              See what our 10 acre ranch and NRHA Professional trainers can offer you and your horse. With beautiful accomodations, unmatched care, and top knotch experts, S6 Ranch is sure to have something for the budding horse enthusiast to the seasoned equestrian.
+              Welcome to S6 Ranch. Our sprawling 10-acre property offers beautiful accommodations, unmatched care, and top knotch experts. Our NRHA Professional trainers and spacious arenas are great for riders of all levels. Whether you're a seasoned equestrian or budding horse enthusiast, our 10-acre haven welcomes you with open arms.
             </p>
             <p className="read-more">
               <Link className="line" to="/facility">

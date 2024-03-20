@@ -38,9 +38,9 @@ export function Facility() {
                     <h3 className="title-small">Our facility boasts:</h3>
                     <hr></hr>
                     <p>150ft x 75ft covered arena with lighting and performance footing</p>
-                    <p>250 ft x 125ft outdoor arena with sand footing</p>
+                    <p>250ft x 125ft outdoor arena with sand footing</p>
                     <p>120ft round cutting arena with sand footing</p>
-                    <p>60 ft round pen with sand footing</p>
+                    <p>60ft round pen with sand footing</p>
                 </div>
             </section>
 
