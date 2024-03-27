@@ -612,6 +612,30 @@
         min-height: 400px;
     }
 
+    .traaaaner-parent {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .traaaaner {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+        & > div {
+            grid-column-start: 1;
+        }
+    }
+
+    .traaaaner:nth-child(2n) {
+        & > div {
+            // background-color: red;
+            // padding: 4rem 0;
+    
+            grid-column-start: 2;
+        }
+    }
+
     //Kristen
     .trainer-one .col-image {
         background: url("../assets/img/meet-trainers.webp") no-repeat center 20%;

@@ -1,32 +1,26 @@
 [
+    // Coming soon placeholder
+    // To hide, add a space on line 5. It should look like this: "/** /"
+    // To show, remove the space on line 5. It should look like this: "/**/"
     /**/
     {
         "images": [
-          "./s6-ranch-preview/data/horses/service-one.webp",
-          // this is comment
+            "./data/horses/service-one.webp",
+            // this is comment
         ],
         "descriptions": [
-              {
-                "title": "Please check back for updates.",
-              }
-        ],
-      },
-    /**/
-    
-    /** /
-    {
-    "images": [
-        "./data/breeding/coming-soon.webp",
-        // this is comment
-    ],
-    "descriptions": [
             {
-            "title": "Coming soon",
+                "title": "Coming soon",
             }
-    ],
+        ],
     },
     /**/
 
+    // Content for the "https://s6horses.com/horses-for-sale" page
+    // Add new images to the "data/horses" folder
+    // You can simple override the old content, or add new image files and change the file names
+    // To hide, add a space on line 24. It should look like this: "/** /"
+    // To show, remove the space on line 24. It should look like this: "/**/"
     /** /
     {
       "images": [

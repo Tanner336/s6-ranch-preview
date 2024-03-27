@@ -1,6 +1,7 @@
 import JSON5 from "json5";
 import { CardInfo } from "./types";
 import { TestimonialData } from "./types-testimonial";
+import { TrainerData } from "./types-trainers";
 
 export * from "./types";
 export * from "./types-testimonial";
@@ -9,6 +10,7 @@ export type DynamicData = {             // global data from jsonl files
     horses: CardInfo[];                 // horses for sale
     breeding: CardInfo[];               // breeding
     testimonials: TestimonialData[];    // testimonials
+    trainers: TrainerData[];            // trainers
     error: string | undefined;          // errors from parsing jsonl files
     filename: string;                   // filename of the jsonl file
 };
@@ -17,6 +19,7 @@ export const dynamicData: DynamicData = {
     horses: [],
     breeding: [],
     testimonials: [],
+    trainers: [],
     error: undefined,
     filename: '',
 };
@@ -28,12 +31,14 @@ async function initMdSDataWithFetch(url: string): Promise<any> {
     return obj;
 }
 
-function fixRelativePaths(items: string[], folder: string): string[] {
+function fixRelativePaths<TElement extends string>(items: TElement[], folder: string): TElement[] {
     return items.map(
         (item) => {
-            const isAbsolute = item.match(/^(\/|\.)/);
-            if (!isAbsolute) {
-                return `${folder}${item}`;
+            if (item) {
+                const isAbsolute = item.match(/^(\/|\.)/);
+                if (!isAbsolute) {
+                    return `${folder}${item}` as TElement;
+                }
             }
             return item;
         }
@@ -60,6 +65,14 @@ export async function initDataWithFetch() {
         folder = "./data/testimonials/";
         dynamicData.filename = "testimonials.jsonl";
         dynamicData.testimonials = await initMdSDataWithFetch(`${folder}${dynamicData.filename}`);
+
+        folder = "./data/trainers/";
+        dynamicData.filename = "trainers.jsonl";
+        dynamicData.trainers = await initMdSDataWithFetch(`${folder}${dynamicData.filename}`);
+        dynamicData.trainers.forEach((item) => {
+            item.imageUrl = fixRelativePaths([item.imageUrl], folder)[0];
+        });
+
     } catch (err) {
         dynamicData.error = err instanceof Error ? err.message : '' + err;
         console.error('11', err);

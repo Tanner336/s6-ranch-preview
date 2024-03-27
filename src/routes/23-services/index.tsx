@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { SEO } from "./SEO";
-import { Testimonial } from "./22-facility/3-testimonial";
+import { SEO } from "../SEO";
+import { Testimonial } from "../22-facility/3-testimonial";
+import { Trainers } from "./trainers";
 
 export function Services() {
     return (
@@ -42,7 +43,7 @@ export function Services() {
                         <h2 className="title-large">Our Trainers</h2>
                     </div>
 
-                    <div className="img-text-box trainer-one">
+                    {/* <div className="img-text-box trainer-one">
                         <div className="col-text">
                             <h3 className="title-small">Expert Reiner</h3>
                             <h2>Kristen Marrow</h2>
@@ -54,10 +55,11 @@ export function Services() {
                             </p>
                         </div>
                         <div className="col-image" />
-                    </div>
+                    </div> */}
+
+                    <Trainers />
 
                     {/* <div className="img-text-box trainer-two">
-                        <div className="col-image reverse" />
                         <div className="col-text">
                             <h3 className="title-small">Trainer Two</h3>
                             <h2>Josh Johnson</h2>
@@ -71,6 +73,7 @@ export function Services() {
                                 zzril delenit augue duis dolore te feugait nulla facilisi.
                             </p>
                         </div>
+                        <div className="col-image reverse" />
                     </div> */}
 
                     <div className="secondary-details">
