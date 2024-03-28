@@ -1,5 +1,5 @@
 [
-    /**/
+    /** /
     {
       "images": [
         "./s6-ranch-preview/data/breeding/mare-with-foal.webp",
@@ -13,7 +13,7 @@
     },
     /**/
     
-    /** /
+    /**/
     {
       "images": [
         "./data/breeding/coming-soon.webp",
