@@ -1,14 +1,10 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { SEO } from "../SEO";
-import { Testimonial } from "./3-testimonial";
-import { useState } from "react";
-import grounds from "../../assets/img/grounds-v2.webp";
 import { Squares } from "./2-squares";
+import { Testimonial } from "./3-testimonial";
+import grounds from "../../assets/img/grounds-v2.webp";
 import { IconFacebook, IconInstagram } from "../../ui/icons";
 
 export function Facility() {
-    const [d1, setD1] = useState("1");
     return (<>
         <main id="facility">
             <SEO
@@ -27,10 +23,7 @@ export function Facility() {
             <section className="overlap">
                 <div className="overlap-quote">
                     <div className="offset-card">
-                        <img
-                            src={grounds}
-                            alt="Top down view of S6 Ranch"
-                        />
+                        <img loading="lazy" src={grounds} alt="Top down view of S6 Ranch" />
                     </div>
                 </div>
 
@@ -44,23 +37,6 @@ export function Facility() {
                 </div>
             </section>
 
-            {/* <section className="cta-text-block">
-                <div className="stats">
-                    <h3 className="title-small">
-                        Stay in the Loop with us on facebook
-                    </h3>
-                    <hr />
-                    <p className="read-more">
-                        <a
-                            href="https://www.facebook.com/people/S6-Ranch/100087839483211/"
-                            target="_blank"
-                        >
-                            Connect Now
-                        </a>
-                    </p>
-                </div>
-            </section> */}
-
             <section className="cta-text-block">
                 <div>
                     <h3 className="title-small">
@@ -73,6 +49,7 @@ export function Facility() {
                             href="https://www.facebook.com/profile.php?id=100087839483211&mibextid=LQQJ4d"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="S6 Ranch Facebook page"
                         >
                             <IconFacebook />
                         </a>
@@ -81,6 +58,7 @@ export function Facility() {
                             href="https://www.instagram.com/s6horses/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="S6 Ranch Instagram page"
                         >
                             <IconInstagram />
                         </a>

@@ -14,7 +14,7 @@ export function Home() {
       <section className="hero">
         <HeaderBody />
         <div className="hero-text">
-          <img src={logoXL} alt="profile view of a young horse" />
+          <img loading="lazy" src={logoXL} alt="profile view of a young horse" />
           <h1>Ranch</h1>
           {/* <h1 className="lines title-small">
             <span>Performance Horses</span>
@@ -32,7 +32,7 @@ export function Home() {
               <p className="title-small">Horsemanship</p>
               <h2>With Integrity</h2>
             </div>
-            <img src={horseProfile} alt="profile view of a young horse" />
+            <img loading="lazy" src={horseProfile} alt="profile view of a young horse" />
           </div>
           <div className="quick-words-bottom">
             <p className="text-block">
@@ -48,7 +48,7 @@ export function Home() {
       </section>
 
       <section id="about-us">
-        <img
+        <img loading="lazy"
           src={salvador}
           alt="large group of people gathered around a firepit"
         />
@@ -168,7 +168,7 @@ export function Home() {
           <div className="news-tile-wrapper">
             <div className="news-tile">
               <div className="tile-stories">
-                <img
+                <img loading="lazy"
                   src={community}
                   alt="large group of people gathered around a firepit"
                 />

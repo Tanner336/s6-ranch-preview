@@ -46,6 +46,7 @@ export function Carousel<T = string>({ slides, options, className, card, showBut
                 </div>
             </div>
         </div>
+        
         {slides.length > 1 && (
             <div className={css["buttons-wrapper"]}>
                 <button className={classNames(css["button__arrow"], css["button__arrow-left"])} onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
