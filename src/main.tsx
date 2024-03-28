@@ -8,7 +8,7 @@ import ReactGA from 'react-ga';
 
 ReactGA.initialize('G-SX6Z98R67S');
 
-setTimeout(() => initDataWithFetch(), 1000);
+await initDataWithFetch();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
