@@ -30,8 +30,14 @@ export function MainMenu() {
 
     return (
         <div className="navigation" ref={ref}>
-            <button className="hamburger" onClick={() => setIsMenuOpen((v) => !v)}>
-                {isMenuOpen ? <IconCross /> : <IconHamburger />}
+            <button
+                className="hamburger"
+                onClick={() => setIsMenuOpen((v) => !v)}
+                role="navigation"
+                aria-label="Main Menu"
+                type="button"
+            >
+                {isMenuOpen ? <IconCross aria-state="open" /> : <IconHamburger aria-state="closed" />}
             </button>
 
             <ul className={classNames("nav-wrapper", isMenuOpen && "show-menu")}>

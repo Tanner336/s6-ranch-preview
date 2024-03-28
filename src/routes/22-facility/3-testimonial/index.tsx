@@ -20,7 +20,8 @@ function CarouselSlides({ slides }: { slides: TestimonialData[]; }) {
                             </div>
                         </div>
                     );
-                }}
+                }
+            }
             showButtonText={false}
         />
     );

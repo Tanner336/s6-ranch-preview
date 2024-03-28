@@ -2,12 +2,9 @@
 
 .card {
     margin: 3rem auto;
-    max-width: 95%;
-    /* margin: 1rem 2rem; */
-    
+    max-width: 95%;    
     background: #2B2B2B;
     font-size: 1.25rem;
-   
 }
 
 .card__description {
@@ -23,8 +20,6 @@
    p.read-more {
     padding: 0;
    }
-
-  
 }
 
 .title-large {
