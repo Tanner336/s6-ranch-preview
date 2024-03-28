@@ -14,15 +14,9 @@ export function Home() {
       <section className="hero">
         <HeaderBody />
         <div className="hero-text">
-          <img src={logoXL} alt="profile view of a young horse" />
-          <h1>Ranch</h1>
-          {/* <h1 className="lines title-small">
-            <span>Performance Horses</span>
-          </h1> */}
+          <img src={logoXL} alt="S6 Ranch logo" />
+          <h1><span className="visually-hidden">S6 </span>Ranch</h1>
         </div>
-        {/* <a className="main-btn" tabIndex={0} href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5d2486ea-bbf6-4ecc-9b77-7ccd59a2304e&env=na4&acct=4ca4f66f-951d-4258-9482-4800ab8aff19&v=2">
-          <span className="main-btn-text">Release Form</span>
-        </a> */}
       </section>
 
       <section className="quick-words">
@@ -50,7 +44,7 @@ export function Home() {
       <section id="about-us">
         <img
           src={salvador}
-          alt="large group of people gathered around a firepit"
+          alt="The Salvador family along with thier horse and dog"
         />
         <div className="text-body">
           <div>
@@ -77,9 +71,8 @@ export function Home() {
               <h2 className="lines">
                 <span>Trainers</span>
               </h2>
-
               <Link className="main-btn" to="/services">
-                <span className="main-btn-text">more info</span>
+                <span className="main-btn-text">more info</span><span className="visually-hidden"> about our trainers</span>
               </Link>
             </div>
           </div>
@@ -93,7 +86,7 @@ export function Home() {
                 <span>Lessons</span>
               </h2>
               <Link className="main-btn" to="/services">
-                <span className="main-btn-text">more info</span>
+                <span className="main-btn-text">more info</span><span className="visually-hidden"> about our lessons</span>
               </Link>
             </div>
           </div>
@@ -107,7 +100,7 @@ export function Home() {
                 <span>Breeding</span>
               </h2>
               <Link className="main-btn" to="/breeding">
-                <span className="main-btn-text">more info</span>
+                <span className="main-btn-text">more info</span><span className="visually-hidden"> about our breeding program</span>
               </Link>
             </div>
           </div>
@@ -121,44 +114,6 @@ export function Home() {
       </section>
 
 
-
-      {/* <section className="stats">
-        <div className="stats-wrapper">
-          <div className="stats-inner-wrapper">
-            <div className="stats-set">
-              <div className="stats-text">
-                <p className="stats-number">5</p>
-                <p className="title-small">NRHA</p>
-                <p className="title-large">Members</p>
-              </div>
-            </div>
-            <div className="stats-set">
-              <div className="stats-text">
-                <p className="stats-number">6</p>
-                <p className="title-small">Ranch</p>
-                <p className="title-large">Horses</p>
-              </div>
-            </div>
-          </div>
-          <div className="stats-inner-wrapper">
-            <div className="stats-set">
-              <div className="stats-text">
-                <p className="stats-number">10</p>
-                <p className="title-small">Total</p>
-                <p className="title-large">Acres</p>
-              </div>
-            </div>
-            <div className="stats-set">
-              <div className="stats-text">
-                <p className="stats-number">25</p>
-                <p className="title-small">Barn</p>
-                <p className="title-large">Stalls</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="news">
         <div className="news-wrapper">
           <div className="news-text">
@@ -170,7 +125,7 @@ export function Home() {
               <div className="tile-stories">
                 <img
                   src={community}
-                  alt="large group of people gathered around a firepit"
+                  alt="large group of formally dressed people gathered for a horse show"
                 />
                 <div className="news-tile-text">
                   <h3 className="title-small">Community is Everything</h3>

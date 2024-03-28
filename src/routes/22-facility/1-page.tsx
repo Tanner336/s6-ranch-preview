@@ -29,7 +29,7 @@ export function Facility() {
                     <div className="offset-card">
                         <img
                             src={grounds}
-                            alt="Top down view of S6 Ranch"
+                            alt="Aerial view of S6 Ranch's 10 acre property"
                         />
                     </div>
                 </div>
@@ -43,23 +43,6 @@ export function Facility() {
                     <p>60ft round pen with sand footing</p>
                 </div>
             </section>
-
-            {/* <section className="cta-text-block">
-                <div className="stats">
-                    <h3 className="title-small">
-                        Stay in the Loop with us on facebook
-                    </h3>
-                    <hr />
-                    <p className="read-more">
-                        <a
-                            href="https://www.facebook.com/people/S6-Ranch/100087839483211/"
-                            target="_blank"
-                        >
-                            Connect Now
-                        </a>
-                    </p>
-                </div>
-            </section> */}
 
             <section className="cta-text-block">
                 <div>

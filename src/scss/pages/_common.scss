@@ -4,8 +4,9 @@
 
 // Variables
 // $teal: #30b4a9;
-$gold: #30b4a9;
-$teal: rgb(48, 180, 169);
+// $teal: rgb(48, 180, 169);
+// $teal: #2ba399;
+$teal: rgb(43, 163, 153);
 $secondary: #d4c4bc;
 $dark: #1a1a1a;
 $dark-medium: #222222;
@@ -194,6 +195,17 @@ ul {
 // =========================
 // Reusable Styles
 // =========================
+
+//visibly hide content needed for accessibility
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
 //main button
 .main-btn {
