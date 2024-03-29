@@ -231,7 +231,7 @@
 //facility only
 #facility {
     .hero {
-        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/entry-v2.webp") no-repeat center center;
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/entry-v2.jpg") no-repeat center center;
         background-size: cover;
     }
 
@@ -320,7 +320,7 @@
 
     // Item 1.1
     &.two {
-        background: url("../assets/img/facility-2.webp") no-repeat center center;
+        background: url("../assets/img/facility-2.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -328,7 +328,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-2.webp") no-repeat center center;
+                background: url("../assets/img/facility-2.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -336,7 +336,7 @@
 
     // Item 1.2
     &.three {
-        background: url("../assets/img/facility-8.webp") no-repeat center center;
+        background: url("../assets/img/facility-8.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -344,7 +344,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-8.webp") no-repeat center center;
+                background: url("../assets/img/facility-8.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -352,7 +352,7 @@
 
     // Item 1.3
     &.four {
-        background: url("../assets/img/facility-1.webp") no-repeat center center;
+        background: url("../assets/img/facility-1.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -360,7 +360,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-1.webp") no-repeat center center;
+                background: url("../assets/img/facility-1.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -368,7 +368,7 @@
 
     // Item 2.1
     &.five {
-        background: url("../assets/img/facility-5.webp") no-repeat center center;
+        background: url("../assets/img/facility-5.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -376,7 +376,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-5.webp") no-repeat center center;
+                background: url("../assets/img/facility-5.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -384,7 +384,7 @@
 
     // Item 2.2
     &.six {
-        background: url("../assets/img/facility-7.webp") no-repeat center center;
+        background: url("../assets/img/facility-7.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -392,7 +392,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-7.webp") no-repeat center center;
+                background: url("../assets/img/facility-7.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -400,7 +400,7 @@
 
     // Item 2.3
     &.seven {
-        background: url("../assets/img/facility-4.webp") no-repeat center center;
+        background: url("../assets/img/facility-4.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -408,7 +408,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-4.webp") no-repeat center center;
+                background: url("../assets/img/facility-4.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -416,7 +416,7 @@
 
     // Item 3.1
     &.eight {
-        background: url("../assets/img/facility-6.webp") no-repeat center bottom;
+        background: url("../assets/img/facility-6.jpg") no-repeat center bottom;
         background-size: cover;
 
         @include desktop {
@@ -424,7 +424,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-6.webp") no-repeat center bottom;
+                background: url("../assets/img/facility-6.jpg") no-repeat center bottom;
                 background-size: cover;
             }
         }
@@ -432,7 +432,7 @@
 
     // Item 3.2
     &.nine {
-        background: url("../assets/img/facility-3.webp") no-repeat center center;
+        background: url("../assets/img/facility-3.jpg") no-repeat center center;
         background-size: cover;
 
         @include desktop {
@@ -440,7 +440,7 @@
             background-size: cover;
 
             &:hover {
-                background: url("../assets/img/facility-3.webp") no-repeat center center;
+                background: url("../assets/img/facility-3.jpg") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -475,7 +475,7 @@
 //Service only
 #service {
     .hero {
-        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/contact-us1.webp") no-repeat center center;
+        background: linear-gradient(to right, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, 0.75) 90%), url("../assets/img/contact-us1.jpg") no-repeat center center;
         background-size: cover;
     }
 
@@ -514,17 +514,17 @@
 
 #service {
     .riding-lessons {
-        background: linear-gradient(to bottom, rgba(11, 11, 11, .4) 15%, rgba(11, 11, 11, 0.4) 100%), url("../assets/img/service-one-v2.webp") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .4) 15%, rgba(11, 11, 11, 0.4) 100%), url("../assets/img/service-one-v2.jpg") no-repeat center center;
         background-size: cover;
     }
 
     .training {
-        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-two-v2.webp") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-two-v2.jpg") no-repeat center center;
         background-size: cover;
     }
 
     .boarding {
-        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-three-v2.webp") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(11, 11, 11, .55) 15%, rgba(11, 11, 11, 0.55) 100%), url("../assets/img/service-three-v2.jpg") no-repeat center center;
         background-size: cover;
     }
 
@@ -536,7 +536,7 @@
 
 //trainers - service page only
 #trainers {
-    background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url(../assets/img/service-background-blurr.webp) no-repeat 50% 15%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, .3) 10%, rgba(11, 11, 11, 0.85) 80%), url(../assets/img/service-background-blurr.jpg) no-repeat 50% 15%;
     background-size: cover;
     background-position: bottom;
 }
@@ -637,17 +637,17 @@
 
     //Kristen
     .trainer-one .col-image {
-        background: url("../assets/img/meet-trainers.webp") no-repeat center 20%;
+        background: url("../assets/img/meet-trainers.jpg") no-repeat center 20%;
         background-size: cover;
     }
 
     .trainer-two .col-image {
-        background: url("../assets/img/trainer-two-sample.webp") no-repeat center center;
+        background: url("../assets/img/trainer-two-sample.jpg") no-repeat center center;
         background-size: cover;
     }
 
     .trainer-three .col-image {
-        background: url("../assets/img/trainer-three.webp") no-repeat center center;
+        background: url("../assets/img/trainer-three.jpg") no-repeat center center;
         background-size: cover;
     }
 

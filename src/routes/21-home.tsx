@@ -1,8 +1,8 @@
 import { HeaderBody } from "./1-header";
 import { SEO } from "./SEO";
 import horseProfile from "../assets/img/horse-2.jpg";
-import community from "../assets/img/community-photo.webp";
-import salvador from "../assets/img/salvador-family.webp";
+import community from "../assets/img/community-photo.png";
+import salvador from "../assets/img/salvador-family.png";
 import { Link } from "react-router-dom";
 import logoXL from "../assets/img/logo-xl.png";
 

@@ -1,7 +1,7 @@
 import { SEO } from "../SEO";
 import { Squares } from "./2-squares";
 import { Testimonial } from "./3-testimonial";
-import grounds from "../../assets/img/grounds-v2.webp";
+import grounds from "../../assets/img/grounds-v2.jpg";
 import { IconFacebook, IconInstagram } from "../../ui/icons";
 
 export function Facility() {
